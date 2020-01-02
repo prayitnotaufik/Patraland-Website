@@ -8,7 +8,7 @@
 <html>
 <!-- Head -->
 <head>
-	<title>Premier Realty a Real Estate Category Flat Bootstrap Responsive Website Template | Services :: W3layouts</title>
+	<title>PT. Patraland</title>
 	<!-- Meta-Tags -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
