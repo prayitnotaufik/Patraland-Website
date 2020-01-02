@@ -26,7 +26,7 @@
 	<!-- Default-JavaScript-File -->
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	
+
 </head>
 <!-- //Head -->
 <!-- Body -->
@@ -34,52 +34,7 @@
 	<!-- Header -->
 	<div class="header w3layouts-1">
 		<!-- Top-Bar -->
-			
-				<div class="top-bar w3-1">
-				<div class="container">
-					<div class="header-nav w3-agileits-1">
-						<nav class="navbar navbar-default">
-							<!-- Brand and toggle get grouped for better mobile display -->
-							<div class="navbar-header">
-								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-								<h1><a class="navbar-brand" href="index.html">Premier Realty</a></h1>
-							</div>
-							<!-- Collect the nav links, forms, and other content for toggling -->
-							<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-								<ul class="nav navbar-nav ">
-									<li><a href="index.html">Home</a></li>
-									<li><a href="about.html">About</a></li>
-									<li><a href="gallery.html">Gallery</a></li>
-									<li><a href="codes.html">shortcodes</a></li>
-									<li><a href="services.html">Services</a></li>
-									<li><a class="active" href="contact.html">Contact</a></li>
-								</ul>
-								<div class="search-box">
-									<div id="sb-search" class="sb-search">
-										<form>
-											<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
-											<input class="sb-search-submit" type="submit" value="">
-											<span class="sb-icon-search"> </span>
-										</form>
-									</div>
-								</div>
-							</div><!-- /navbar-collapse -->
-							<!-- search-scripts -->
-							<script src="js/classie.js"></script>
-							<script src="js/uisearch.js"></script>
-								<script>
-									new UISearch( document.getElementById( 'sb-search' ) );
-								</script>
-							<!-- //search-scripts -->
-						</nav>
-					</div>
-				</div>
-			</div>
+			<?php include("includes/topbar.php"); ?>
 		<!-- //Top-Bar -->
 		<div class="banner">
 			<div class="bann-info">
@@ -96,60 +51,49 @@
 			<p>Many desktop publishing packages and web page editors now use Lorem Ipsum  Ipsum as their default model text now use Lorem Ipsum as their default model text</p>
 		<h4>Address</h4>
 		<ul class="contact-list agileits-6">
-				<li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>756 global Place, New York.</li>
+				<li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>Jl. Candi Panggung Bar. No.3a, Mojolangu, <br>Kec. Lowokwaru, Kota Malang, Jawa Timur 65143</li>
 				<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:example@mail.com">mail@example.com</a></li>
-				<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>+123 2222 222</li>
+				<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>(0341) 488489</li>
 			</ul>
     </div>
   <div class="col-md-8 content-pro-head1 w3agile-6">
    		<form action="#" method="post">
 				<div class=" grid-contact agileinfo-6">
 					<div class="your-top">
-						
-						<input type="text" placeholder="Name" name="Name" required="">								
+
+						<input type="text" placeholder="Name" name="Name" required="">
 						<div class="clearfix"> </div>
 					</div>
 					<div class="your-top">
-						
-						<input type="text" placeholder="E-mail" name="E-mail" required="">								
+
+						<input type="text" placeholder="E-mail" name="E-mail" required="">
 						<div class="clearfix"> </div>
 					</div>
 					<div class="your-top">
-						
-						<input type="text" placeholder="Website" name="Website" required="">								
+
+						<input type="text" placeholder="Website" name="Website" required="">
 						<div class="clearfix"> </div>
 					</div>
-					
-			
+
+
 					<textarea placeholder=" Message" name=" Message" required=""></textarea>
 					<input type="submit" value="Send">
-				
+
 				</div>
 				</form>
   </div>
-  
+
 	<div class="clearfix"> </div>
 	</div>
 </div>
 <div class="w3l-map">
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387142.8400883834!2d-74.25818885297905!3d40.70583164034001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1471602679873" frameborder="0" style="border:0" allowfullscreen></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.6134462468017!2d112.61464261428439!3d-7.935377994284005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788208dabed68f%3A0xc6aff25df0f92357!2sPT.%20Patraland!5e0!3m2!1sid!2sid!4v1577953890741!5m2!1sid!2sid" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 </div>
 <!--/ w3l-1 -->
-	<div class="footer-bottom agileits-w3layouts-1">
-		<div class="container">
-			<h3>Newsletter</h3>
-			<p class="ttt">when an unknown printer took a galley of type and scrambled Lorem Ipsum passages, and more recently it to make a type specimen book.</p>
-			<form action="#" method="post">
-				<input type="text" value="Name" name="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-				<input type="email" value="Email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-				<input type="submit" value="Submit">
-			</form>
-		</div>
-	</div>
 <!-- footer -->
 <div class="footer w3-agile-1">
 	<div class="container">
-		
+
 		<ul class="fb_icons2 agile-1">
 			<li><a class="fb" href="#"></a></li>
 			<li><a class="twit" href="#"></a></li>

@@ -27,7 +27,7 @@
 	<!-- Default-JavaScript-File -->
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	
+
 </head>
 <!-- //Head -->
 <!-- Body -->
@@ -35,52 +35,7 @@
 	<!-- Header -->
 	<div class="header w3layouts-1">
 		<!-- Top-Bar -->
-			
-				<div class="top-bar w3-1">
-				<div class="container">
-					<div class="header-nav w3-agileits-1">
-						<nav class="navbar navbar-default">
-							<!-- Brand and toggle get grouped for better mobile display -->
-							<div class="navbar-header">
-								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-								<h1><a class="navbar-brand" href="index.html">Premier Realty</a></h1>
-							</div>
-							<!-- Collect the nav links, forms, and other content for toggling -->
-							<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-								<ul class="nav navbar-nav ">
-									<li><a href="index.html">Home</a></li>
-									<li><a href="about.html">About</a></li>
-									<li><a href="gallery.html">Gallery</a></li>
-									<li><a href="codes.html">shortcodes</a></li>
-									<li><a class="active" href="services.html">Services</a></li>
-									<li><a href="contact.html">Contact</a></li>
-								</ul>
-								<div class="search-box">
-									<div id="sb-search" class="sb-search">
-										<form>
-											<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
-											<input class="sb-search-submit" type="submit" value="">
-											<span class="sb-icon-search"> </span>
-										</form>
-									</div>
-								</div>
-							</div><!-- /navbar-collapse -->
-							<!-- search-scripts -->
-							<script src="js/classie.js"></script>
-							<script src="js/uisearch.js"></script>
-								<script>
-									new UISearch( document.getElementById( 'sb-search' ) );
-								</script>
-							<!-- //search-scripts -->
-						</nav>
-					</div>
-				</div>
-			</div>
+			<?php include("includes/topbar.php"); ?>
 		<!-- //Top-Bar -->
 		<div class="banner">
 			<div class="bann-info">
@@ -91,14 +46,14 @@
 	<!-- //Header -->
 	<div class="services wthree-3">
 				<div class="container">
-					<h2 class="tittle">services</h2>
+					<h2 class="tittle">Project</h2>
 					<div class="services-grids">
 						<div class="col-md-6 services-grid">
 							<div class="col-md-5 serv-img mask">
 								<img src="images/i2.jpg" alt="" class="img-responsive zoom-img">
 							</div>
 							<div class="col-md-7 serv-text">
-								<h4>Et iusto odio dignissimos </h4>
+								<h4>Patra Garden</h4>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,sed do eiusmod tempor incididunt .</p>
 							</div>
 						  <div class="clearfix"> </div>
@@ -108,34 +63,33 @@
 								<img src="images/i7.jpg" alt="" class="img-responsive zoom-img">
 							</div>
 							<div class="col-md-7 serv-text">
-								<h4>Et iusto odio dignissimos </h4>
+								<h4>Patra Mulia Kencana</h4>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,sed do eiusmod tempor incididunt .</p>
 							</div>
 						</div>
 					   <div class="clearfix"> </div>
 					</div>
-					<div class="services-grids">
+          <div class="services-grids">
 						<div class="col-md-6 services-grid">
 							<div class="col-md-5 serv-img mask">
-								<img src="images/i8.jpg" alt="" class="img-responsive zoom-img">
+								<img src="images/i2.jpg" alt="" class="img-responsive zoom-img">
 							</div>
 							<div class="col-md-7 serv-text">
-								<h4>Et iusto odio dignissimos</h4>
+								<h4>Patraland Griya Madani</h4>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,sed do eiusmod tempor incididunt .</p>
 							</div>
 						  <div class="clearfix"> </div>
 						</div>
 						<div class="col-md-6 services-grid">
 							<div class="col-md-5 serv-img mask">
-								<img src="images/i9.jpg" alt="" class="img-responsive zoom-img">
+								<img src="images/i7.jpg" alt="" class="img-responsive zoom-img">
 							</div>
 							<div class="col-md-7 serv-text">
-								<h4>Et iusto odio dignissimos </h4>
+								<h4>Patra Mulia Kencana</h4>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,sed do eiusmod tempor incididunt .</p>
 							</div>
-						  <div class="clearfix"> </div>
 						</div>
-					  <div class="clearfix"> </div>
+					   <div class="clearfix"> </div>
 					</div>
 				</div>
 			</div>
@@ -171,7 +125,7 @@
 							<h4>Accusantium</h4>
 							<p>Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc.</p>
 						</div>
-						<div class="clearfix"></div>		
+						<div class="clearfix"></div>
 					</div>
 					<div class="featured-grids w3l-2">
 						<div class="col-md-3 agile-3">
@@ -202,36 +156,14 @@
 							<h4>Accusantium</h4>
 							<p>Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc.</p>
 						</div>
-						<div class="clearfix"></div>		
+						<div class="clearfix"></div>
 					</div>
 				</div>
 			</div>
 <!--/ w3l-1 -->
-	<div class="footer-bottom agileits-w3layouts-1">
-		<div class="container">
-			<h3>Newsletter</h3>
-			<p class="ttt">when an unknown printer took a galley of type and scrambled Lorem Ipsum passages, and more recently it to make a type specimen book.</p>
-			<form action="#" method="post">
-				<input type="text" value="Name" name="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-				<input type="email" value="Email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-				<input type="submit" value="Submit">
-			</form>
-		</div>
-	</div>
+
 <!-- footer -->
-<div class="footer w3-agile-1">
-	<div class="container">
-		
-		<ul class="fb_icons2 agile-1">
-			<li><a class="fb" href="#"></a></li>
-			<li><a class="twit" href="#"></a></li>
-			<li><a class="goog" href="#"></a></li>
-			<li><a class="pin" href="#"></a></li>
-			<li><a class="drib" href="#"></a></li>
-		</ul>
-	</div>
-	<p class="copyright">© 2017 Premier Realty. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a></p>
-</div>
+<?php include("includes/footer.php"); ?>
 <!-- footer -->
 </body>
 <!-- //Body -->

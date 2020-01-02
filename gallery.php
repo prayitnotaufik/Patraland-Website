@@ -34,52 +34,7 @@
 	<!-- Header -->
 	<div class="header w3layouts-1">
 		<!-- Top-Bar -->
-			
-				<div class="top-bar w3-1">
-				<div class="container">
-					<div class="header-nav w3-agileits-1">
-						<nav class="navbar navbar-default">
-							<!-- Brand and toggle get grouped for better mobile display -->
-							<div class="navbar-header">
-								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-								<h1><a class="navbar-brand" href="index.html">Premier Realty</a></h1>
-							</div>
-							<!-- Collect the nav links, forms, and other content for toggling -->
-							<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-								<ul class="nav navbar-nav ">
-									<li><a href="index.html">Home</a></li>
-									<li><a href="about.html">About</a></li>
-									<li><a class="active" href="gallery.html">Gallery</a></li>
-									<li><a href="codes.html">shortcodes</a></li>
-									<li><a href="services.html">Services</a></li>
-									<li><a href="contact.html">Contact</a></li>
-								</ul>
-								<div class="search-box">
-									<div id="sb-search" class="sb-search">
-										<form>
-											<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
-											<input class="sb-search-submit" type="submit" value="">
-											<span class="sb-icon-search"> </span>
-										</form>
-									</div>
-								</div>
-							</div><!-- /navbar-collapse -->
-							<!-- search-scripts -->
-							<script src="js/classie.js"></script>
-							<script src="js/uisearch.js"></script>
-								<script>
-									new UISearch( document.getElementById( 'sb-search' ) );
-								</script>
-							<!-- //search-scripts -->
-						</nav>
-					</div>
-				</div>
-			</div>
+			<?php include("includes/topbar.php"); ?>
 		<!-- //Top-Bar -->
 		<div class="banner">
 			<div class="bann-info">
@@ -96,9 +51,9 @@
 				<div class="content-grid-effect slow-zoom vertical text-center">
 					<a href="images/i1.jpg" class="b-link-stripe b-animate-go  swipebox">
 						<div class="img-box">
-							<img src="images/i1.jpg" alt="image" class="img-responsive zoom-img">	
+							<img src="images/i1.jpg" alt="image" class="img-responsive zoom-img">
 						</div>
-				
+
 						<div class="info-box">
 							<div class="info-content">
 								<h4>Premier Realty</h4>
@@ -113,9 +68,9 @@
 				<div class="content-grid-effect slow-zoom vertical text-center">
 					<a href="images/i2.jpg" class="b-link-stripe b-animate-go  swipebox">
 						<div class="img-box">
-							<img src="images/i2.jpg" alt="image" class="img-responsive zoom-img">	
+							<img src="images/i2.jpg" alt="image" class="img-responsive zoom-img">
 						</div>
-				
+
 						<div class="info-box">
 							<div class="info-content">
 								<h4>Premier Realty</h4>
@@ -130,9 +85,9 @@
 				<div class="content-grid-effect slow-zoom vertical text-center">
 					<a href="images/i3.jpg" class="b-link-stripe b-animate-go  swipebox">
 						<div class="img-box">
-							<img src="images/i3.jpg" alt="image" class="img-responsive zoom-img">	
+							<img src="images/i3.jpg" alt="image" class="img-responsive zoom-img">
 						</div>
-					
+
 						<div class="info-box">
 							<div class="info-content">
 								<h4>Premier Realty</h4>
@@ -147,9 +102,9 @@
 				<div class="content-grid-effect slow-zoom vertical text-center">
 					<a href="images/i4.jpg" class="b-link-stripe b-animate-go  swipebox">
 						<div class="img-box">
-							<img src="images/i4.jpg" alt="image" class="img-responsive zoom-img">	
+							<img src="images/i4.jpg" alt="image" class="img-responsive zoom-img">
 						</div>
-					
+
 						<div class="info-box">
 							<div class="info-content">
 								<h4>Premier Realty</h4>
@@ -164,9 +119,9 @@
 				<div class="content-grid-effect slow-zoom vertical text-center">
 					<a href="images/i5.jpg" class="b-link-stripe b-animate-go  swipebox">
 						<div class="img-box">
-							<img src="images/i5.jpg" alt="image" class="img-responsive zoom-img">	
+							<img src="images/i5.jpg" alt="image" class="img-responsive zoom-img">
 						</div>
-					
+
 						<div class="info-box">
 							<div class="info-content">
 								<h4>Premier Realty</h4>
@@ -181,9 +136,9 @@
 				<div class="content-grid-effect slow-zoom vertical text-center">
 					<a href="images/i6.jpg" class="b-link-stripe b-animate-go  swipebox">
 						<div class="img-box">
-							<img src="images/i6.jpg" alt="image" class="img-responsive zoom-img">	
+							<img src="images/i6.jpg" alt="image" class="img-responsive zoom-img">
 						</div>
-					
+
 						<div class="info-box">
 							<div class="info-content">
 								<h4>Premier Realty</h4>
@@ -198,9 +153,9 @@
 				<div class="content-grid-effect slow-zoom vertical text-center">
 					<a href="images/i7.jpg" class="b-link-stripe b-animate-go  swipebox">
 						<div class="img-box">
-							<img src="images/i7.jpg" alt="image" class="img-responsive zoom-img">	
+							<img src="images/i7.jpg" alt="image" class="img-responsive zoom-img">
 						</div>
-					
+
 						<div class="info-box">
 							<div class="info-content">
 								<h4>Premier Realty</h4>
@@ -215,9 +170,9 @@
 				<div class="content-grid-effect slow-zoom vertical text-center">
 					<a href="images/i8.jpg" class="b-link-stripe b-animate-go  swipebox">
 						<div class="img-box">
-							<img src="images/i8.jpg" alt="image" class="img-responsive zoom-img">	
+							<img src="images/i8.jpg" alt="image" class="img-responsive zoom-img">
 						</div>
-					
+
 						<div class="info-box">
 							<div class="info-content">
 								<h4>Premier Realty</h4>
@@ -232,9 +187,9 @@
 				<div class="content-grid-effect slow-zoom vertical text-center">
 					<a href="images/i9.jpg" class="b-link-stripe b-animate-go  swipebox">
 						<div class="img-box">
-							<img src="images/i9.jpg" alt="image" class="img-responsive zoom-img">	
+							<img src="images/i9.jpg" alt="image" class="img-responsive zoom-img">
 						</div>
-					
+
 						<div class="info-box">
 							<div class="info-content">
 								<h4>Premier Realty</h4>
@@ -246,38 +201,15 @@
 				</div>
 			</div>
 			<div class="clearfix"></div>
-			
+
 		</div>
 	</div>
 <!--/ w3l-1 -->
-	<div class="footer-bottom agileits-w3layouts-1">
-		<div class="container">
-			<h3>Newsletter</h3>
-			<p class="ttt">when an unknown printer took a galley of type and scrambled Lorem Ipsum passages, and more recently it to make a type specimen book.</p>
-			<form action="#" method="post">
-				<input type="text" value="Name" name="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-				<input type="email" value="Email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-				<input type="submit" value="Submit">
-			</form>
-		</div>
-	</div>
 <!-- footer -->
-<div class="footer w3-agile-1">
-	<div class="container">
-		
-		<ul class="fb_icons2 agile-1">
-			<li><a class="fb" href="#"></a></li>
-			<li><a class="twit" href="#"></a></li>
-			<li><a class="goog" href="#"></a></li>
-			<li><a class="pin" href="#"></a></li>
-			<li><a class="drib" href="#"></a></li>
-		</ul>
-	</div>
-	<p class="copyright">© 2017 Premier Realty. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a></p>
-</div>
+<?php include("includes/footer.php"); ?>
 <!-- footer -->
 <!-- swipe box js -->
-		<script src="js/jquery.swipebox.min.js"></script> 
+		<script src="js/jquery.swipebox.min.js"></script>
 			<script type="text/javascript">
 				jQuery(function($) {
 				$(".swipebox").swipebox();
