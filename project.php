@@ -24,8 +24,9 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
-	<link rel="stylesheet" href="css/cards-gallery.css" <!-- //Custom-Theme-Files -->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" /> -->
+	<!-- <link rel="stylesheet" href="css/cards-gallery.css"> -->
+
 	<!-- Web-Fonts -->
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
@@ -55,11 +56,27 @@
 	<div class="services wthree-3">
 		<div class="container">
 			<h2 class="tittle">Project</h2>
-			<div class="card">
-				<img src="images/image1.jpg" alt="Avatar" style="width:100%">
-				<div class="container-card">
-					<h4><b>Patra Garden</b></h4>
-					<p>Kata kata patra garden</p>
+			<div class="row ">
+				<div class="col-md-4 card">
+					<img src="images/image1.jpg" alt="Avatar" >
+					<div class="container-card">
+						<h4><b>Patra Garden</b></h4>
+						<p>Kata kata patra garden</p>
+					</div>
+				</div>
+				<div class="col-md-4 card">
+					<img src="images/image1.jpg" alt="Avatar" >
+					<div class="container-card">
+						<h4><b>Patra Garden</b></h4>
+						<p>Kata kata patra garden</p>
+					</div>
+				</div>
+				<div class="col-md-4 card">
+					<img src="images/image1.jpg" alt="Avatar" >
+					<div class="container-card">
+						<h4><b>Patra Garden</b></h4>
+						<p>Kata kata patra garden</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -69,7 +86,7 @@
 	</div>
 	<!--/ w3l-1 -->
 
-<!--/ w3l-1 -->
+	<!--/ w3l-1 -->
 
 	<!-- footer -->
 	<?php include("includes/footer.php"); ?>
