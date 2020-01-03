@@ -18,6 +18,7 @@
 	<!-- Custom-Theme-Files -->
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/about.css" type="text/css" media="all">
 	<!-- //Custom-Theme-Files -->
 	<!-- Web-Fonts -->
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" 	type="text/css">
@@ -62,7 +63,7 @@
 		<div class="container">
 			<h3 class="tittle">Meet Our Team</h3>
 			<div class="w3l_team_grids">
-				<div class="col-md-3 w3l_team_grid">
+				<div class="col-md-3 w3l_team_grid col-custom">
 					<div class="view view-second">
 						<img src="images/6.jpg" alt=" " class="img-responsive" />
 						<div class="mask"></div>
@@ -82,7 +83,7 @@
 					<h4>Jass Thomas</h4>
 					<p>Ipsum Dolor</p>
 				</div>
-				<div class="col-md-3 w3l_team_grid">
+				<div class="col-md-3 w3l_team_grid col-custom">
 					<div class="view view-second">
 						<img src="images/9.jpg" alt=" " class="img-responsive" />
 						<div class="mask"></div>
@@ -102,7 +103,47 @@
 					<h4>Dino Mariya</h4>
 					<p>Ipsum Dolor</p>
 				</div>
-				<div class="col-md-3 w3l_team_grid">
+        <div class="col-md-3 w3l_team_grid col-custom">
+					<div class="view view-second">
+						<img src="images/9.jpg" alt=" " class="img-responsive" />
+						<div class="mask"></div>
+						<div class="content">
+							<div class="w3l_social_icons w3l_social_icons1">
+								<ul>
+									<li><a href="#" class="facebook"></a></li>
+									<li><a href="#" class="twitter"></a></li>
+									<li><a href="#" class="google_plus"></a></li>
+									<li><a href="#" class="pinterest"></a></li>
+									<li><a href="#" class="instagram"></a></li>
+								</ul>
+							</div>
+							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+						</div>
+					</div>
+					<h4>Dino Mariya</h4>
+					<p>Ipsum Dolor</p>
+				</div>
+        <div class="col-md-3 w3l_team_grid col-custom">
+					<div class="view view-second">
+						<img src="images/9.jpg" alt=" " class="img-responsive" />
+						<div class="mask"></div>
+						<div class="content">
+							<div class="w3l_social_icons w3l_social_icons1">
+								<ul>
+									<li><a href="#" class="facebook"></a></li>
+									<li><a href="#" class="twitter"></a></li>
+									<li><a href="#" class="google_plus"></a></li>
+									<li><a href="#" class="pinterest"></a></li>
+									<li><a href="#" class="instagram"></a></li>
+								</ul>
+							</div>
+							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+						</div>
+					</div>
+					<h4>Dino Mariya</h4>
+					<p>Ipsum Dolor</p>
+				</div>
+				<div class="col-md-3 w3l_team_grid col-custom">
 					<div class="view view-second">
 						<img src="images/8.jpg" alt=" " class="img-responsive" />
 						<div class="mask"></div>
@@ -122,7 +163,7 @@
 					<h4>James Doe</h4>
 					<p>Ipsum Dolor</p>
 				</div>
-				<div class="col-md-3 w3l_team_grid">
+				<div class="col-md-3 w3l_team_grid col-custom">
 					<div class="view view-second">
 						<img src="images/10.jpg" alt=" " class="img-responsive" />
 						<div class="mask"></div>

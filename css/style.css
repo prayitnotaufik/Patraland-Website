@@ -397,7 +397,7 @@ a.navbar-brand span {
     color: #fff;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus ,.navbar-default .navbar-nav > li > a.active{
-    color:#EFA52C;
+    color:#FFF;
 	}
 .navbar {
     border-radius: 0px;
