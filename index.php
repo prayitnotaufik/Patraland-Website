@@ -18,6 +18,7 @@
 	<!-- Custom-Theme-Files -->
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" type="text/css" href="css/component.css" />
 	<!-- //Custom-Theme-Files -->
 	<!-- Web-Fonts -->
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" 	type="text/css">
@@ -186,7 +187,73 @@
 				</div>
 			</div>
 <!-- friend-agent -->
-
+<div class="featured-section">
+  <div class="container">
+    <h3 class="tittle">Featured services</h3>
+    <div class="featured-grids w3ls-2">
+      <div class="col-md-3 agile-3">
+        <div class="icon hi-icon-wrap hi-icon-effect-6">
+          <i><a href="#" class="hi-icon hi-icon-cog glyphicon glyphicon-user"></a></i>
+        </div>
+        <h4>Accusantium</h4>
+        <p>Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc.</p>
+      </div>
+      <div class="col-md-3 agile-3">
+        <div class="icon hi-icon-wrap hi-icon-effect-6">
+          <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-book"></a>
+        </div>
+        <h4>Lorem ipsum</h4>
+        <p>Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc.</p>
+      </div>
+      <div class="col-md-3 agile-3">
+        <div class="icon hi-icon-wrap hi-icon-effect-6">
+          <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-globe"></a>
+        </div>
+        <h4>adipiscing elit</h4>
+        <p>Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc.</p>
+      </div>
+      <div class="col-md-3 agile-3">
+        <div class="icon hi-icon-wrap hi-icon-effect-6">
+          <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-wrench"></a>
+        </div>
+        <h4>Accusantium</h4>
+        <p>Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc.</p>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="featured-grids w3l-2">
+      <div class="col-md-3 agile-3">
+        <div class="icon hi-icon-wrap hi-icon-effect-6">
+          <i><a href="#" class="hi-icon hi-icon-cog glyphicon glyphicon-dashboard"></a></i>
+        </div>
+        <h4>Accusantium</h4>
+        <p>Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc.</p>
+      </div>
+      <div class="col-md-3 agile-3">
+        <div class="icon hi-icon-wrap hi-icon-effect-6">
+          <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-signal"></a>
+        </div>
+        <h4>Lorem ipsum</h4>
+        <p>Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc.</p>
+      </div>
+      <div class="col-md-3 agile-3">
+        <div class="icon hi-icon-wrap hi-icon-effect-6">
+          <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-cog"></a>
+        </div>
+        <h4>adipiscing elit</h4>
+        <p>Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc.</p>
+      </div>
+      <div class="col-md-3 agile-3">
+        <div class="icon hi-icon-wrap hi-icon-effect-6">
+          <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-file"></a>
+        </div>
+        <h4>Accusantium</h4>
+        <p>Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc.</p>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
 <!-- footer -->
 <?php include("includes/footer.php"); ?>
 <!-- footer -->
