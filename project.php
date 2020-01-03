@@ -101,6 +101,7 @@
 				</div>
 				<div class="clearfix"></div>
 			</div>
+<<<<<<< HEAD
 			<div class="featured-grids w3l-2">
 				<div class="col-md-3 agile-3">
 					<div class="icon hi-icon-wrap hi-icon-effect-6">
@@ -135,6 +136,10 @@
 		</div>
 	</div>
 	<!--/ w3l-1 -->
+=======
+			
+<!--/ w3l-1 -->
+>>>>>>> f536ab0a4c2aeb6d34589fa5e015029c91cc4f67
 
 	<!-- footer -->
 	<?php include("includes/footer.php"); ?>
