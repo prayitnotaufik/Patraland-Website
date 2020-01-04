@@ -56,35 +56,30 @@
 	<div class="services wthree-3">
 		<div class="container">
 			<h2 class="tittle">Project</h2>
-			<div class="row">
-				<a href="patra-garden" class="a-project stretched-link">
-					<div class="col-md-4 card">
-						<img src="images/image1.jpg" alt="Avatar" >
-						<div class="container-card">
-							<h4><b>Patra Garden</b></h4>
-							<p>Kata kata patra garden</p>
-						</div>
+			<div class="row ">
+				<div class="col-md-4 card">
+					<img src="images/image1.jpg" alt="Avatar" >
+					<div class="container-card">
+						<h4><b>Patra Garden</b></h4>
+						<p>Kata kata patra garden</p>
 					</div>
-				</a>
-				<a href="patra-garden" class="a-project">
-					<div class="col-md-4 card">
-						<img src="images/image1.jpg" alt="Avatar" >
-						<div class="container-card">
-							<h4><b>Patra Garden</b></h4>
-							<p>Kata kata patra garden</p>
-						</div>
+				</div>
+				<div class="col-md-4 card">
+					<img src="images/image1.jpg" alt="Avatar" >
+					<div class="container-card">
+						<h4><b>Patra Garden</b></h4>
+						<p>Kata kata patra garden</p>
 					</div>
-				</a>
-				<a href="patra-garden" class="a-project">
-					<div class="col-md-4 card">
-						<img src="images/image1.jpg" alt="Avatar" >
-						<div class="container-card">
-							<h4><b>Patra Garden</b></h4>
-							<p>Kata kata patra garden</p>
-						</div>
+				</div>
+				<div class="col-md-4 card">
+					<img src="images/image1.jpg" alt="Avatar" >
+					<div class="container-card">
+						<h4><b>Patra Garden</b></h4>
+						<p>Kata kata patra garden</p>
 					</div>
-				</a>
+				</div>
 			</div>
+		</div>
 		<div class="clearfix"> </div>
 	</div>
 	</div>
