@@ -10,13 +10,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <h1><a class="navbar-brand" href="index.html">Patraland</a></h1>
+        <h1><a class="navbar-brand" href="index.php">Patraland</a></h1>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-
           <ul class="nav navbar-nav ">
-            <li><a href="index.php">Home</a></li>
+            <li><a href="#welcome">Home</a></li>
             <li><a href="about.php">About</a></li>
             <li><a href="gallery.php">Gallery</a></li>
             <li><a href="project.php">Project</a></li>
@@ -33,9 +32,7 @@
             </ul>
           </li> -->
             <li><a href="contact.php">Contact</a></li>
-            <li><a href="adm">Login</a></li>
           </ul>
-        
       </div><!-- /navbar-collapse -->
       <!-- search-scripts -->
       <script src="js/classie.js"></script>
