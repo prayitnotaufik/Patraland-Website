@@ -16,7 +16,6 @@ if(@$_SESSION['status'] != "login") {
   <style>
 .tooltip {
   position: relative;
-  width:200px;
   display: inline-block;
   font-size:10px;
 }
@@ -31,14 +30,17 @@ if(@$_SESSION['status'] != "login") {
 
   /* Position the tooltip */
   position: absolute;
-  z-index: 1;
   top: 100%;
   left: 50%;
+  width:170px;
   margin-left: -60px;
+  transition:0.3s;
+  opacity:0;
 }
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+  opacity:1;
 }
 </style>
 </head>
@@ -78,7 +80,7 @@ if(@$_SESSION['status'] != "login") {
               <tr>
                 <td>Google Maps
                   <div class="tooltip"><sup>(❔ help)</sup>
-                    <span class="tooltiptext"><a href="https://www.google.com/maps" target="_blank">maps.google.com</a> > Cari Alamat > Klik menu ≡ > Bagikan atau Sematkan Peta > Pilih Sematkan Peta > Salin Link</span>
+                    <span class="tooltiptext"><a href="https://www.google.com/maps" target="_blank">maps.google.com</a> => Cari Alamat > Klik menu ≡ > Bagikan atau Sematkan Peta > Pilih Sematkan Peta > Salin Link</span>
                   </div>
                 </td>
               </tr>
