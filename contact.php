@@ -1,3 +1,9 @@
+<?php
+include("config/conn.php");
+$sql = "SELECT * FROM tb_contact";
+$sql1 = mysqli_query($db, $sql);
+$data = mysqli_fetch_assoc($sql1);
+?>
 <!DOCTYPE html>
 <html>
 <!-- Head -->
@@ -41,13 +47,11 @@
 	<div class="container">
 	<h2 class="tittle">Contact</h2>
 	<div class="col-md-4 content-pro-head content-pro-head3 agile-6">
-			<h4>Information</h4>
-			<p>Many desktop publishing packages and web page editors now use Lorem Ipsum  Ipsum as their default model text now use Lorem Ipsum as their default model text</p>
 		<h4>Address</h4>
 		<ul class="contact-list agileits-6">
-				<li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>Jl. Candi Panggung Bar. No.3a, Mojolangu, <br>Kec. Lowokwaru, Kota Malang, Jawa Timur 65143</li>
-				<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:example@mail.com">mail@example.com</a></li>
-				<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>(0341) 488489</li>
+				<li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span><?php echo $data['lokasi']; ?></li>
+				<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:<?php echo $data['email']; ?>"><?php echo $data['email']; ?></a></li>
+				<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span><?php echo $data['telp']; ?></li>
 			</ul>
     </div>
   <div class="col-md-8 content-pro-head1 w3agile-6">
@@ -81,7 +85,7 @@
 	</div>
 </div>
 <div class="w3l-map">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.6134462468017!2d112.61464261428439!3d-7.935377994284005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788208dabed68f%3A0xc6aff25df0f92357!2sPT.%20Patraland!5e0!3m2!1sid!2sid!4v1577953890741!5m2!1sid!2sid" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+  <?php echo $data['maps']; ?>
 </div>
 <!--/ w3l-1 -->
 <!-- footer -->
