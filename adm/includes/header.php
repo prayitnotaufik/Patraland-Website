@@ -18,7 +18,7 @@
       </a>
 
       <ul class="cd-nav__sub-list">
-        <li class="cd-nav__sub-item"><a href="#0">Reset Password</a></li>
+        <li class="cd-nav__sub-item"><a href="reset-pass.php">Reset Password</a></li>
         <li class="cd-nav__sub-item"><a href="../config/logout.php">Logout</a></li>
       </ul>
     </li>

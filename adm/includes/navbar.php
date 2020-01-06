@@ -5,23 +5,23 @@
     </li>
 
     <li class="cd-side__item cd-side__item">
-      <a href="#0">Notifications</a>
+      <a href="#0">Home</a>
     </li>
 
     <li class="cd-side__item cd-side__item">
-      <a href="#0">Comments</a>
+      <a href="#0">About</a>
     </li>
 
     <li class="cd-side__item cd-side__item">
-      <a href="#0">Bookmarks</a>
+      <a href="#0">Gallery</a>
     </li>
 
     <li class="cd-side__item cd-side__item">
-      <a href="#0">Images</a>
+      <a href="#0">Project</a>
     </li>
 
     <li class="cd-side__item cd-side__item">
-      <a href="#0">Users</a>
+      <a href="contact.php">Contact</a>
     </li>
   </ul>
 </nav>

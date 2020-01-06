@@ -159,6 +159,7 @@
 <!-- friend-agent -->
 	<div class="friend-agent agileits-1">
 				<div class="container">
+          <h3 class="tittle">Berita Terbaru</h3>
 					<div class="friend-grids">
 						<div class="col-md-4 friend-grid">
 							<img src="images/i4.jpg" alt="" class="img-responsive" >
@@ -182,7 +183,7 @@
 <!-- friend-agent -->
 <div class="featured-section">
   <div class="container">
-    <h3 class="tittle">Featured services</h3>
+    <h3 class="tittle">Keunggulan</h3>
     <div class="featured-grids w3ls-2">
       <div class="col-md-3 agile-3">
         <div class="icon hi-icon-wrap hi-icon-effect-6">
