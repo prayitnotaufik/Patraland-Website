@@ -3,7 +3,8 @@
 <!-- Head -->
 
 <head>
-	<title>PT. Patraland</title>
+	<title>PT. Patraland Griya Madani</title>
+	<link rel="shortcut icon" type="image/png" href="images/icon2.png">
 	<!-- Meta-Tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -59,7 +60,7 @@
 			<div class="row">
 				<a href="patra-garden" class="a-project stretched-link">
 					<div class="col-md-4 card">
-						<img src="images/image1.jpg" alt="Avatar" >
+						<img src="images/image1.jpg" alt="Avatar">
 						<div class="container-card">
 							<h4><b>Patra Garden</b></h4>
 							<p>Kata kata patra garden</p>
@@ -68,7 +69,7 @@
 				</a>
 				<a href="patra-garden" class="a-project">
 					<div class="col-md-4 card">
-						<img src="images/image1.jpg" alt="Avatar" >
+						<img src="images/image1.jpg" alt="Avatar">
 						<div class="container-card">
 							<h4><b>Patra Garden</b></h4>
 							<p>Kata kata patra garden</p>
@@ -77,7 +78,7 @@
 				</a>
 				<a href="patra-garden" class="a-project">
 					<div class="col-md-4 card">
-						<img src="images/image1.jpg" alt="Avatar" >
+						<img src="images/image1.jpg" alt="Avatar">
 						<div class="container-card">
 							<h4><b>Patra Garden</b></h4>
 							<p>Kata kata patra garden</p>
@@ -85,8 +86,8 @@
 					</div>
 				</a>
 			</div>
-		<div class="clearfix"> </div>
-	</div>
+			<div class="clearfix"> </div>
+		</div>
 	</div>
 	</div>
 	<!--/ w3l-1 -->

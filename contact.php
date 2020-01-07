@@ -9,7 +9,8 @@ $data = mysqli_fetch_assoc($sql1);
 <!-- Head -->
 
 <head>
-	<title>PT. Patraland</title>
+	<title>PT. Patraland Griya Madani</title>
+	<link rel="shortcut icon" type="image/png" href="images/icon2.png">
 	<!-- Meta-Tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -96,6 +97,7 @@ $data = mysqli_fetch_assoc($sql1);
 	<!-- footer -->
 </body>
 <!-- //Body -->
+
 </html>
 
 <?php

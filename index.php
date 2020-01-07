@@ -2,8 +2,9 @@
 <html>
 <!-- Head -->
 <head>
-	<title>PT. Patraland</title>
-	<!-- Meta-Tags -->
+	<title>PT. Patraland Griya Madani</title>
+	<link rel="shortcut icon" type="image/png" href="images/icon2.png">
+	<!-- Meta-Tags --> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="keywords" content="Premier Realty a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
