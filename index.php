@@ -1,3 +1,8 @@
+<?php
+include("config/conn.php");
+$sql = "SELECT * FROM tb_slider";
+$hasil = mysqli_query($db,$sql);
+?>
 <!DOCTYPE html>
 <html>
 <!-- Head -->
@@ -54,36 +59,20 @@
 		<div class="slider">
 			<div class="callbacks_container">
 				<ul class="rslides" id="slider">
-					<li>
-						<div class="slider-img">
-							<img src="images/slide-1.jpg" class="img-responsive" alt="Manufactory">
-						</div>
-						<div class="slider-info w3ls-1">
-							<h3>Patraland Garden</h3>
-							<div class="underline"></div>
-							<p>Contoh 1</p>
-						</div>
-					</li>
-					<li>
-						<div class="slider-img">
-							<img src="images/slide-2.jpg" class="img-responsive" alt="Manufactory">
-						</div>
-						<div class="slider-info">
-							<h3>Patraland Mulia Kencana</h3>
-							<div class="underline"></div>
-							<p>Contoh 2</p>
-						</div>
-					</li>
-					<li>
-						<div class="slider-img">
-							<img src="images/slide-3.jpg" class="img-responsive" alt="Manufactory">
-						</div>
-						<div class="slider-info w3ls-1">
-							<h3>Patraland Griya Madani</h3>
-							<div class="underline"></div>
-							<p>Contoh 3</p>
-						</div>
-					</li>
+          <?php
+            while($data = mysqli_fetch_assoc($hasil)) {
+          ?>
+  					<li>
+  						<div class="slider-img">
+  							<img src="images/slider/<?php echo $data['image']; ?>" class="img-responsive">
+  						</div>
+  						<div class="slider-info w3ls-1">
+  							<h3><?php echo $data['title']; ?></h3>
+  							<div class="underline"></div>
+  							<p><?php echo $data['caption']; ?></p>
+  						</div>
+  					</li>
+          <?php } ?>
 				</ul>
 
 			</div>
