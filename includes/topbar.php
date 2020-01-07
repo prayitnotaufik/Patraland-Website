@@ -1,3 +1,4 @@
+<link rel="shortcut icon" type="image/png" href="images/logo.png" />
 <div class="top-bar w3-1">
 <div class="container">
   <div class="header-nav w3-agileits-1">
@@ -10,11 +11,10 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <h1><a class="navbar-brand" href="index.html">Patraland</a></h1>
+        <a class="navbar-brand" href="index.php"><img class="" src="images/lgo.png" alt="" srcset="" ></a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-
           <ul class="nav navbar-nav ">
             <li><a href="index.php">Home</a></li>
             <li><a href="about.php">About</a></li>
