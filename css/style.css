@@ -67,8 +67,9 @@ a:focus, a:hover {
     position: absolute;
     width: 100%;
     z-index: 99999;
-    padding: 10px 0 0px;
-    border-bottom:1px solid #6f6f6f;
+    padding: 0px 0 0px;
+    /* border-bottom:1px solid #6f6f6f; */
+    background: #f4f4f4;
 }
 /*-- Logo --*/
 .logo {
@@ -358,6 +359,9 @@ a:focus, a:hover {
 }
 a.navbar-brand img {
     display: inline-block;
+    margin: -7px;
+    padding: 0;
+    /* margin: -22px; */
 }
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     padding: 0;
@@ -375,22 +379,23 @@ a.navbar-brand span {
     min-height: inherit;
 }
 .navbar-header {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #fff;
   background-color: #2FD828;
 }
 .navbar-default .navbar-nav > li > a{
-  color: #fff;
+  color: black;
   font-size: 16px;
 }
 .navbar-nav > li > a {
-  padding-top: 25px;
+  padding-top: 0px;
   padding-bottom: 25px;
 }
 .navbar-brand {
     height: 0;
+    margin-bottom: 20px;
     padding: 0;
 	}
 .navbar{
@@ -2321,6 +2326,7 @@ p.copyright {
 }
 .top-bar {
     padding: 4px 0 0px;
+    background-color: #f4f4f4;
 }
 .wthree-3 {
     padding: 2em 0;
@@ -2397,4 +2403,9 @@ ul.contact-list li {
 .gal-left {
     padding: 0;
 }
+
+ul li a{
+    color: black;
+}
+
 }
