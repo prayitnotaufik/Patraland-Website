@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2020 at 03:13 AM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.4
+-- Generation Time: Jan 08, 2020 at 08:35 AM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -65,6 +65,30 @@ INSERT INTO `tb_login` (`id_login`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_message`
+--
+
+CREATE TABLE `tb_message` (
+  `id_message` int(55) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) NOT NULL,
+  `website` varchar(255) NOT NULL,
+  `message` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_message`
+--
+
+INSERT INTO `tb_message` (`id_message`, `name`, `email`, `website`, `message`) VALUES
+(1, 'Muhammad Taufik Prayitno', 'taufikprayitno16@gmail.com', 'facebook.com', 'kkmk'),
+(2, 'Muhammad Taufik Prayitno', 'test@gmail.com', 'facebook.com', 'mlmlml'),
+(3, 'Muhammad Taufik Prayitno', 'taufikprayitno16@gmail.com', 'sdf', 'sdfsdf'),
+(4, 'Muhammad Taufik Prayitno', 'taufikprayitno16@gmail.com', 'sdf', 'sdfsdf');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tb_slider`
 --
 
@@ -101,6 +125,12 @@ ALTER TABLE `tb_login`
   ADD PRIMARY KEY (`id_login`);
 
 --
+-- Indexes for table `tb_message`
+--
+ALTER TABLE `tb_message`
+  ADD PRIMARY KEY (`id_message`);
+
+--
 -- Indexes for table `tb_slider`
 --
 ALTER TABLE `tb_slider`
@@ -121,6 +151,12 @@ ALTER TABLE `tb_contact`
 --
 ALTER TABLE `tb_login`
   MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tb_message`
+--
+ALTER TABLE `tb_message`
+  MODIFY `id_message` int(55) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tb_slider`
