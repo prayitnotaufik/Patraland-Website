@@ -66,7 +66,7 @@ $data = mysqli_fetch_assoc($sql1);
 				</ul>
 			</div>
 			<div class="col-md-8 content-pro-head1 w3agile-6">
-				<form action="" method="post">
+				<form action="proc/add-message.php" method="post">
 					<div class=" grid-contact agileinfo-6">
 						<div class="your-top">
 							<input type="text" placeholder="Name" name="name" required="">
@@ -81,7 +81,7 @@ $data = mysqli_fetch_assoc($sql1);
 							<div class="clearfix"> </div>
 						</div>
 						<textarea placeholder="Message" name="message" required=""></textarea>
-						<input type="submit" name="submit" value="Send">
+						<input type="submit" name="submit" value="submit">
 					</div>
 				</form>
 			</div>
@@ -101,7 +101,4 @@ $data = mysqli_fetch_assoc($sql1);
 </html>
 
 <?php
-if (isset($_POST["submit"])) {
-	$name = $_POST["name"];
-}
 ?>
