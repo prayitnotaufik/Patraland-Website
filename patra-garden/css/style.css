@@ -7,7 +7,7 @@
 /*-- Reset-Code --*/
 html {
   height:100%;
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -68,8 +68,9 @@ a:focus, a:hover {
     position: absolute;
     width: 100%;
     z-index: 99999;
-    padding: 10px 0 0px;
-    border-bottom:1px solid #6f6f6f;
+    padding: 0px 0 0px;
+    /* border-bottom:1px solid #6f6f6f; */
+    background: #f4f4f4;
 }
 /*-- Logo --*/
 .logo {
@@ -359,6 +360,10 @@ a:focus, a:hover {
 }
 a.navbar-brand img {
     display: inline-block;
+    margin: -7px;
+    padding: 0;
+    width: 11%;
+    /* margin: -22px; */
 }
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     padding: 0;
@@ -376,22 +381,23 @@ a.navbar-brand span {
     min-height: inherit;
 }
 .navbar-header {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #fff;
   background-color: #2FD828;
 }
 .navbar-default .navbar-nav > li > a{
-  color: #fff;
+  color: black;
   font-size: 16px;
 }
 .navbar-nav > li > a {
-  padding-top: 25px;
+  padding-top: 0px;
   padding-bottom: 25px;
 }
 .navbar-brand {
     height: 0;
+    margin-bottom: 20px;
     padding: 0;
 	}
 .navbar{
@@ -1896,9 +1902,9 @@ h2.tittle, h3.tittle {
 .navbar-default .navbar-brand {
     font-size: 30px;
 }
-.nav>li>a {
+/* .nav>li>a {
     padding: 10px 8px;
-}
+} */
 .navbar-nav>li>a {
     line-height: 47px;
 }
@@ -2322,6 +2328,7 @@ p.copyright {
 }
 .top-bar {
     padding: 4px 0 0px;
+    background-color: #f4f4f4;
 }
 .wthree-3 {
     padding: 2em 0;
@@ -2398,4 +2405,145 @@ ul.contact-list li {
 .gal-left {
     padding: 0;
 }
+
+ul li a{
+    color: black;
 }
+
+}
+
+/* ================== CUSTOM MEDIA SCREEN ======================= */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    a.navbar-brand img{
+        width: 18%;
+        margin-top: -75px;
+        margin-left: 20px;
+        /* padding-top: -20px; */
+    }
+
+    .navbar-brand{
+        margin-bottom: 20px;
+    }
+    
+    .navbar-header{
+        margin-top: 30px;
+    }
+
+    .navbar-default .navbar-toggle{
+        border-color: black;
+    }
+
+    .navbar-default .navbar-toggle:hover{
+        border-color: black;
+    }
+
+    .navbar-default .navbar-toggle .icon-bar{
+        background: black;
+    }
+
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+        background: #f4f4f4;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    a.navbar-brand img{
+        width: 18%;
+        margin-top: -75px;
+        margin-left: 20px;
+        padding-top: -20px;
+    }
+
+    .navbar-brand{
+        margin-bottom: 20px;
+    }
+    
+    .navbar-header{
+        margin-top: 30px;
+    }
+
+    .navbar-default .navbar-toggle{
+        border-color: black;
+    }
+
+    .navbar-default .navbar-toggle:hover{
+        border-color: black;
+    }
+
+    .navbar-default .navbar-toggle .icon-bar{
+        background: black;
+    }
+
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+        background: #f4f4f4;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    a.navbar-brand img{
+        width: 18%;
+        margin-top: 0;
+        margin-left: 20px;
+        padding-top: -20px;
+    }
+
+    .navbar-brand{
+        margin-bottom: 20px;
+    }
+    
+    .navbar-header{
+        margin-top: 15px;
+    }
+
+    .navbar-default .navbar-toggle{
+        border-color: black;
+    }
+
+    .navbar-default .navbar-toggle:hover{
+        border-color: black;
+    }
+
+    .navbar-default .navbar-toggle .icon-bar{
+        background: black;
+    }
+
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+        background: #f4f4f4;
+    }
+
+    .nav li a{
+        padding: none;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .nav > li > a{
+        padding: none;
+    }
+
+    .nav>li>a{
+        padding:none;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    a.navbar-brand img {
+        display: inline-block;
+        margin: -7px;
+        padding: 0;
+        width: 11%;
+        /* margin: -22px; */
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* ================== CUSTOM MEDIA SCREEN ======================= */
