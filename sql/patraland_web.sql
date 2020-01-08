@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 07, 2020 at 02:31 AM
+-- Generation Time: Jan 08, 2020 at 03:13 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -62,6 +62,28 @@ CREATE TABLE `tb_login` (
 INSERT INTO `tb_login` (`id_login`, `username`, `password`) VALUES
 (1, 'admin', 'admin');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_slider`
+--
+
+CREATE TABLE `tb_slider` (
+  `id_slider` int(11) NOT NULL,
+  `image` longtext NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `caption` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_slider`
+--
+
+INSERT INTO `tb_slider` (`id_slider`, `image`, `title`, `caption`) VALUES
+(1, 'slide-1.jpg', 'Griya Madani', 'Harmoni - Asri - Nyaman'),
+(2, 'slide-2.jpg', 'The Island Cluster', 'Beautiful & Stylish Home'),
+(3, 'slide-3.jpg', 'Garden Residence', 'Siap Bangun');
+
 --
 -- Indexes for dumped tables
 --
@@ -79,6 +101,12 @@ ALTER TABLE `tb_login`
   ADD PRIMARY KEY (`id_login`);
 
 --
+-- Indexes for table `tb_slider`
+--
+ALTER TABLE `tb_slider`
+  ADD PRIMARY KEY (`id_slider`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -93,6 +121,12 @@ ALTER TABLE `tb_contact`
 --
 ALTER TABLE `tb_login`
   MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tb_slider`
+--
+ALTER TABLE `tb_slider`
+  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
