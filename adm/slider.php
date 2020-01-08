@@ -14,45 +14,45 @@ if(@$_SESSION['status'] != "login") {
   <link rel="stylesheet" href="assets/css/style.css">
   <title>PT. Patraland - Administrator</title>
   <style>
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 10; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
 
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 27%;
-  text-align: center;
-}
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 27%;
+    text-align: center;
+  }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 </style>
 </head>
 <body>
@@ -62,7 +62,44 @@ if(@$_SESSION['status'] != "login") {
     <div class="cd-content-wrapper">
 
 
-        <h2>Slider</h2><br>
+      <h2>Slider</h2><br>
+      <?php
+      if(@$_GET['act']=='edit') {
+        $id = $_GET['id'];
+        $sql = "SELECT * FROM tb_slider WHERE id_slider = '$id'";
+        $hasil = mysqli_query($db,$sql);
+        $data = mysqli_fetch_assoc($hasil)
+        ?>
+        <form action="proc/proc-edit-slider.php" method="post" enctype="multipart/form-data">
+          <table cellpadding="5">
+            <tr>
+              <td>Image</td>
+              <td>:</td>
+              <td>
+                <img src="../images/slider/<?php echo $data['image']; ?>" width="200"><br>
+                <input type="file" name="file">
+                <input type="hidden" name="id_slider" value="<?php echo $_GET['id']; ?>">
+              </td>
+            </tr>
+            <tr>
+              <td>Title</td>
+              <td>:</td>
+              <td><input type="text" name="txttitle" value="<?php echo $data['title']; ?>"></td>
+            </tr>
+            <tr>
+              <td>Caption</td>
+              <td>:</td>
+              <td><textarea name="txtcaption" cols="30"><?php echo $data['caption']; ?></textarea></td>
+            </tr>
+            <tr>
+              <td colspan="2" align="right"><br><input class="btn btn--primary btn--sm" type="submit" name="edit" value="Simpan"></td>
+            </tr>
+          </table>
+        </form>
+        <div style="width:100%; border-bottom:1px solid #aaa; margin:20px 0px;"></div>
+        <?php
+      } else {
+        ?>
         <a class="btn btn--primary btn--sm" id="myBtn">Tambah</a><br><br>
 
         <!-- The Modal -->
@@ -72,66 +109,75 @@ if(@$_SESSION['status'] != "login") {
           <div class="modal-content">
             <span class="close">&times;</span>
             <center>
-            <form action="proc/proc-slider.php" method="post" enctype="multipart/form-data">
-              <table cellpadding="5">
-                <tr>
-                  <td>Image :</td>
-                </tr>
-                <tr>
-                  <td><input type="file" name="file"></td>
-                </tr>
-                <tr>
-                  <td>Title :</td>
-                </tr>
-                <tr>
-                  <td><input type="text" name="txttitle"><hr></td>
-                </tr>
-                <tr>
-                  <td>Caption :</td>
-                </tr>
-                <tr>
-                  <td><textarea name="txtcaption" cols="28"></textarea></td>
-                </tr>
-                <tr>
-                  <td><input type="submit" class="btn btn--primary btn--sm" style="width:100%;" name="submit" value="Simpan"></td>
-                </tr>
-              </table>
-            </form>
+              <form action="proc/proc-add-slider.php" method="post" enctype="multipart/form-data">
+                <table cellpadding="5">
+                  <tr>
+                    <td>Image :</td>
+                  </tr>
+                  <tr>
+                    <td><input type="file" name="file"></td>
+                  </tr>
+                  <tr>
+                    <td>Title :</td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" name="txttitle"><hr></td>
+                  </tr>
+                  <tr>
+                    <td>Caption :</td>
+                  </tr>
+                  <tr>
+                    <td><textarea name="txtcaption" cols="28"></textarea></td>
+                  </tr>
+                  <tr>
+                    <td><input type="submit" class="btn btn--primary btn--sm" style="width:100%;" name="submit" value="Simpan"></td>
+                  </tr>
+                </table>
+              </form>
             </center>
           </div>
 
         </div>
-
-        <p>
-            <table cellpadding="5" width="100%" border=1>
-              <tr>
-                <th>No.</th>
-                <th>Image</th>
-                <th>Title</th>
-                <th>Caption</th>
-              </tr>
-              <?php
-                $no = 1;
-                $sql = "SELECT * FROM tb_slider";
-                $hasil = mysqli_query($db,$sql);
-                while($data = mysqli_fetch_assoc($hasil)) {
-              ?>
-                <tr>
-                  <td align="center"><?php echo $no++; ?></td>
-                  <td align="center"><img src="../images/slider/<?php echo $data['image']; ?>" width="120"></td>
-                  <td><?php echo $data['title']; ?></td>
-                  <td><?php echo $data['caption']; ?></td>
-                </tr>
-              <?php } ?>
-            </table>
-          </form>
-        </p>
-
-    </div> <!-- .content-wrapper -->
-  </main> <!-- .cd-main-content -->
-  <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
-  <script src="assets/js/menu-aim.js"></script>
-  <script src="assets/js/main.js"></script>
+      <?php } ?>
+      <p>
+        <table cellpadding="5" width="100%" border=1>
+          <tr>
+            <th>No.</th>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Caption</th>
+          </tr>
+          <?php
+          $no = 1;
+          $sql = "SELECT * FROM tb_slider";
+          $hasil = mysqli_query($db,$sql);
+          while($data = mysqli_fetch_assoc($hasil)) {
+            ?>
+            <tr>
+              <td align="center"><?php echo $no++; ?></td>
+              <td align="center"><img src="../images/slider/<?php echo $data['image']; ?>" width="120"></td>
+              <td><?php echo $data['title']; ?></td>
+              <td><?php echo $data['caption']; ?></td>
+              <td align="center"><br><a class="btn btn--primary btn--sm" style="background:#28a745;" href="?id=<?php echo $data['id_slider']; ?>&act=edit">Edit</a><br><br></td>
+              <td align="center"><br><a class="btn btn--accent btn--sm" href="?id=<?php echo $data['id_slider']; ?>&act=del">Hapus</a><br><br></td>
+            </tr>
+          <?php } ?>
+        </table>
+      </form>
+    </p>
+    <?php
+    if(@$_GET['act']=='del') {
+      $id = $_GET['id'];
+      $sqldel = "DELETE FROM tb_slider WHERE id_slider = '$id'";
+      $result = mysqli_query($db,$sqldel);
+      echo "<script type='text/javascript'>alert('Hapus data berhasil!');window.location.href='slider.php';</script>";
+    }
+    ?>
+  </div> <!-- .content-wrapper -->
+</main> <!-- .cd-main-content -->
+<script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+<script src="assets/js/menu-aim.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
 

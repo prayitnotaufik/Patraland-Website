@@ -13,8 +13,11 @@
       </ul>
     </li>
 
-    <li class="cd-side__item cd-side__item--users">
+    <li class="cd-side__item cd-side__item--has-children cd-side__item--users js-cd-item--has-children">
       <a href="#0">About</a>
+      <ul class="cd-side__sub-list">
+        <li class="cd-side__sub-item"><a href="#0">Meet our Team</a></li>
+      </ul>
     </li>
 
     <li class="cd-side__item cd-side__item--images">
