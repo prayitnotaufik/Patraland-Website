@@ -20,6 +20,7 @@
             <li><a href="about.php">About</a></li>
             <li><a href="gallery.php">Gallery</a></li>
             <li><a href="project.php">Project</a></li>
+            <li><a href="news.php">News</a></li>
             <!-- <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -35,7 +36,7 @@
             <li><a href="contact.php">Contact</a></li>
             <li><a href="adm">Login</a></li>
           </ul>
-        
+
       </div><!-- /navbar-collapse -->
       <!-- search-scripts -->
       <script src="js/classie.js"></script>

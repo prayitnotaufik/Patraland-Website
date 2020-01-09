@@ -146,6 +146,7 @@ if(@$_SESSION['status'] != "login") {
             <th>Image</th>
             <th>Title</th>
             <th>Caption</th>
+            <th colspan="2"></th>
           </tr>
           <?php
           $no = 1;
