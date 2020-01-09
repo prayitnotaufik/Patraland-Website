@@ -18,7 +18,7 @@
     </li>
 
     <li class="cd-side__item cd-side__item--images">
-      <a href="#0">Gallery</a>
+      <a href="gallery.php">Gallery</a>
     </li>
 
     <li class="cd-side__item cd-side__item--has-children cd-side__item--bookmarks js-cd-item--has-children">
