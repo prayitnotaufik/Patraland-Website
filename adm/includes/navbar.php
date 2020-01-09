@@ -28,8 +28,12 @@
       </ul>
     </li>
 
-    <li class="cd-side__item cd-side__item--notifications">
-      <a href="contact.php">News</a>
+    <li class="cd-side__item cd-side__item--has-children cd-side__item--notifications js-cd-item--has-children">
+      <a href="#0">News</a>
+      <ul class="cd-side__sub-list">
+        <li class="cd-side__sub-item"><a href="news.php">Semua Berita</a></li>
+        <li class="cd-side__sub-item"><a href="add-news.php">Tambah Baru</a></li>
+      </ul>
     </li>
 
     <li class="cd-side__item cd-side__item--comments">

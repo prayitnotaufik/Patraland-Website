@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2020 at 08:35 AM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.9
+-- Generation Time: Jan 09, 2020 at 07:27 AM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -89,6 +89,29 @@ INSERT INTO `tb_message` (`id_message`, `name`, `email`, `website`, `message`) V
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_news`
+--
+
+CREATE TABLE `tb_news` (
+  `id_news` int(11) NOT NULL,
+  `image` mediumtext NOT NULL,
+  `title` mediumtext NOT NULL,
+  `author` varchar(50) NOT NULL,
+  `date` varchar(50) NOT NULL,
+  `status` varchar(50) NOT NULL,
+  `description` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_news`
+--
+
+INSERT INTO `tb_news` (`id_news`, `image`, `title`, `author`, `date`, `status`, `description`) VALUES
+(1, 'ei33.jpg', 'Rumah Modifikasi Ei-33', 'Patraland', '09 / 01 / 2020', 'Published', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tb_slider`
 --
 
@@ -104,9 +127,9 @@ CREATE TABLE `tb_slider` (
 --
 
 INSERT INTO `tb_slider` (`id_slider`, `image`, `title`, `caption`) VALUES
-(1, 'slide-1.jpg', 'Griya Madani', 'Harmoni - Asri - Nyaman'),
-(2, 'slide-2.jpg', 'The Island Cluster', 'Beautiful & Stylish Home'),
-(3, 'slide-3.jpg', 'Garden Residence', 'Siap Bangun');
+(1, '09012020072603DSC00163.JPG', 'Griya Madani', 'Harmoni - Asri - Nyaman'),
+(2, '09012020024146slide-2.jpg', 'The Island Cluster', 'Beautiful & Stylish Home'),
+(3, '09012020024153slide-3.jpg', 'Garden Residence', 'Siap Bangun');
 
 --
 -- Indexes for dumped tables
@@ -129,6 +152,12 @@ ALTER TABLE `tb_login`
 --
 ALTER TABLE `tb_message`
   ADD PRIMARY KEY (`id_message`);
+
+--
+-- Indexes for table `tb_news`
+--
+ALTER TABLE `tb_news`
+  ADD PRIMARY KEY (`id_news`);
 
 --
 -- Indexes for table `tb_slider`
@@ -157,6 +186,12 @@ ALTER TABLE `tb_login`
 --
 ALTER TABLE `tb_message`
   MODIFY `id_message` int(55) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tb_news`
+--
+ALTER TABLE `tb_news`
+  MODIFY `id_news` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_slider`
