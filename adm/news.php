@@ -26,7 +26,7 @@ if(@$_SESSION['status'] != "login") {
     <div class="cd-content-wrapper">
 
 
-      <h2>Berita</h2></h2><br>
+      <h2>News</h2></h2><br>
       <p>
         <table cellpadding="5" width="100%" border=1>
           <tr style="background:#ddd; font-weight:bolder;">

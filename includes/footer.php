@@ -9,5 +9,5 @@
 			<li><a class="drib" href="#"></a></li>
 		</ul>
 	</div>
-	<p class="copyright">© 2020 PT. Patraland. All Rights Reserved | Design by <a href="#"> Patraland</a></p>
+	<p class="copyright">© 2020 PT Patraland Griya Madani | Design by <a href="#">PT Patraland Griya Madani</a></p>
 </div>

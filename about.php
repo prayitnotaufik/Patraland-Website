@@ -53,13 +53,14 @@
 		<div class="container">
 			<h2 class="tittle">About</h2>
 			<div class="agileinfo_about_bottom_grids">
-				<div class="col-md-6 agileinfo_about_bottom_grid">
+				<div class="col-md-12 agileinfo_about_bottom_grid">
+          <img src="images/slide-5.jpg" alt=" " class="img-responsive" style="width:600px; margin-left:20px; float:right">
 					<h5>Patraland Place (Hunian Berkelas di Lokasi Strategis)</h5>
-					<p>PT. Patraland Griya Madani Development menawarkan sebuah hunian pilihan yang sangat sesuai untuk Anda yang ingin setiap saat menikmati keindahan dan kesejukan kota Malang. Perumahan Patraland adalah proyek perumahan dengan pemilihan lokasi yang sangat strategis, dan telah melalui pertimbangan yang matang demi kepuasan penghuninya.</p>
+					<p>PT. Patraland Griya Madani Development menawarkan sebuah hunian pilihan yang sangat sesuai untuk Anda yang ingin setiap saat menikmati keindahan dan kesejukan kota Malang. Perumahan Patraland adalah proyek perumahan dengan pemilihan lokasi yang sangat strategis, dan telah melalui pertimbangan yang matang demi kepuasan penghuninya.PT. Patraland Griya Madani Development menawarkan sebuah hunian pilihan yang sangat sesuai untuk Anda yang ingin setiap saat menikmati keindahan dan kesejukan kota Malang. Perumahan Patraland adalah proyek perumahan dengan pemilihan lokasi yang sangat strategis, dan telah melalui pertimbangan yang matang demi kepuasan penghuninya.PT. Patraland Griya Madani Development menawarkan sebuah hunian pilihan yang sangat sesuai untuk Anda yang ingin setiap saat menikmati keindahan dan kesejukan kota Malang. Perumahan Patraland adalah proyek perumahan dengan pemilihan lokasi yang sangat strategis, dan telah melalui pertimbangan yang matang demi kepuasan penghuninya.</p>
 				</div>
-				<div class="col-md-6 agileinfo_about_bottom_grid">
+				<!-- <div class="col-md-6 agileinfo_about_bottom_grid">
 					<img src="images/slide-5.jpg" alt=" " class="img-responsive">
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
