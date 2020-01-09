@@ -1,11 +1,8 @@
 <nav class="cd-side-nav js-cd-side-nav">
   <ul class="cd-side__list js-cd-side__list">
     <li class="cd-side__item cd-side__item--selected"></li>
-    <li class="cd-side__item cd-side__item--overview">
-      <a href="#0">Beranda</a>
-    </li>
 
-    <li class="cd-side__item cd-side__item--has-children cd-side__item--notifications js-cd-item--has-children">
+    <li class="cd-side__item cd-side__item--has-children cd-side__item--overview js-cd-item--has-children">
       <a href="#0">Home</a>
       <ul class="cd-side__sub-list">
         <li class="cd-side__sub-item"><a href="slider.php">Slider</a></li>
@@ -29,6 +26,10 @@
       <ul class="cd-side__sub-list">
         <li class="cd-side__sub-item"><a href="#0">Patra Garden</a></li>
       </ul>
+    </li>
+
+    <li class="cd-side__item cd-side__item--notifications">
+      <a href="contact.php">News</a>
     </li>
 
     <li class="cd-side__item cd-side__item--comments">
