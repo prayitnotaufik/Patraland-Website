@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 09, 2020 at 07:27 AM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.4
+-- Generation Time: Jan 09, 2020 at 09:24 AM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -42,6 +42,27 @@ CREATE TABLE `tb_contact` (
 
 INSERT INTO `tb_contact` (`id_contact`, `lokasi`, `email`, `telp`, `maps`) VALUES
 (1, 'Jl. Candi Panggung Bar. No.3a, Mojolangu,\r\nKec. Lowokwaru, Kota Malang, Jawa Timur 65143', 'mail@example.com', '(0341) 488489', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.6134462468017!2d112.61464261428439!3d-7.935377994284005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788208dabed68f%3A0xc6aff25df0f92357!2sPT.%20Patraland!5e0!3m2!1sid!2sid!4v1578285560952!5m2!1sid!2sid\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\"></iframe>');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_gallery`
+--
+
+CREATE TABLE `tb_gallery` (
+  `id_gallery` int(11) NOT NULL,
+  `image` longtext NOT NULL,
+  `category` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `caption` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_gallery`
+--
+
+INSERT INTO `tb_gallery` (`id_gallery`, `image`, `category`, `title`, `caption`) VALUES
+(1, '09012020091001i6.jpg', '1', 'Kencana', 'Kencana Residence');
 
 -- --------------------------------------------------------
 
@@ -127,9 +148,7 @@ CREATE TABLE `tb_slider` (
 --
 
 INSERT INTO `tb_slider` (`id_slider`, `image`, `title`, `caption`) VALUES
-(1, '09012020072603DSC00163.JPG', 'Griya Madani', 'Harmoni - Asri - Nyaman'),
-(2, '09012020024146slide-2.jpg', 'The Island Cluster', 'Beautiful & Stylish Home'),
-(3, '09012020024153slide-3.jpg', 'Garden Residence', 'Siap Bangun');
+(4, '09012020075506placeholderslider1280x600.jpg', 'Kencana Residence', 'Nilai Keharmonisan Hunian dan Alam');
 
 --
 -- Indexes for dumped tables
@@ -140,6 +159,12 @@ INSERT INTO `tb_slider` (`id_slider`, `image`, `title`, `caption`) VALUES
 --
 ALTER TABLE `tb_contact`
   ADD PRIMARY KEY (`id_contact`);
+
+--
+-- Indexes for table `tb_gallery`
+--
+ALTER TABLE `tb_gallery`
+  ADD PRIMARY KEY (`id_gallery`);
 
 --
 -- Indexes for table `tb_login`
@@ -176,6 +201,12 @@ ALTER TABLE `tb_contact`
   MODIFY `id_contact` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `tb_gallery`
+--
+ALTER TABLE `tb_gallery`
+  MODIFY `id_gallery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `tb_login`
 --
 ALTER TABLE `tb_login`
@@ -197,7 +228,7 @@ ALTER TABLE `tb_news`
 -- AUTO_INCREMENT for table `tb_slider`
 --
 ALTER TABLE `tb_slider`
-  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
