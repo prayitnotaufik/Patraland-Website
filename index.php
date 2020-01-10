@@ -2,6 +2,8 @@
 include("config/conn.php");
 $sql = "SELECT * FROM tb_slider";
 $hasil = mysqli_query($db,$sql);
+$sql1 = "SELECT * FROM tb_news WHERE status = 'Published' ORDER BY id_news DESC";
+$hasil1 = mysqli_query($db,$sql1);
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,7 +11,7 @@ $hasil = mysqli_query($db,$sql);
 <head>
 	<title>PT. Patraland Griya Madani</title>
 	<link rel="shortcut icon" type="image/png" href="images/icon2.png">
-	<!-- Meta-Tags --> 
+	<!-- Meta-Tags -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="keywords" content="Premier Realty a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
@@ -151,12 +153,14 @@ $hasil = mysqli_query($db,$sql);
 				<div class="container">
           <h3 class="tittle">Berita Terbaru</h3>
 					<div class="friend-grids">
+            <?php while($data1 = mysqli_fetch_assoc($hasil1)) { ?>
 						<div class="col-md-4 friend-grid">
-							<img src="images/i4.jpg" alt="" class="img-responsive" >
-							<h4>Dolor Sit Amet</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel.</p>
+							<img src="images/news/<?php echo $data1['image']; ?>" alt="" class="img-responsive" >
+							<h4><?php echo $data1['title']; ?></h4>
+							<p><?php echo substr($data1['description'], 0, 130); ?> ...</p>
 						</div>
-						<div class="col-md-4 friend-grid">
+          <?php } ?>
+						<!-- <div class="col-md-4 friend-grid">
 							<img src="images/i5.jpg" alt="" class="img-responsive" >
 							<h4>Adipiscing Elit</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel.</p>
@@ -165,7 +169,7 @@ $hasil = mysqli_query($db,$sql);
 							<img src="images/i6.jpg" alt="" class="img-responsive" >
 							<h4>Nulla Convallis</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel.</p>
-						</div>
+						</div> -->
 						<div class="clearfix"></div>
 					</div>
 				</div>

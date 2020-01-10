@@ -68,7 +68,7 @@ $result = mysqli_query($db,$sql);
         <div class="agileinfo_about_bottom_grids">
           <div class="col-md-7 agileinfo_about_bottom_grid">
             <h5><b><a href="" style="color:black;"><?php echo $data['title']; ?></a></b></h5>
-            <div style="position:inherit"><small><i>(Posted by <u><?php echo $data['author']; ?></u> - <?php echo $data['date']; ?>)</i></small></div>
+            <div style="position:inherit"><small><i>(Posted by <u style="text-transform:capitalize;"><?php echo $data['author']; ?></u> - <?php echo $data['date']; ?>)</i></small></div>
             <p><?php echo substr($data['description'], 0, 400); ?> ... - <a href=""><u>Baca Selengkapnya</u></a></p>
 
           </div>

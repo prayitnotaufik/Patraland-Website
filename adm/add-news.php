@@ -41,7 +41,7 @@ if(@$_SESSION['status'] != "login") {
 
       <h2>Add News</h2><br>
       <p>
-        <form action="" method="post">
+        <form action="proc/proc-add-news.php" method="post" enctype="multipart/form-data">
           <table cellpadding="5">
             <tr>
               <td>Image</td>
@@ -53,14 +53,18 @@ if(@$_SESSION['status'] != "login") {
               <td>Title</td>
             </tr>
             <tr>
-              <td><input type="text" name="txttitle" required></td>
+              <td>
+                <input type="text" name="txttitle" required>
+                <input type="text" name="txtauthor" value="<?php echo $_SESSION['username']; ?>">
+                <input type="text" name="txtdate" value="<?php echo date("d / m / Y"); ?>">
+              </td>
             </tr>
             <tr>
               <td>Description</td>
             </tr>
             <tr>
               <td>
-                <textarea id="summernote" name=""></textarea>
+                <textarea id="summernote" name="txtdescription"></textarea>
                 <script>
                 $('#summernote').summernote({
                   tabsize: 2,
@@ -84,8 +88,8 @@ if(@$_SESSION['status'] != "login") {
               <td></td>
             </tr>
             <tr>
-              <td>Status : <input type="radio" name="status" value="Draft"> Draft&nbsp;
-              <input type="radio" name="status" value="Published"> Publish</td>
+              <td>Status : <input type="radio" name="status" value="Draft" required> Draft&nbsp;
+              <input type="radio" name="status" value="Published" required> Publish</td>
             </tr>
             <tr>
               <td><br><input class="btn btn--primary btn--sm" type="submit" name="submit" value="Simpan"></td>
