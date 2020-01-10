@@ -1,7 +1,9 @@
 <?php
 include("config/conn.php");
-$sql = "SELECT * FROM tb_news WHERE status = 'Published'";
+$idnews = $_GET['id'];
+$sql = "SELECT * FROM tb_news WHERE id_news = '$idnews'";
 $result = mysqli_query($db,$sql);
+$data = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <html>
@@ -62,23 +64,18 @@ $result = mysqli_query($db,$sql);
   <!-- //Header -->
   <div class="about-bottom wthree-3">
     <div class="container">
-      <h2 class="tittle">News</h2>
-      <!-- While -->
-      <?php while($data = mysqli_fetch_assoc($result)) { ?>
         <div class="agileinfo_about_bottom_grids">
-          <div class="col-md-7 agileinfo_about_bottom_grid">
-            <h5><b><a href="news-detail.php?id=<?php echo $data['id_news']; ?>" style="color:black;"><?php echo $data['title']; ?></a></b></h5>
+          <div class="col-md-12 agileinfo_about_bottom_grid">
+            <img src="images/news/<?php echo $data['image']; ?>" alt=" " class="img-responsive" style="width:50%; margin-bottom:20px; border:10px solid #ddd;">
+            <h5><b><a href="" style="color:black;"><?php echo $data['title']; ?></a></b></h5>
             <div style="position:inherit"><small><i>(Posted by <u style="text-transform:capitalize;"><?php echo $data['author']; ?></u> - <?php echo $data['date']; ?>)</i></small></div>
-            <p><?php echo substr($data['description'], 0, 400); ?> ... - <a style="color:#EFA52C;" href="news-detail.php?id=<?php echo $data['id_news']; ?>"><u>Baca Selengkapnya</u></a></p>
-
-          </div>
-          <div class="col-md-5 agileinfo_about_bottom_grid">
-            <a href="news-detail.php?id=<?php echo $data['id_news']; ?>"><img src="images/news/<?php echo $data['image']; ?>" alt=" " class="img-responsive" style="width:80%; border:10px solid #ddd;"></a>
+            <p><?php echo $data['description']; ?></p>
           </div>
         </div>
         <div class="bts">&nbsp;</div>
-      <?php } ?>
-      <!-- End While -->
+        <div style="position:absolute; margin-left:15px;">
+          <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fpatraland.blogspot.com%2F&layout=button_count&size=small&width=101&height=20&appId" width="101" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        </div>
     </div>
   </div>
 

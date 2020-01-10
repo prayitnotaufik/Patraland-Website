@@ -2,7 +2,7 @@
 include("config/conn.php");
 $sql = "SELECT * FROM tb_slider";
 $hasil = mysqli_query($db,$sql);
-$sql1 = "SELECT * FROM tb_news WHERE status = 'Published' ORDER BY id_news DESC";
+$sql1 = "SELECT * FROM tb_news WHERE status = 'Published' ORDER BY id_news DESC LIMIT 3";
 $hasil1 = mysqli_query($db,$sql1);
 ?>
 <!DOCTYPE html>
@@ -155,8 +155,8 @@ $hasil1 = mysqli_query($db,$sql1);
 					<div class="friend-grids">
             <?php while($data1 = mysqli_fetch_assoc($hasil1)) { ?>
 						<div class="col-md-4 friend-grid">
-							<img src="images/news/<?php echo $data1['image']; ?>" alt="" class="img-responsive" >
-							<h4><?php echo $data1['title']; ?></h4>
+							<a href="news-detail.php?id=<?php echo $data1['id_news']; ?>"><img src="images/news/<?php echo $data1['image']; ?>" alt="" class="img-responsive" ></a>
+							<h4><a style="color:#EFA52C;" href="news-detail.php?id=<?php echo $data1['id_news']; ?>"><?php echo $data1['title']; ?></a></h4>
 							<p><?php echo substr($data1['description'], 0, 130); ?> ...</p>
 						</div>
           <?php } ?>
