@@ -62,7 +62,7 @@ $result = mysqli_query($db,$sql);
   <!-- //Header -->
   <div class="about-bottom wthree-3">
     <div class="container">
-      <h2 class="tittle">Berita</h2>
+      <h2 class="tittle">News</h2>
       <!-- While -->
       <?php while($data = mysqli_fetch_assoc($result)) { ?>
         <div class="agileinfo_about_bottom_grids">

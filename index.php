@@ -151,7 +151,7 @@ $hasil1 = mysqli_query($db,$sql1);
 <!-- friend-agent -->
 	<div class="friend-agent agileits-1">
 				<div class="container">
-          <h3 class="tittle">Berita Terbaru</h3>
+          <h3 class="tittle">Latest News</h3>
 					<div class="friend-grids">
             <?php while($data1 = mysqli_fetch_assoc($hasil1)) { ?>
 						<div class="col-md-4 friend-grid">
