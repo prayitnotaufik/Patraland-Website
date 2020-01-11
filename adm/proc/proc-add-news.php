@@ -35,8 +35,9 @@ if (isset($_POST["submit"])) {
         }
 
     } else {
-        $error = urldecode("Upload Gagal, Tidak Ada File yang Terupload");
-        header("Location: ../add-news.php?error=$error");
+      $querydetail = "INSERT INTO tb_news (title, author, date, status, description) VALUES ('$txttitle','$txtauthor','$txtdate','$status','$txtdescription')";
+      mysqli_query($db, $querydetail);
+        header("Location: ../news.php");
         die();
     }
 }

@@ -47,7 +47,7 @@ if(@$_SESSION['status'] != "login") {
               <td><?php echo $data['author']; ?></td>
               <td><?php echo $data['date']; ?></td>
               <td><?php echo $data['status']; ?></td>
-              <td align="center"><br><a class="btn btn--primary btn--sm" style="background:#28a745;" href="?id=<?php echo $data['id_news']; ?>&act=edit">Edit</a><br><br></td>
+              <td align="center"><br><a class="btn btn--primary btn--sm" style="background:#28a745;" href="edit-news.php?id=<?php echo $data['id_news']; ?>&act=edit">Edit</a><br><br></td>
               <td align="center"><br><a class="btn btn--accent btn--sm" href="?id=<?php echo $data['id_news']; ?>&act=del">Hapus</a><br><br></td>
             </tr>
           <?php } ?>

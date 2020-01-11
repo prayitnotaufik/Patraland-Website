@@ -44,6 +44,40 @@ $data = mysqli_fetch_assoc($result);
     margin:20px 0px;
     border-bottom:1px solid #ddd;
   }
+  h5{
+    margin: 0;
+
+  }
+  h3{
+    color: #EFA52C;
+    margin: 10px 0px 15px;
+    padding-bottom:10px;
+    padding-left: 10px;
+    border-left: 5px solid #EFA52C;
+  }
+  .sidebar.widget {
+    background: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+  }
+  .sidebar.widget ul {
+    margin: 0px;
+    padding: 0;
+    overflow: hidden;
+  }
+  .sidebar.widget ul li {
+    overflow: hidden;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 20px
+  }
+  a {
+    color:#000;
+  }
+  a:hover {
+    color:#EFA52C;
+  }
   </style>
 </head>
 <!-- //Head -->
@@ -64,18 +98,47 @@ $data = mysqli_fetch_assoc($result);
   <!-- //Header -->
   <div class="about-bottom wthree-3">
     <div class="container">
-        <div class="agileinfo_about_bottom_grids">
-          <div class="col-md-12 agileinfo_about_bottom_grid">
-            <img src="images/news/<?php echo $data['image']; ?>" alt=" " class="img-responsive" style="width:50%; margin-bottom:20px; border:10px solid #ddd;">
-            <h5><b><a href="" style="color:black;"><?php echo $data['title']; ?></a></b></h5>
-            <div style="position:inherit"><small><i>(Posted by <u style="text-transform:capitalize;"><?php echo $data['author']; ?></u> - <?php echo $data['date']; ?>)</i></small></div>
-            <p><?php echo $data['description']; ?></p>
+      <div class="agileinfo_about_bottom_grids">
+        <div class="col-md-8 agileinfo_about_bottom_grid">
+          <img src="images/news/<?php echo $data['image']; ?>" alt=" " class="img-responsive" style="width:50%; margin-bottom:20px; border:10px solid #ddd;">
+          <h5><b><a href="" style="color:black;"><?php echo $data['title']; ?></a></b></h5>
+          <div style="position:inherit"><small><i>(Posted by <u style="text-transform:capitalize;"><?php echo $data['author']; ?></u> - <?php echo $data['date']; ?>)</i></small></div>
+          <p><?php echo $data['description']; ?></p>
+          <div style="position:relative; margin-top:20px;">
+            <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fpatraland.co.id%2F&layout=button_count&size=small&width=101&height=20&appId" width="101" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
           </div>
         </div>
-        <div class="bts">&nbsp;</div>
-        <div style="position:absolute; margin-left:15px;">
-          <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fpatraland.blogspot.com%2F&layout=button_count&size=small&width=101&height=20&appId" width="101" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        <div class="col-md-4 agileinfo_about_bottom_grid">
+          <div style="position:inherit; border-top:1px solid #ddd; padding:20px;">
+            <div class="sidebar widget">
+              <h3>Recent Post</h3>
+              <ul>
+                <?php
+                $sql1 = "SELECT * FROM tb_news ORDER BY date DESC LIMIT 5";
+                $result1 = mysqli_query($db,$sql1);
+                while($data1 = mysqli_fetch_assoc($result1)) {
+                  ?>
+                  <li>
+                    <a href="news-detail.php?id=<?php echo $data1['id_news']; ?>">
+                      <small><i><?php echo $data1['date']; ?></i></small> -
+                      <img src="images/news/<?php echo $data1['image']; ?>" alt=" " class="img-responsive" style="width:75px; height:75px; margin-right:10px; float:left; border:5px solid #ddd;">
+                      <b><?php echo substr($data1['title'], 0, 50);?></b>
+                      <?php
+                      $string = $data1['title'];
+                        if(strlen($string) > 50) {
+                          echo "...";
+                        }
+                      ?>
+                    </a>
+                  </li><!-- .Li ends here -->
+                <?php } ?>
+                <center><a href="news.php">-- Show More --</a></center>
+              </ul><!-- .Ul ends here -->
+            </div>
+          </div>
         </div>
+      </div>
+
     </div>
   </div>
 

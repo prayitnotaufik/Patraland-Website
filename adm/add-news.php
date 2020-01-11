@@ -33,11 +33,6 @@ if(@$_SESSION['status'] != "login") {
   <main class="cd-main-content">
     <?php include("includes/navbar.php"); ?>
     <div class="cd-content-wrapper">
-      <?php
-      $sqlslct = "SELECT * FROM tb_contact WHERE id_contact = '1'";
-      $sqlect1 = mysqli_query($db, $sqlslct);
-      $data = mysqli_fetch_assoc($sqlect1);
-      ?>
 
       <h2>Add News</h2><br>
       <p>
@@ -55,8 +50,8 @@ if(@$_SESSION['status'] != "login") {
             <tr>
               <td>
                 <input type="text" name="txttitle" required>
-                <input type="text" name="txtauthor" value="<?php echo $_SESSION['username']; ?>">
-                <input type="text" name="txtdate" value="<?php echo date("d / m / Y"); ?>">
+                <input type="hidden" name="txtauthor" value="<?php echo $_SESSION['username']; ?>">
+                <input type="hidden" name="txtdate" value="<?php echo date("d / m / Y"); ?>">
               </td>
             </tr>
             <tr>
