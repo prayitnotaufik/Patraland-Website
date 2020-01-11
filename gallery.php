@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+include("config/conn.php");
+?>
 <html>
 <!-- Head -->
 
@@ -31,6 +34,7 @@
 	<!-- Default-JavaScript-File -->
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
 </head>
 <!-- //Head -->
 <!-- Body -->
@@ -49,164 +53,168 @@
 	</div>
 	<!-- //Header -->
 	<div class="gallery wthree-3">
-
 		<div class="container">
 			<h2 class="tittle">Gallery</h2>
-			<div class="col-md-4 gal-left gal_mar">
-				<div class="content-grid-effect slow-zoom vertical text-center">
-					<a href="images/i1.jpg" class="b-link-stripe b-animate-go  swipebox">
-						<div class="img-box">
-							<img src="images/i1.jpg" alt="image" class="img-responsive zoom-img">
-						</div>
-
-						<div class="info-box">
-							<div class="info-content">
-								<h4>Premier Realty</h4>
-								<span class="separator"></span>
-								<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam</p>
-							</div>
-						</div>
-					</a>
-				</div>
+			<div align="center">
+				<button class="btn btn-default filter-button" data-filter="all">Show All</button>
+				<button class="btn btn-default filter-button " data-filter="1">Kencana Residence</button>
+				<button class="btn btn-default filter-button " data-filter="2">Garden Residence</button>
+				<button class="btn btn-default filter-button " data-filter="3">The Island Cluster</button>
+				<button class="btn btn-default filter-button " data-filter="4">Griya Madani</button>
 			</div>
-			<div class="col-md-4 gal-left gal_mar">
-				<div class="content-grid-effect slow-zoom vertical text-center">
-					<a href="images/i2.jpg" class="b-link-stripe b-animate-go  swipebox">
-						<div class="img-box">
-							<img src="images/i2.jpg" alt="image" class="img-responsive zoom-img">
-						</div>
-
-						<div class="info-box">
-							<div class="info-content">
-								<h4>Premier Realty</h4>
-								<span class="separator"></span>
-								<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam</p>
-							</div>
-						</div>
-					</a>
-				</div>
+			<!-- <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
 			</div>
-			<div class="col-md-4 gal-left gal_mar">
-				<div class="content-grid-effect slow-zoom vertical text-center">
-					<a href="images/i3.jpg" class="b-link-stripe b-animate-go  swipebox">
-						<div class="img-box">
-							<img src="images/i3.jpg" alt="image" class="img-responsive zoom-img">
-						</div>
 
-						<div class="info-box">
-							<div class="info-content">
-								<h4>Premier Realty</h4>
-								<span class="separator"></span>
-								<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam</p>
-							</div>
-						</div>
-					</a>
-				</div>
+			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
 			</div>
-			<div class="col-md-4 gal-left gal_mar">
-				<div class="content-grid-effect slow-zoom vertical text-center">
-					<a href="images/i4.jpg" class="b-link-stripe b-animate-go  swipebox">
-						<div class="img-box">
-							<img src="images/i4.jpg" alt="image" class="img-responsive zoom-img">
-						</div>
 
-						<div class="info-box">
-							<div class="info-content">
-								<h4>Premier Realty</h4>
-								<span class="separator"></span>
-								<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam</p>
-							</div>
-						</div>
-					</a>
-				</div>
+			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
 			</div>
-			<div class="col-md-4 gal-left gal_mar">
-				<div class="content-grid-effect slow-zoom vertical text-center">
-					<a href="images/i5.jpg" class="b-link-stripe b-animate-go  swipebox">
-						<div class="img-box">
-							<img src="images/i5.jpg" alt="image" class="img-responsive zoom-img">
-						</div>
 
-						<div class="info-box">
-							<div class="info-content">
-								<h4>Premier Realty</h4>
-								<span class="separator"></span>
-								<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam</p>
-							</div>
-						</div>
-					</a>
-				</div>
+			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
 			</div>
-			<div class="col-md-4 gal-left gal_mar">
-				<div class="content-grid-effect slow-zoom vertical text-center">
-					<a href="images/i6.jpg" class="b-link-stripe b-animate-go  swipebox">
-						<div class="img-box">
-							<img src="images/i6.jpg" alt="image" class="img-responsive zoom-img">
-						</div>
 
-						<div class="info-box">
-							<div class="info-content">
-								<h4>Premier Realty</h4>
-								<span class="separator"></span>
-								<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam</p>
-							</div>
-						</div>
-					</a>
-				</div>
+			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
 			</div>
-			<div class="col-md-4 gal-left gal_mar">
-				<div class="content-grid-effect slow-zoom vertical text-center">
-					<a href="images/i7.jpg" class="b-link-stripe b-animate-go  swipebox">
-						<div class="img-box">
-							<img src="images/i7.jpg" alt="image" class="img-responsive zoom-img">
-						</div>
 
-						<div class="info-box">
-							<div class="info-content">
-								<h4>Premier Realty</h4>
-								<span class="separator"></span>
-								<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam</p>
-							</div>
-						</div>
-					</a>
-				</div>
+			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
 			</div>
-			<div class="col-md-4 gal-left gal_mar">
-				<div class="content-grid-effect slow-zoom vertical text-center">
-					<a href="images/i8.jpg" class="b-link-stripe b-animate-go  swipebox">
-						<div class="img-box">
-							<img src="images/i8.jpg" alt="image" class="img-responsive zoom-img">
-						</div>
 
-						<div class="info-box">
-							<div class="info-content">
-								<h4>Premier Realty</h4>
-								<span class="separator"></span>
-								<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam</p>
-							</div>
-						</div>
-					</a>
-				</div>
+			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
 			</div>
-			<div class="col-md-4 gal-left gal_mar">
-				<div class="content-grid-effect slow-zoom vertical text-center">
-					<a href="images/i9.jpg" class="b-link-stripe b-animate-go  swipebox">
-						<div class="img-box">
-							<img src="images/i9.jpg" alt="image" class="img-responsive zoom-img">
-						</div>
 
-						<div class="info-box">
-							<div class="info-content">
-								<h4>Premier Realty</h4>
-								<span class="separator"></span>
-								<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam</p>
-							</div>
-						</div>
-					</a>
-				</div>
+			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
 			</div>
+
+			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
+			</div>
+
+			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
+			</div>
+
+			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
+			</div>
+
+			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
+			</div> -->
+			<!-- GALLERY DEFAULT -->
+			<!-- CATEGORY 1 -->
+			<?php
+			$query = "SELECT * FROM tb_gallery WHERE category=1";
+			$result = mysqli_query($db, $query);
+			if (mysqli_num_rows($result) > 0) {
+				while ($row = mysqli_fetch_assoc($result)) { ?>
+					<div class="col-md-4 gal-left gal_mar gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter 1">
+						<div class="content-grid-effect slow-zoom vertical text-center">
+							<a href="images/gallery/<?php echo $row["image"] ?>" class="b-link-stripe b-animate-go  swipebox">
+								<div class="img-box">
+									<img src="images/gallery/<?php echo $row["image"] ?>" alt="image" class="img-responsive zoom-img">
+								</div>
+								<div class="info-box">
+									<div class="info-content">
+										<h4><?php echo $row["title"] ?></h4>
+										<span class="separator"></span>
+										<p><?php echo $row["caption"] ?></p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+			<?php }
+			}
+			?>
+			<!-- CATEGORY 1 -->
+			<!-- CATEGORY 2 -->
+			<?php
+			$query = "SELECT * FROM tb_gallery WHERE category=2";
+			$result = mysqli_query($db, $query);
+			if (mysqli_num_rows($result) > 0) {
+				while ($row = mysqli_fetch_assoc($result)) { ?>
+					<div class="col-md-4 gal-left gal_mar gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter 2">
+						<div class="content-grid-effect slow-zoom vertical text-center">
+							<a href="images/gallery/<?php echo $row["image"] ?>" class="b-link-stripe b-animate-go  swipebox">
+								<div class="img-box">
+									<img src="images/gallery/<?php echo $row["image"] ?>" alt="image" class="img-responsive zoom-img">
+								</div>
+								<div class="info-box">
+									<div class="info-content">
+										<h4><?php echo $row["title"] ?></h4>
+										<span class="separator"></span>
+										<p><?php echo $row["caption"] ?></p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+			<?php }
+			}
+			?>
+			<!-- CATEGORY 2 -->
+			<!-- CATEGORY 3 -->
+			<?php
+			$query = "SELECT * FROM tb_gallery WHERE category=3";
+			$result = mysqli_query($db, $query);
+			if (mysqli_num_rows($result) > 0) {
+				while ($row = mysqli_fetch_assoc($result)) { ?>
+					<div class="col-md-4 gal-left gal_mar gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter 3">
+						<div class="content-grid-effect slow-zoom vertical text-center">
+							<a href="images/gallery/<?php echo $row["image"] ?>" class="b-link-stripe b-animate-go  swipebox">
+								<div class="img-box">
+									<img src="images/gallery/<?php echo $row["image"] ?>" alt="image" class="img-responsive zoom-img">
+								</div>
+								<div class="info-box">
+									<div class="info-content">
+										<h4><?php echo $row["title"] ?></h4>
+										<span class="separator"></span>
+										<p><?php echo $row["caption"] ?></p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+			<?php }
+			}
+			?>
+			<!-- CATEGORY 3 -->
+			<!-- CATEGORY 4 -->
+			<?php
+			$query = "SELECT * FROM tb_gallery WHERE category=4";
+			$result = mysqli_query($db, $query);
+			if (mysqli_num_rows($result) > 0) {
+				while ($row = mysqli_fetch_assoc($result)) { ?>
+					<div class="col-md-4 gal-left gal_mar gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter 4">
+						<div class="content-grid-effect slow-zoom vertical text-center">
+							<a href="images/gallery/<?php echo $row["image"] ?>" class="b-link-stripe b-animate-go  swipebox">
+								<div class="img-box">
+									<img src="images/gallery/<?php echo $row["image"] ?>" alt="image" class="img-responsive zoom-img">
+								</div>
+								<div class="info-box">
+									<div class="info-content">
+										<h4><?php echo $row["title"] ?></h4>
+										<span class="separator"></span>
+										<p><?php echo $row["caption"] ?></p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+			<?php }
+			}
+			?>
+			<!-- CATEGORY 4 -->
 			<div class="clearfix"></div>
-
 		</div>
 	</div>
 	<!--/ w3l-1 -->
@@ -218,6 +226,31 @@
 	<script type="text/javascript">
 		jQuery(function($) {
 			$(".swipebox").swipebox();
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$(".filter-button").click(function() {
+				var value = $(this).attr('data-filter');
+
+				if (value == "all") {
+					//$('.filter').removeClass('hidden');
+					$('.filter').show('1000');
+				} else {
+					//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+					//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+					$(".filter").not('.' + value).hide('3000');
+					$('.filter').filter('.' + value).show('3000');
+
+				}
+			});
+
+			if ($(".filter-button").removeClass("active")) {
+				$(this).removeClass("active");
+			}
+			$(this).addClass("active");
+
 		});
 	</script>
 	<!-- //swipe box js -->

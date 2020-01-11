@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 09, 2020 at 09:24 AM
+-- Generation Time: Jan 11, 2020 at 07:32 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -62,7 +62,16 @@ CREATE TABLE `tb_gallery` (
 --
 
 INSERT INTO `tb_gallery` (`id_gallery`, `image`, `category`, `title`, `caption`) VALUES
-(1, '09012020091001i6.jpg', '1', 'Kencana', 'Kencana Residence');
+(7, '11012020044055IMG_20200108_123913.jpg', '1', '', ''),
+(8, '11012020044101IMG_20200108_123913.jpg', '1', '', ''),
+(9, '11012020044106IMG_20200108_123913.jpg', '1', '', ''),
+(17, '11012020044442DSC00241.JPG', '1', '', ''),
+(18, '11012020044451DSC00241.JPG', '1', '', ''),
+(19, '11012020044456DSC00241.JPG', '1', '', ''),
+(20, '11012020044503IMG_20200108_123913.jpg', '1', '', ''),
+(21, '11012020044508IMG_20200108_123913.jpg', '1', '', ''),
+(22, '11012020044513IMG_20200108_123913.jpg', '1', '', ''),
+(23, '11012020044817IMG_20200108_123913.jpg', '2', '', '');
 
 -- --------------------------------------------------------
 
@@ -204,7 +213,7 @@ ALTER TABLE `tb_contact`
 -- AUTO_INCREMENT for table `tb_gallery`
 --
 ALTER TABLE `tb_gallery`
-  MODIFY `id_gallery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_gallery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `tb_login`

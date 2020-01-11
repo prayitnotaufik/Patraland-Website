@@ -58,7 +58,7 @@ a:focus, a:hover {
 /*-- Index-Page-Styling --*/
 /*-- Top-Bar --*/
 .top-bar {
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 5;
     padding: 0px 0 0px;
