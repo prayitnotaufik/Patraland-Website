@@ -1397,9 +1397,10 @@ ul.count li span {
 .view .mask,.view .content {
    position: absolute;
    overflow: hidden;
-   top: 0;
+   top: 20px;
    left: 0;
    padding: 6em 1em;
+   width:100%;
 }
 .view img {
    display: block;
@@ -1555,6 +1556,14 @@ ul.count li span {
 }
 .w3l_social_icons ul li a.instagram:hover{
 	background:url(../images/img-sp.png) no-repeat -127px -24px #00BFFF;
+	display:block;
+}
+.w3l_social_icons ul li a.whatsapp{
+	background:url(../images/img-sp.png) no-repeat -159px 7px #fff;
+	display:block;
+}
+.w3l_social_icons ul li a.whatsapp:hover{
+	background:url(../images/img-sp.png) no-repeat -159px -23px #00BFFF;
 	display:block;
 }
 .team.agileinfo-3 {
