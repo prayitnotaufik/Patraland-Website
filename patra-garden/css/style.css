@@ -59,7 +59,7 @@ a:focus, a:hover {
 /*-- Index-Page-Styling --*/
 /*-- Top-Bar --*/
 .top-bar {
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 99999;
     padding: 0px 0 0px;
@@ -265,7 +265,8 @@ a:focus, a:hover {
 	float: none;
 }
 .rslides img {
-	height: auto;
+    height: auto;
+    margin-top: 80px;
 	border: 0;
 }
 .callbacks_tabs {
@@ -502,7 +503,8 @@ a.navbar-brand span {
 /*--//search--*/
 /*-- banner-bottom --*/
 .agileinfo{
-padding:5em 0;
+/* padding:5em 0; */
+padding: 130px 10px;
 }
 h3.tittle-one{
 text-align:center;
@@ -518,6 +520,11 @@ line-height:2em;
 }
 .agileinfo-grid img{
 width:100%;
+}
+.agileinfo h4{
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
 }
 .grid-one h4 {
     font-size: 32px;
@@ -1915,7 +1922,7 @@ h2.tittle, h3.tittle {
     top: 48.5%;
 }
 .agileinfo {
-    padding: 3em 0;
+    /* padding-top: 100px; */
 }
 p.ttt {
     font-size: 14px;
@@ -2072,6 +2079,7 @@ h2.tittle, h3.tittle {
 .navbar-toggle {
     margin-top: -4px;
 }
+
 }
 @media screen and (max-width:667px) {
 .slider-info {
@@ -2101,7 +2109,8 @@ h2.tittle, h3.tittle {
     margin: 20px auto;
 }
 .rslides img {
-    height: 300px;
+    /* height: 300px; */
+    margin-top: 88px;
     border: 0;
 }
 .slider-info p {
@@ -2411,9 +2420,9 @@ ul li a{
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     a.navbar-brand img{
-        width: 18%;
+        width: 29%;
         margin-top: -75px;
-        margin-left: 20px;
+        margin-left: 5px;
         /* padding-top: -20px; */
     }
 
@@ -2440,15 +2449,18 @@ ul li a{
     .navbar-default .navbar-collapse, .navbar-default .navbar-form{
         background: #f4f4f4;
     }
+    
+    .rslides img{
+        margin-top: 88px;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     a.navbar-brand img{
-        width: 18%;
+        width: 29%;
         margin-top: -75px;
-        margin-left: 20px;
-        padding-top: -20px;
+        margin-left: 5px;
     }
 
     .navbar-brand{
@@ -2474,14 +2486,24 @@ ul li a{
     .navbar-default .navbar-collapse, .navbar-default .navbar-form{
         background: #f4f4f4;
     }
+    
+    .rslides img{
+        margin-top: 88px;
+    }
+}
+
+@media only screen and (min-width: 736px) {
+    .rslides img{
+        margin-top: 100px;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     a.navbar-brand img{
-        width: 18%;
-        margin-top: 0;
-        margin-left: 20px;
+        width: 20%;
+        margin-top: 18px;
+        margin-left: 4px;
         padding-top: -20px;
     }
 
@@ -2512,7 +2534,13 @@ ul li a{
     .nav li a{
         padding: none;
     }
+
+    .rslides img{
+        margin-top: 107px;
+    }
 }
+
+
 
 @media only screen and (max-width: 991px) {
     .nav > li > a{
@@ -2528,10 +2556,14 @@ ul li a{
 @media only screen and (min-width: 992px) {
     a.navbar-brand img {
         display: inline-block;
-        margin: -7px;
+        margin: 0px;
         padding: 0;
-        width: 11%;
+        width: 16%;
         /* margin: -22px; */
+    }
+
+    .rslides img{
+        margin-top: 80px;
     }
 }
 
@@ -2541,3 +2573,16 @@ ul li a{
 }
 
 /* ================== CUSTOM MEDIA SCREEN ======================= */
+
+/* ==================       CUSTOM CSS    ======================= */
+
+.about-page{
+    background-color: #f4f4f4;
+}
+
+
+
+
+
+
+/* ==================       CUSTOM CSS    ======================= */
