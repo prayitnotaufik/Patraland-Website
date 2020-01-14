@@ -1397,7 +1397,7 @@ ul.count li span {
 .view .mask,.view .content {
    position: absolute;
    overflow: hidden;
-   top: 20px;
+   top: 0;
    left: 0;
    padding: 6em 1em;
    width:100%;
@@ -1425,7 +1425,7 @@ ul.count li span {
     -moz-transform: translate(265px, 145px) rotate(45deg);
     -o-transform: translate(265px, 145px) rotate(45deg);
     -ms-transform: translate(265px, 145px) rotate(45deg);
-    transform: translate(265px, 145px) rotate(45deg);
+    transform: translate(265px, 145px) rotate(0deg);
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;

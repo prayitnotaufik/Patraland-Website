@@ -80,42 +80,50 @@ if (@$_SESSION['status'] != "login") {
       <?php
       if (@$_GET['act'] == 'edit') {
         $id = $_GET['id'];
-        $sql = "SELECT * FROM tb_gallery WHERE id_gallery = '$id'";
+        $sql = "SELECT * FROM tb_team WHERE id_team = '$id'";
         $hasil = mysqli_query($db, $sql);
         $data = mysqli_fetch_assoc($hasil)
       ?>
-        <form action="proc/proc-edit-gallery.php" method="post" enctype="multipart/form-data">
+        <form action="proc/proc-edit-team.php" method="post" enctype="multipart/form-data">
           <table cellpadding="5">
             <tr>
-              <td>Image</td>
+              <td>Photo</td>
               <td>:</td>
               <td>
-                <img src="../images/gallery/<?php echo $data['image']; ?>" width="200"><br>
+                <img src="../images/team/<?php echo $data['photo']; ?>" width="200"><br>
                 <input type="file" name="file">
-                <input type="hidden" name="id_gallery" value="<?php echo $_GET['id']; ?>">
+                <input type="hidden" name="idteam" value="<?php echo $_GET['id']; ?>">
               </td>
             </tr>
             <tr>
-              <td>Title</td>
+              <td>Name</td>
               <td>:</td>
-              <td>
-                <select class="" name="category" id="selectkategori">
-                  <option value="1">Kencana Residence</option>
-                  <option value="2">Garden Residence</option>
-                  <option value="3">The Island Cluster</option>
-                  <option value="4">Griya Madani</option>
-                </select>
-              </td>
+              <td><input type="text" name="txtname" value="<?php echo $data['name']; ?>" style="width:300px"></td>
             </tr>
             <tr>
-              <td>Title</td>
+              <td>Position</td>
               <td>:</td>
-              <td><input type="text" name="txttitle" value="<?php echo $data['title']; ?>"></td>
+              <td><input type="text" name="txtposition" value="<?php echo $data['position']; ?>"></td>
             </tr>
             <tr>
-              <td>Caption</td>
+              <td>Whatsapp</td>
               <td>:</td>
-              <td><textarea name="txtcaption" cols="30"><?php echo $data['caption']; ?></textarea></td>
+              <td><input type="number" name="txtwa" value="<?php echo $data['whatsapp']; ?>" placeholder="6282137899966"></td>
+            </tr>
+            <tr>
+              <td>Instagram</td>
+              <td>:</td>
+              <td><input type="text" name="txtig" value="<?php echo $data['instagram']; ?>" placeholder="username"></td>
+            </tr>
+            <tr>
+              <td>Facebook</td>
+              <td>:</td>
+              <td><input type="text" name="txtfb" value="<?php echo $data['facebook']; ?>" placeholder="https://www.facebook.com/user" style="width:400px"></td>
+            </tr>
+            <tr>
+              <td>Twitter</td>
+              <td>:</td>
+              <td><input type="text" name="txttw" value="<?php echo $data['twitter']; ?>" placeholder="username"></td>
             </tr>
             <tr>
               <td colspan="2" align="right"><br><input class="btn btn--primary btn--sm" type="submit" name="edit" value="Simpan"></td>
@@ -135,40 +143,49 @@ if (@$_SESSION['status'] != "login") {
           <div class="modal-content">
             <span class="close">&times;</span>
             <center>
-              <form action="proc/proc-add-gallery.php" method="post" enctype="multipart/form-data">
+              <form action="proc/proc-add-team.php" method="post" enctype="multipart/form-data">
                 <table cellpadding="5">
                   <tr>
-                    <td>Image :</td>
+                    <td>Photo :</td>
                   </tr>
                   <tr>
-                    <td><input type="file" name="file"></td>
+                    <td><input type="file" name="file" required></td>
                   </tr>
                   <tr>
-                    <td>Category :</td>
+                    <td>Name :</td>
                   </tr>
                   <tr>
-                    <td>
-                      <select class="" name="category" id="selectkategori">
-                        <option value="1">Kencana Residence</option>
-                        <option value="2">Garden Residence</option>
-                        <option value="3">The Island Cluster</option>
-                        <option value="4">Griya Madani</option>
-                      </select>
-                    </td>
+                    <td><input type="text" name="txtname" required></td>
                   </tr>
                   <tr>
-                    <td>Title :</td>
+                    <td>Position :</td>
                   </tr>
                   <tr>
-                    <td><input type="text" name="txttitle">
-                      <hr>
-                    </td>
+                    <td><input type="text" name="txtposition" required></td>
                   </tr>
                   <tr>
-                    <td>Caption :</td>
+                    <td>Whatsapp :</td>
                   </tr>
                   <tr>
-                    <td><textarea name="txtcaption" cols="28"></textarea></td>
+                    <td><input type="number" name="txtwa" style="width: 275px;" placeholder="6282137899966"></td>
+                  </tr>
+                  <tr>
+                    <td>Instagram :</td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" name="txtig" style="width: 275px;" placeholder="username"></td>
+                  </tr>
+                  <tr>
+                    <td>Facebook :</td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" name="txtfb" style="width: 275px;" placeholder="https://www.facebook.com/user"></td>
+                  </tr>
+                  <tr>
+                    <td>Twitter :</td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" name="txttw" style="width: 275px;" placeholder="username"></td>
                   </tr>
                   <tr>
                     <td><input type="submit" class="btn btn--primary btn--sm" style="width:100%;" name="submit" value="Simpan"></td>
@@ -183,41 +200,31 @@ if (@$_SESSION['status'] != "login") {
       <p>
         <table cellpadding="5" width="100%" border=1>
           <tr>
-            <th>No.</th>
-            <th>Image</th>
-            <th>Category</th>
-            <th>Title</th>
-            <th>Caption</th>
+            <th>Photo</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Whatsapp</th>
+            <th>Instagram</th>
+            <th>Facebook</th>
+            <th>Twitter</th>
             <th colspan="2"></th>
           </tr>
           <?php
           $no = 1;
-          $sql = "SELECT * FROM tb_gallery ";
+          $sql = "SELECT * FROM tb_team";
           $hasil = mysqli_query($db, $sql);
           while ($data = mysqli_fetch_assoc($hasil)) {
           ?>
             <tr>
-              <td align="center"><?php echo $no++; ?></td>
-              <td align="center"><img src="../images/gallery/<?php echo $data['image']; ?>" width="120"></td>
-              <td>
-                <?php
-                $category = "";
-                if ($data['category'] == 1) {
-                  $category = "Kencana Residence";
-                } elseif ($data['category'] == 2) {
-                  $category = "Garden Residence";
-                } elseif ($data['category'] == 3) {
-                  $category = "The Island Cluster";
-                } elseif ($data['category'] == 4) {
-                  $category = "Griya Madani";
-                }
-                echo $category;
-                ?>
-              </td>
-              <td><?php echo $data['title']; ?></td>
-              <td><?php echo $data['caption']; ?></td>
-              <td align="center"><br><a class="btn btn--primary btn--sm" style="background:#28a745;" href="?id=<?php echo $data['id_gallery']; ?>&act=edit">Edit</a><br><br></td>
-              <td align="center"><br><a class="btn btn--accent btn--sm" href="?id=<?php echo $data['id_gallery']; ?>&act=del">Hapus</a><br><br></td>
+              <td align="center"><img src="../images/team/<?php echo $data['photo']; ?>" width="120"></td>
+              <td><?php echo $data['name']; ?></td>
+              <td><?php echo $data['position']; ?></td>
+              <td><?php echo $data['whatsapp']; ?></td>
+              <td><?php echo $data['instagram']; ?></td>
+              <td><?php echo $data['facebook']; ?></td>
+              <td><?php echo $data['twitter']; ?></td>
+              <td align="center"><br><a class="btn btn--primary btn--sm" style="background:#28a745;" href="?id=<?php echo $data['id_team']; ?>&act=edit">Edit</a><br><br></td>
+              <td align="center"><br><a class="btn btn--accent btn--sm" href="?id=<?php echo $data['id_team']; ?>&act=del">Hapus</a><br><br></td>
             </tr>
           <?php } ?>
         </table>

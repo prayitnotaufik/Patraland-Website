@@ -34,7 +34,7 @@
             </ul>
           </li> -->
             <li><a href="contact.php">Contact</a></li>
-            <li><a href="adm">Login</a></li>
+            <li><a href="adm" target="_blank">Login</a></li>
           </ul>
 
       </div><!-- /navbar-collapse -->

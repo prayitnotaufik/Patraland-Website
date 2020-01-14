@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 11, 2020 at 07:32 AM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.9
+-- Generation Time: Jan 14, 2020 at 09:21 AM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -159,6 +159,32 @@ CREATE TABLE `tb_slider` (
 INSERT INTO `tb_slider` (`id_slider`, `image`, `title`, `caption`) VALUES
 (4, '09012020075506placeholderslider1280x600.jpg', 'Kencana Residence', 'Nilai Keharmonisan Hunian dan Alam');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_team`
+--
+
+CREATE TABLE `tb_team` (
+  `id_team` int(11) NOT NULL,
+  `photo` longtext NOT NULL,
+  `name` text NOT NULL,
+  `position` text NOT NULL,
+  `whatsapp` varchar(20) NOT NULL,
+  `instagram` varchar(300) NOT NULL,
+  `facebook` longtext NOT NULL,
+  `twitter` varchar(300) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_team`
+--
+
+INSERT INTO `tb_team` (`id_team`, `photo`, `name`, `position`, `whatsapp`, `instagram`, `facebook`, `twitter`) VALUES
+(1, '6.jpg', 'Ray White', 'Marketing Officer', '6282137899966', 'nurhidayats', '', ''),
+(2, '140120200537088.jpg', 'Toyo Ta', 'Marketing Coordinator', '6281237899966', '', 'https://facebook.com/Nurhidayat.Aldila', ''),
+(3, '140120200753439.jpg', 'M. Topek', 'Magang', '', '', '', '');
+
 --
 -- Indexes for dumped tables
 --
@@ -200,6 +226,12 @@ ALTER TABLE `tb_slider`
   ADD PRIMARY KEY (`id_slider`);
 
 --
+-- Indexes for table `tb_team`
+--
+ALTER TABLE `tb_team`
+  ADD PRIMARY KEY (`id_team`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -238,6 +270,12 @@ ALTER TABLE `tb_news`
 --
 ALTER TABLE `tb_slider`
   MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tb_team`
+--
+ALTER TABLE `tb_team`
+  MODIFY `id_team` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
