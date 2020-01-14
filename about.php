@@ -1,3 +1,6 @@
+<?php
+include("config/conn.php");
+?>
 <!DOCTYPE html>
 <html>
 <!-- Head -->
@@ -69,28 +72,58 @@
   <div class="container">
     <h3 class="tittle">Marketing Team</h3>
     <div class="w3l_team_grids">
-      <div class="col-md-3 w3l_team_grid col-custom">
-        <div class="view view-second">
-          <img src="images/6.jpg" alt=" " class="img-responsive" />
-          <div class="mask"></div>
-          <div class="content">
-            <div class="w3l_social_icons w3l_social_icons1">
-              <ul>
-                <li><a href="#" class="facebook"></a></li>
-                <li><a href="#" class="twitter"></a></li>
-                <li><a href="#" class="google_plus"></a></li>
-                <li><a href="#" class="pinterest"></a></li>
-                <li><a href="#" class="instagram"></a></li>
-                <li><a href="#" class="whatsapp"></a></li>
-              </ul>
+      <?php
+      $sql = "SELECT * FROM tb_team";
+      $hasil = mysqli_query($db, $sql);
+      while ($data = mysqli_fetch_assoc($hasil)) {
+        ?>
+        <div class="col-md-3 w3l_team_grid col-custom">
+          <div class="view view-second">
+            <img src="images/team/<?php echo $data['photo']; ?>" alt=" " class="img-responsive" />
+            <div class="mask"></div>
+            <div class="content">
+              <div class="w3l_social_icons w3l_social_icons1">
+                <ul>
+                  <?php
+                  $wa = $data['whatsapp'];
+                  $tw = $data['twitter'];
+                  $ig = $data['instagram'];
+                  $fb = $data['facebook'];
+                  if($fb!=null) {
+                    ?>
+                    <li><a href="<?php echo $data['facebook']; ?>" class="facebook" target="_blank"></a></li>
+                  <?php } else { ?>
+                    <li><a href="#" class="facebook"></a></li>
+                  <?php } ?>
+
+                  <?php if($tw!=null) { ?>
+                    <li><a href="https://www.twitter.com/<?php echo $data['twitter']; ?>" class="twitter" target="_blank"></a></li>
+                  <?php } else { ?>
+                    <li><a href="#" class="twitter"></a></li>
+                  <?php } ?>
+
+                  <?php if($ig!=null) { ?>
+                    <li><a href="https://www.instagram.com/<?php echo $data['instagram']; ?>" class="instagram" target="_blank"></a></li>
+                  <?php } else { ?>
+                    <li><a href="#" class="instagram"></a></li>
+                  <?php } ?>
+
+                  <?php if($wa!=null) { ?>
+                    <li><a href="https://api.whatsapp.com/send?phone=<?php echo $data['whatsapp']; ?>" class="whatsapp" target="_blank"></a></li>
+                  <?php } else { ?>
+                    <li><a href="#" class="whatsapp"></a></li>
+                  <?php } ?>
+                </ul>
+              </div>
+              <!-- <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. Duis aute irure dolor i</p> -->
+              <!-- <p><i><small>Social Media</small></i></p> -->
+              <p><img class="" src="images/lgo.png" alt="" srcset="" style="width:100%; position:absolute;"></p>
             </div>
-            <!-- <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. Duis aute irure dolor i</p> -->
-            <p><i><small>Social Media</small></i></p>
           </div>
+          <h4><?php echo $data['name']; ?></h4>
+          <p><?php echo $data['position']; ?></p>
         </div>
-        <h4>Jass Thomas</h4>
-        <p>Ipsum Dolor</p>
-      </div>
+      <?php } ?>
       <div class="clearfix"> </div>
     </div>
   </div>
