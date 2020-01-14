@@ -2580,9 +2580,46 @@ ul li a{
     background-color: #f4f4f4;
 }
 
+.tipe-page{
+    background-color: #615555;
+}
+
+.tipe-page h4{
+    color: #EFA52C;
+    font-size: 25px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    font-weight: normal;
+}
+
+.konten{
+    /* margin-top: 100px; */
+    padding: 10px;
+}
+
+.siteplan{
+    margin-bottom: 80px;
+    padding: 15px;
+}
 
 
 
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
 
 
 /* ==================       CUSTOM CSS    ======================= */

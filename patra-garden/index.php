@@ -114,7 +114,89 @@ $hasil = mysqli_query($db, $sql);
 					<br>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 				</div>
-				
+
+			</div>
+		</div>
+	</div>
+	<!-- SECTION PART -->
+	<div id="tipe" class="agileinfo tipe-page">
+		<div class="container">
+			<h3>Tipe Rumah</h3>
+			<div class="row">
+				<div class="col-md-4">
+					<h4>Tipe 45</h4>
+					<img src="images/tipe45.jpg" alt="">
+				</div>
+				<div class="col-md-4">
+					<h4>Tipe 48</h4>
+					<img src="images/tipe48.jpg" alt="">
+				</div>
+				<div class="col-md-4">
+					<h4>Tipe 54</h4>
+					<img src="images/tipe54.jpg" alt="">
+				</div>
+				<div class="col-md-4">
+					<h4>Tipe 70</h4>
+					<img src="images/tipe70.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- SECTION PART -->
+	<div id="project" class="agileinfo tipe-page">
+		<div class="container">
+			<h3>Site Plan</h3>
+			<div class="row siteplan">
+				<div>
+					<img src="images/siteplan.jpg" alt="">
+				</div>
+			</div>
+			<div class="row">
+				<a href="" class="">
+					<div class="col-md-4 konten hvr-grow">
+						<img src="images/asoka.jpg" alt="" srcset="">
+					</div>
+				</a>
+				<a href="" class="">
+					<div class="col-md-4 konten hvr-grow">
+						<img src="images/aster.jpg" alt="" srcset="">
+					</div>
+				</a>
+				<a href="" class="">
+					<div class="col-md-4 konten hvr-grow">
+						<img src="images/camelia.jpg" alt="" srcset="">
+					</div>
+				</a>
+				<a href="" class="">
+					<div class="col-md-4 konten hvr-grow">
+						<img src="images/edelweis.jpg" alt="" srcset="">
+					</div>
+				</a>
+				<a href="" class="">
+					<div class="col-md-4 konten hvr-grow">
+						<img src="images/lavender.jpg" alt="" srcset="">
+					</div>
+				</a>
+				<a href="" class="">
+					<div class="col-md-4 konten hvr-grow">
+						<img src="images/magnolia.jpg" alt="" srcset="">
+					</div>
+				</a>
+				<a href="" class="">
+					<div class="col-md-4 konten hvr-grow">
+						<img src="images/rosela.jpg" alt="" srcset="">
+					</div>
+				</a>
+				<a href="" class="">
+					<div class="col-md-4 konten hvr-grow">
+						<img src="images/sakura.jpg" alt="" srcset="">
+					</div>
+				</a>
+				<a href="" class="">
+					<div class="col-md-4 konten hvr-grow">
+						<img src="images/tulip.jpg" alt="" srcset="">
+					</div>
+				</a>
 			</div>
 		</div>
 	</div>
