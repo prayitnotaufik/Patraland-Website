@@ -90,99 +90,49 @@ $hasil1 = mysqli_query($db,$sql1);
       <h3>Welcome</h3>
       <p class="ttt">when an unknown printer took a galley of type and scrambled Lorem Ipsum passages, and more recently it to make a type specimen book.</p>
       <div class="flexslider-info">
-        <section class="slider">
-          <div class="flexslider">
-            <ul class="slides">
-              <li>
-                <div class="banner-info">
-                  <div class="col-md-7 agileinfo-left">
-                    <img src="images/slide-1.jpg" alt="">
-                  </div>
-                  <div class="col-md-5 agileinfo-grid grid-one">
-                    <h4>Temporibus autem</h4>
-                    <p>Libero tempore, cum soluta nobis est eligendi
-                      optio cumque nihil impedit quo minus id quod maxime
-                      placeat facere possimus  ut
-                      et voluptates repudiandae sint et molestiae non recusandae</p>
+        <div class="banner-info">
+          <div class="col-md-7 agileinfo-left">
+            <iframe width="100%" height="311.717" src="https://www.youtube.com/embed/6wfc0SZodCQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="col-md-5 agileinfo-grid grid-one">
+            <h4>Temporibus autem</h4>
+            <p>Libero tempore, cum soluta nobis est eligendi
+              optio cumque nihil impedit quo minus id quod maxime
+              placeat facere possimus  ut
+              et voluptates repudiandae sint et molestiae non recusandae</p>
 
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="banner-info">
-                    <div class="col-md-7 agileinfo-left">
-                      <img src="images/slide-2.jpg" alt="">
-                    </div>
-                    <div class="col-md-5 agileinfo-grid grid-one">
-                      <h4>Temporibus autem</h4>
-                      <p>Libero tempore, cum soluta nobis est eligendi
-                        optio cumque nihil impedit quo minus id quod maxime
-                        placeat facere possimus  ut
-                        et voluptates repudiandae sint et molestiae non recusandae</p>
-
-                      </div>
-                      <div class="clearfix"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="banner-info">
-                      <div class="col-md-7 agileinfo-left">
-                        <img src="images/slide-3.jpg" alt="">
-                      </div>
-                      <div class="col-md-5 agileinfo-grid grid-one">
-                        <h4>Temporibus autem</h4>
-                        <p>Libero tempore, cum soluta nobis est eligendi
-                          optio cumque nihil impedit quo minus id quod maxime
-                          placeat facere possimus  ut
-                          et voluptates repudiandae sint et molestiae non recusandae</p>
-
-                        </div>
-                        <div class="clearfix"></div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </section>
             </div>
+            <div class="clearfix"></div>
           </div>
         </div>
-        <!-- agileinfo -->
-        <!-- friend-agent -->
-        <div class="friend-agent agileits-1">
-          <div class="container">
-            <h3 class="tittle">Latest News</h3>
-            <div class="friend-grids">
-              <?php while($data1 = mysqli_fetch_assoc($hasil1)) { ?>
-                <div class="col-md-4 friend-grid" style="min-height:470px;">
-                  <a href="news-detail.php?id=<?php echo $data1['id_news']; ?>"><img src="images/news/<?php echo $data1['image']; ?>" alt="" class="img-responsive" width="350" height="237" ></a>
-                  <h4><a style="color:#EFA52C;" href="news-detail.php?id=<?php echo $data1['id_news']; ?>"><?php echo $data1['title']; ?></a></h4>
-                  <a href="news-detail.php?id=<?php echo $data1['id_news']; ?>">
-                    <p>
-                      <?php echo substr($data1['description'], 0, 170); ?>
-                      <?php
-                      $string = $data1['description'];
-                      if(strlen($string) > 170) {
-                        echo "...";
-                      }
-                      ?>
-                    </p>
-                  </a>
-                  <div style="bottom:0; left:0; position:absolute; width:100%;">
-                    <a href="news-detail.php?id=<?php echo $data1['id_news']; ?>"><button class="btn btn-primary">Read More</button></a>
-                  </div>
-                </div>
-              <?php } ?>
-              <!-- <div class="col-md-4 friend-grid">
-              <img src="images/i5.jpg" alt="" class="img-responsive" >
-              <h4>Adipiscing Elit</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel.</p>
+      </div>
+    </div>
+    <!-- agileinfo -->
+    <!-- friend-agent -->
+    <div class="friend-agent agileits-1">
+      <div class="container">
+        <h3 class="tittle">Latest News</h3>
+        <div class="friend-grids">
+          <?php while($data1 = mysqli_fetch_assoc($hasil1)) { ?>
+            <div class="col-md-4 friend-grid" style="min-height:470px;">
+              <a href="news-detail.php?id=<?php echo $data1['id_news']; ?>"><img src="images/news/<?php echo $data1['image']; ?>" alt="" class="img-responsive" width="350" height="237" ></a>
+              <h4><a style="color:#EFA52C;" href="news-detail.php?id=<?php echo $data1['id_news']; ?>"><?php echo $data1['title']; ?></a></h4>
+              <a href="news-detail.php?id=<?php echo $data1['id_news']; ?>">
+                <p>
+                  <?php echo substr($data1['description'], 0, 170); ?>
+                  <?php
+                  $string = $data1['description'];
+                  if(strlen($string) > 170) {
+                    echo "...";
+                  }
+                  ?>
+                </p>
+              </a>
+              <div style="bottom:0; left:0; position:absolute; width:100%;">
+                <a href="news-detail.php?id=<?php echo $data1['id_news']; ?>"><button class="btn btn-primary">Read More</button></a>
+              </div>
             </div>
-            <div class="col-md-4 friend-grid">
-            <img src="images/i6.jpg" alt="" class="img-responsive" >
-            <h4>Nulla Convallis</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel.</p>
-          </div> -->
+          <?php } ?>
           <div class="clearfix"></div>
         </div>
       </div>
@@ -196,14 +146,14 @@ $hasil1 = mysqli_query($db,$sql1);
             <div class="icon hi-icon-wrap hi-icon-effect-6">
               <i><a href="#" class="hi-icon hi-icon-cog glyphicon glyphicon-usd"></a></i>
             </div>
-            <h4>Bebas Biaya Pajak</h4>
-            <p>Bebas PPN, BPHTB, Notaris, AJB dan Balik Nama, PLN, Air Bersih, dan Taman Depan Kavling.</p>
+            <h4>Siap Bangun</h4>
+            <p>Kami siap membangun rumah sesaat setelah pembelian sudah berlangsung</p>
           </div>
           <div class="col-md-3 agile-3">
             <div class="icon hi-icon-wrap hi-icon-effect-6">
               <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-tag"></a>
             </div>
-            <h4>Potongan Harga</h4>
+            <h4>Diskon Puluhan Juta</h4>
             <p>Dapatkan potongan harga spesial selama masa promo hingga 30%.</p>
           </div>
           <div class="col-md-3 agile-3">
@@ -215,41 +165,10 @@ $hasil1 = mysqli_query($db,$sql1);
           </div>
           <div class="col-md-3 agile-3">
             <div class="icon hi-icon-wrap hi-icon-effect-6">
-              <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-map-marker"></a>
+              <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-heart"></a>
             </div>
-            <h4>Lokasi Strategis</h4>
-            <p>Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc.</p>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-        <div class="featured-grids w3l-2">
-          <div class="col-md-3 agile-3">
-            <div class="icon hi-icon-wrap hi-icon-effect-6">
-              <i><a href="#" class="hi-icon hi-icon-cog glyphicon glyphicon-plane"></a></i>
-            </div>
-            <h4>Dekat Kampus dan Sekolah</h4>
-            <p>Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc.</p>
-          </div>
-          <div class="col-md-3 agile-3">
-            <div class="icon hi-icon-wrap hi-icon-effect-6">
-              <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-file"></a>
-            </div>
-            <h4>Bonus SHM Atas Nama Pembeli</h4>
-            <p>Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc.</p>
-          </div>
-          <div class="col-md-3 agile-3">
-            <div class="icon hi-icon-wrap hi-icon-effect-6">
-              <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-stats"></a>
-            </div>
-            <h4>Berbagai Type Modern Minimalis</h4>
-            <p>Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc.</p>
-          </div>
-          <div class="col-md-3 agile-3">
-            <div class="icon hi-icon-wrap hi-icon-effect-6">
-              <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-heart-empty"></a>
-            </div>
-            <h4>Bebas Sutet</h4>
-            <p>Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc.</p>
+            <h4>Free Semua Pajak</h4>
+            <p>Bebas PPN, BPHTB, Notaris, AJB dan Balik Nama, PLN, Air Bersih, dan Taman Depan Kavling.</p>
           </div>
           <div class="clearfix"></div>
         </div>
@@ -281,7 +200,7 @@ $hasil1 = mysqli_query($db,$sql1);
         fit: true   // 100% fit in a container
       });
     });
-    </script>
-  </body>
-  <!-- //Body -->
-  </html>
+  </script>
+</body>
+<!-- //Body -->
+</html>

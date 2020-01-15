@@ -100,7 +100,7 @@ $data = mysqli_fetch_assoc($result);
     <div class="container">
       <div class="agileinfo_about_bottom_grids">
         <div class="col-md-8 agileinfo_about_bottom_grid">
-          <img src="images/news/<?php echo $data['image']; ?>" alt=" " class="img-responsive" style="width:50%; margin-bottom:20px; border:10px solid #ddd;">
+          <img src="images/news/<?php echo $data['image']; ?>" alt=" " class="img-responsive" style="width:100%; margin-bottom:20px; border:10px solid #ddd;">
           <h5><b><a href="" style="color:black;"><?php echo $data['title']; ?></a></b></h5>
           <div style="position:inherit"><small><i>(Posted by <u style="text-transform:capitalize;"><?php echo $data['author']; ?></u> - <?php echo $data['date']; ?>)</i></small></div>
           <p><?php echo $data['description']; ?></p>
