@@ -2568,8 +2568,10 @@ ul li a{
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
+@media only screen and (max-width: 1200px) {
+    .mapper{
+        /* width: 100%; */
+    }
 }
 
 /* ================== CUSTOM MEDIA SCREEN ======================= */
@@ -2619,6 +2621,10 @@ ul li a{
 .hvr-grow:focus,
 .hvr-grow:active {
     transform: scale(1.1);
+}
+
+map{
+    color: #A0CC59;
 }
 
 
