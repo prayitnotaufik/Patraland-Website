@@ -37,6 +37,17 @@ $hasil = mysqli_query($db, $sql);
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script src="js/responsiveslides.min.js"></script>
+	<script type="text/javascript">
+		$(window).on('resize', function() {
+			var win = $(this);
+			if (win.width() < 1200) {
+				$('div').removeClass('mapper');
+			}if(win.width > 1200) {
+				$('div').addClass('mapper');
+			}
+
+		});
+	</script>
 	<script>
 		$(function() {
 			$("#slider").responsiveSlides({
@@ -147,53 +158,57 @@ $hasil = mysqli_query($db, $sql);
 		<div class="container">
 			<h3>Site Plan</h3>
 			<div class="row siteplan">
-				<div>
-					<img src="images/siteplan.jpg" alt="">
+				<div class="">
+					<img src="images/siteplan.jpg" class="mapper" alt="map" usemap="#image-map">
+					<map name="image-map">
+						<area class="noborder icolorf4f4f4" id="" rel="" target="" alt="" title="" href="" coords="361,188,548,295,557,289,560,266,557,240,551,217,535,192,525,180,511,184,501,190,485,190,454,186,415,190,388,182" shape="poly">
+					</map>
 				</div>
 			</div>
 			<div class="row">
-				<a href="" class="">
-					<div class="col-md-4 konten hvr-grow">
+				<h3>Produk Kami</h3>
+				<a href="#1" class="">
+					<div class="col-md-3 konten hvr-grow">
 						<img src="images/asoka.jpg" alt="" srcset="">
 					</div>
 				</a>
-				<a href="" class="">
-					<div class="col-md-4 konten hvr-grow">
+				<a href="#1" class="">
+					<div class="col-md-3 konten hvr-grow">
 						<img src="images/aster.jpg" alt="" srcset="">
 					</div>
 				</a>
-				<a href="" class="">
-					<div class="col-md-4 konten hvr-grow">
+				<a href="#1" class="">
+					<div class="col-md-3 konten hvr-grow">
 						<img src="images/camelia.jpg" alt="" srcset="">
 					</div>
 				</a>
-				<a href="" class="">
-					<div class="col-md-4 konten hvr-grow">
+				<a href="#1" class="">
+					<div class="col-md-3 konten hvr-grow">
 						<img src="images/edelweis.jpg" alt="" srcset="">
 					</div>
 				</a>
-				<a href="" class="">
-					<div class="col-md-4 konten hvr-grow">
+				<a href="#1" class="">
+					<div class="col-md-3 konten hvr-grow">
 						<img src="images/lavender.jpg" alt="" srcset="">
 					</div>
 				</a>
-				<a href="" class="">
-					<div class="col-md-4 konten hvr-grow">
+				<a href="#1" class="">
+					<div class="col-md-3 konten hvr-grow">
 						<img src="images/magnolia.jpg" alt="" srcset="">
 					</div>
 				</a>
-				<a href="" class="">
-					<div class="col-md-4 konten hvr-grow">
+				<a href="#1" class="">
+					<div class="col-md-3 konten hvr-grow">
 						<img src="images/rosela.jpg" alt="" srcset="">
 					</div>
 				</a>
-				<a href="" class="">
-					<div class="col-md-4 konten hvr-grow">
+				<a href="#1" class="">
+					<div class="col-md-3 konten hvr-grow">
 						<img src="images/sakura.jpg" alt="" srcset="">
 					</div>
 				</a>
-				<a href="" class="">
-					<div class="col-md-4 konten hvr-grow">
+				<a href="#1" class="">
+					<div class="col-md-3 konten hvr-grow">
 						<img src="images/tulip.jpg" alt="" srcset="">
 					</div>
 				</a>
@@ -292,6 +307,9 @@ $hasil = mysqli_query($db, $sql);
 			});
 		});
 	</script>
+
+	<script type="text/javascript" src="js/wz_jsgraphics.js"></script>
+	<script type="text/javascript" src="js/mapper.js"></script>
 </body>
 <!-- //Body -->
 
