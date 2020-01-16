@@ -1,6 +1,6 @@
 <header class="cd-main-header js-cd-main-header">
   <div class="cd-logo-wrapper">
-    <a href="#0" class="cd-logo"><img src="assets/img/cd-logo.svg" alt="Logo"></a>
+    <a href="#0" class="cd-logo"><img src="../images/cpanel-logo.png" alt="Logo" width="35"></a>
   </div>
 
   <div class="js-cd-search">
