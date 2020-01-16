@@ -2453,6 +2453,10 @@ ul li a{
     .rslides img{
         margin-top: 88px;
     }
+
+    .konten{
+        width: 32% ;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -2490,12 +2494,20 @@ ul li a{
     .rslides img{
         margin-top: 88px;
     }
+
+    .konten{
+        width: 32% ;
+    }
 }
 
 @media only screen and (min-width: 736px) {
     .rslides img{
         margin-top: 100px;
     }
+
+    /* .konten{
+        width: none ;
+    } */
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -2538,9 +2550,17 @@ ul li a{
     .rslides img{
         margin-top: 107px;
     }
+
+    .konten{
+        width: 33% ;
+    } 
 }
 
-
+@media only screen and (max-width: 762px){
+    /* .konten{
+        width: 32% ;
+    } */
+}
 
 @media only screen and (max-width: 991px) {
     .nav > li > a{
@@ -2550,6 +2570,10 @@ ul li a{
     .nav>li>a{
         padding:none;
     }
+
+    /* .konten{
+        width: 33% ;
+    } */
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -2564,6 +2588,10 @@ ul li a{
 
     .rslides img{
         margin-top: 80px;
+    }
+
+    .konten{
+        width: 33% ;
     }
 }
 
@@ -2592,6 +2620,10 @@ ul li a{
     margin-bottom: 15px;
     margin-top: 30px;
     font-weight: normal;
+}
+
+.produk-page{
+    background-color: #676262;
 }
 
 .konten{

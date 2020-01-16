@@ -42,7 +42,8 @@ $hasil = mysqli_query($db, $sql);
 			var win = $(this);
 			if (win.width() < 1200) {
 				$('div').removeClass('mapper');
-			}if(win.width > 1200) {
+			}
+			if (win.width > 1200) {
 				$('div').addClass('mapper');
 			}
 
@@ -154,61 +155,70 @@ $hasil = mysqli_query($db, $sql);
 		</div>
 	</div>
 	<!-- SECTION PART -->
-	<div id="project" class="agileinfo tipe-page">
+	<div id="project" class="agileinfo produk-page">
 		<div class="container">
 			<h3>Site Plan</h3>
 			<div class="row siteplan">
 				<div class="">
 					<img src="images/siteplan.jpg" class="mapper" alt="map" usemap="#image-map">
 					<map name="image-map">
-						<area class="noborder icolorf4f4f4" id="" rel="" target="" alt="" title="" href="" coords="361,188,548,295,557,289,560,266,557,240,551,217,535,192,525,180,511,184,501,190,485,190,454,186,415,190,388,182" shape="poly">
+						<area class="noborder icolor555" id="" rel="" target="" alt="" title="" href="" coords="361,188,548,295,557,289,560,266,557,240,551,217,535,192,525,180,511,184,501,190,485,190,454,186,415,190,388,182" shape="poly">
+						<area class="noborder icolor555" target="" alt="" title="" href="" coords="279,215,317,208,306,380,294,389,269,339,274,276" shape="poly">
+						<area class="noborder icolor555" target="" alt="" title="" href="" coords="335,219,342,205,362,214,549,319,526,349,504,373,489,371,337,285,330,275" shape="poly">
+						<area class="noborder icolor555" target="" alt="" title="" href="" coords="563,343,599,281,613,274,694,317,725,347,813,456,816,499,773,534,765,538,756,529,658,403,567,356" shape="poly">
+						<area class="noborder icolor555" target="" alt="" title="" href="" coords="511,428,507,415,546,362,560,366,628,404,645,413,694,476,641,519,629,518,594,473,559,456" shape="poly">
+						<area class="noborder icolor555" target="" alt="" title="" href="" coords="560,616,558,603,700,496,710,499,746,546,745,557,601,666,591,662,574,642" shape="poly">
+						<area class="noborder icolor555" target="" alt="" title="" href="" coords="612,689,614,678,815,521,825,527,830,556,836,585,830,599,652,731,627,708" shape="poly">
+						<area class="noborder icolor555" target="" alt="" title="" href="" coords="680,730,676,742,685,749,716,749,764,753,804,721,800,709,771,666,760,671" shape="poly">
+						<area class="noborder icolor555" target="" alt="" title="" href="" coords="870,532,895,565,968,522,940,479,1026,415,935,359,860,413,854,423,866,500" shape="poly">
+						<area class="noborder icolor555" target="" alt="" title="" href="" coords="837,409,898,365,930,342,972,313,975,304,917,228,847,248,827,267,734,265,736,277" shape="poly">
 					</map>
 				</div>
 			</div>
 			<div class="row">
 				<h3>Produk Kami</h3>
 				<a href="#1" class="">
-					<div class="col-md-3 konten hvr-grow">
+					<div class="col-md-4 konten hvr-grow">
 						<img src="images/asoka.jpg" alt="" srcset="">
 					</div>
 				</a>
 				<a href="#1" class="">
-					<div class="col-md-3 konten hvr-grow">
+					<div class="col-md-4 konten hvr-grow">
 						<img src="images/aster.jpg" alt="" srcset="">
 					</div>
 				</a>
 				<a href="#1" class="">
-					<div class="col-md-3 konten hvr-grow">
+					<div class="col-md-4 konten hvr-grow">
 						<img src="images/camelia.jpg" alt="" srcset="">
 					</div>
 				</a>
 				<a href="#1" class="">
-					<div class="col-md-3 konten hvr-grow">
+					<div class="col-md-4 konten hvr-grow">
 						<img src="images/edelweis.jpg" alt="" srcset="">
 					</div>
 				</a>
 				<a href="#1" class="">
-					<div class="col-md-3 konten hvr-grow">
+					<div class="col-md-4 konten hvr-grow">
 						<img src="images/lavender.jpg" alt="" srcset="">
 					</div>
 				</a>
 				<a href="#1" class="">
-					<div class="col-md-3 konten hvr-grow">
+					<div class="col-md-4 konten hvr-grow">
 						<img src="images/magnolia.jpg" alt="" srcset="">
 					</div>
 				</a>
 				<a href="#1" class="">
-					<div class="col-md-3 konten hvr-grow">
+					<div class="col-md-4 konten hvr-grow">
 						<img src="images/rosela.jpg" alt="" srcset="">
 					</div>
 				</a>
 				<a href="#1" class="">
-					<div class="col-md-3 konten hvr-grow">
+					<div class="col-md-4 konten hvr-grow">
 						<img src="images/sakura.jpg" alt="" srcset="">
 					</div>
 				</a>
 				<a href="#1" class="">
-					<div class="col-md-3 konten hvr-grow">
+					<div class="col-md-4 konten hvr-grow">
 						<img src="images/tulip.jpg" alt="" srcset="">
 					</div>
 				</a>
