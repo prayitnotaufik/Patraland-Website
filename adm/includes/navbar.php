@@ -13,6 +13,7 @@
     <li class="cd-side__item cd-side__item--has-children cd-side__item--users js-cd-item--has-children">
       <a href="#0">About</a>
       <ul class="cd-side__sub-list">
+        <li class="cd-side__sub-item"><a href="about.php">About the Company</a></li>
         <li class="cd-side__sub-item"><a href="mot.php">Meet our Team</a></li>
       </ul>
     </li>
@@ -24,8 +25,14 @@
     <li class="cd-side__item cd-side__item--has-children cd-side__item--bookmarks js-cd-item--has-children">
       <a href="#0">Project</a>
       <ul class="cd-side__sub-list">
-        <li class="cd-side__sub-item"><a href="#0">Patra Garden</a></li>
+        <li class="cd-side__sub-item"><a href="#0">Garden Residence</a></li>
+        <li class="cd-side__sub-item"><a href="#0">Kencana Residence</a></li>
+        <li class="cd-side__sub-item"><a href="#0">Griya Madani</a></li>
+        <li class="cd-side__sub-item"><a href="#0">The Island Cluster</a></li>
       </ul>
+      <!-- <ul class="cd-side__sub-list">
+        <li class="cd-side__sub-item"><a href="#0">Patra Garden</a></li>
+      </ul> -->
     </li>
 
     <li class="cd-side__item cd-side__item--has-children cd-side__item--notifications js-cd-item--has-children">

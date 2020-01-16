@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2020 at 09:21 AM
+-- Generation Time: Jan 15, 2020 at 09:31 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -21,6 +21,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `patraland_web`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_about`
+--
+
+CREATE TABLE `tb_about` (
+  `id_about` int(11) NOT NULL,
+  `image` longtext NOT NULL,
+  `title` longtext NOT NULL,
+  `description` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_about`
+--
+
+INSERT INTO `tb_about` (`id_about`, `image`, `title`, `description`) VALUES
+(1, 'slide-5.jpg', 'Patraland Place (Hunian Berkelas di Lokasi Strategis)', 'PT. Patraland Griya Madani Development menawarkan sebuah hunian pilihan \r\nyang sangat sesuai untuk Anda yang ingin setiap saat menikmati keindahan\r\n dan kesejukan kota Malang. Perumahan Patraland adalah proyek perumahan \r\ndengan pemilihan lokasi yang sangat strategis, dan telah melalui \r\npertimbangan yang matang demi kepuasan penghuninya.PT. Patraland Griya \r\nMadani Development menawarkan sebuah hunian pilihan yang sangat sesuai \r\nuntuk Anda yang ingin setiap saat menikmati keindahan dan kesejukan kota\r\n Malang. Perumahan Patraland adalah proyek perumahan dengan pemilihan \r\nlokasi yang sangat strategis, dan telah melalui pertimbangan yang matang\r\n demi kepuasan penghuninya.PT. Patraland Griya Madani Development \r\nmenawarkan sebuah hunian pilihan yang sangat sesuai untuk Anda yang \r\ningin setiap saat menikmati keindahan dan kesejukan kota Malang. \r\nPerumahan Patraland adalah proyek perumahan dengan pemilihan lokasi yang\r\n sangat strategis, dan telah melalui pertimbangan yang matang demi \r\nkepuasan penghuninya.');
 
 -- --------------------------------------------------------
 
@@ -190,6 +210,12 @@ INSERT INTO `tb_team` (`id_team`, `photo`, `name`, `position`, `whatsapp`, `inst
 --
 
 --
+-- Indexes for table `tb_about`
+--
+ALTER TABLE `tb_about`
+  ADD PRIMARY KEY (`id_about`);
+
+--
 -- Indexes for table `tb_contact`
 --
 ALTER TABLE `tb_contact`
@@ -236,6 +262,12 @@ ALTER TABLE `tb_team`
 --
 
 --
+-- AUTO_INCREMENT for table `tb_about`
+--
+ALTER TABLE `tb_about`
+  MODIFY `id_about` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `tb_contact`
 --
 ALTER TABLE `tb_contact`
@@ -269,7 +301,7 @@ ALTER TABLE `tb_news`
 -- AUTO_INCREMENT for table `tb_slider`
 --
 ALTER TABLE `tb_slider`
-  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tb_team`

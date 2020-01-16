@@ -52,14 +52,18 @@ include("config/conn.php");
     <!-- //Slider -->
   </div>
   <!-- //Header -->
+  <?php
+  $sql = mysqli_query($db, "SELECT * FROM tb_about WHERE id_about = '1'");
+  $data = mysqli_fetch_array($sql);
+  ?>
   <div class="about-bottom wthree-3">
     <div class="container">
       <h2 class="tittle">About</h2>
       <div class="agileinfo_about_bottom_grids">
         <div class="col-md-12 agileinfo_about_bottom_grid">
-          <img src="images/slide-5.jpg" alt=" " class="img-responsive" style="width:600px; margin-left:20px; float:right">
-          <h5>Patraland Place (Hunian Berkelas di Lokasi Strategis)</h5>
-          <p>PT. Patraland Griya Madani Development menawarkan sebuah hunian pilihan yang sangat sesuai untuk Anda yang ingin setiap saat menikmati keindahan dan kesejukan kota Malang. Perumahan Patraland adalah proyek perumahan dengan pemilihan lokasi yang sangat strategis, dan telah melalui pertimbangan yang matang demi kepuasan penghuninya.PT. Patraland Griya Madani Development menawarkan sebuah hunian pilihan yang sangat sesuai untuk Anda yang ingin setiap saat menikmati keindahan dan kesejukan kota Malang. Perumahan Patraland adalah proyek perumahan dengan pemilihan lokasi yang sangat strategis, dan telah melalui pertimbangan yang matang demi kepuasan penghuninya.PT. Patraland Griya Madani Development menawarkan sebuah hunian pilihan yang sangat sesuai untuk Anda yang ingin setiap saat menikmati keindahan dan kesejukan kota Malang. Perumahan Patraland adalah proyek perumahan dengan pemilihan lokasi yang sangat strategis, dan telah melalui pertimbangan yang matang demi kepuasan penghuninya.</p>
+          <img src="images/about/<?php echo $data['image']; ?>" alt=" " class="img-responsive" style="width:600px; margin-left:20px; float:right">
+          <h5><?php echo $data['title']; ?></h5>
+          <p><?php echo $data['description']; ?></p>
         </div>
         <!-- <div class="col-md-6 agileinfo_about_bottom_grid">
         <img src="images/slide-5.jpg" alt=" " class="img-responsive">
@@ -116,8 +120,8 @@ include("config/conn.php");
                 </ul>
               </div>
               <!-- <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. Duis aute irure dolor i</p> -->
-              <!-- <p><i><small>Social Media</small></i></p> -->
-              <p><img class="" src="images/lgo.png" alt="" srcset="" style="width:100%; position:absolute;"></p>
+              <p><i><small>Social Media</small></i></p>
+              <!-- <p><img class="" src="images/lgo.png" alt="" srcset="" style="width:100%; position:absolute;"></p> -->
             </div>
           </div>
           <h4><?php echo $data['name']; ?></h4>
