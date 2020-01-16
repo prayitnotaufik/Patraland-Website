@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <link rel="shortcut icon" type="image/png" href="../images/icon2.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
@@ -15,7 +16,7 @@
     <?php include("includes/navbar.php"); ?>
     <div class="cd-content-wrapper">
       <div class="text-component text-center">
-        
+
       </div>
     </div> <!-- .content-wrapper -->
   </main> <!-- .cd-main-content -->

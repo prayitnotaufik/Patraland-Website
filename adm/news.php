@@ -8,6 +8,7 @@ if(@$_SESSION['status'] != "login") {
 <!doctype html>
 <html lang="en">
 <head>
+  <link rel="shortcut icon" type="image/png" href="../images/icon2.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
@@ -28,30 +29,32 @@ if(@$_SESSION['status'] != "login") {
 
       <h2>News</h2></h2><br>
       <p>
-        <table cellpadding="5" width="100%" border=1>
-          <tr style="background:#ddd; font-weight:bolder;">
-            <th align="left">Title</th>
-            <th align="left">Author</th>
-            <th align="left">Date</th>
-            <th align="left">Status</th>
-            <th colspan="2"></th>
-          </tr>
-          <?php
-          $no = 1;
-          $sql = "SELECT * FROM tb_news";
-          $hasil = mysqli_query($db,$sql);
-          while($data = mysqli_fetch_assoc($hasil)) {
-            ?>
-            <tr>
-              <td><?php echo $data['title']; ?></td>
-              <td><?php echo $data['author']; ?></td>
-              <td><?php echo $data['date']; ?></td>
-              <td><?php echo $data['status']; ?></td>
-              <td align="center"><br><a class="btn btn--primary btn--sm" style="background:#28a745;" href="edit-news.php?id=<?php echo $data['id_news']; ?>&act=edit">Edit</a><br><br></td>
-              <td align="center"><br><a class="btn btn--accent btn--sm" href="?id=<?php echo $data['id_news']; ?>&act=del">Hapus</a><br><br></td>
+        <div style="overflow-x:auto;">
+          <table cellpadding="5" width="100%" border=1>
+            <tr style="background:#ddd; font-weight:bolder;">
+              <th>Title</th>
+              <th>Author</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th colspan="2"></th>
             </tr>
-          <?php } ?>
-        </table>
+            <?php
+            $no = 1;
+            $sql = "SELECT * FROM tb_news";
+            $hasil = mysqli_query($db,$sql);
+            while($data = mysqli_fetch_assoc($hasil)) {
+              ?>
+              <tr>
+                <td><?php echo $data['title']; ?></td>
+                <td><?php echo $data['author']; ?></td>
+                <td><?php echo $data['date']; ?></td>
+                <td><?php echo $data['status']; ?></td>
+                <td align="center"><br><a class="btn btn--primary btn--sm" style="background:#28a745;" href="edit-news.php?id=<?php echo $data['id_news']; ?>&act=edit">Edit</a><br><br></td>
+                <td align="center"><br><a class="btn btn--accent btn--sm" href="?id=<?php echo $data['id_news']; ?>&act=del">Hapus</a><br><br></td>
+              </tr>
+            <?php } ?>
+          </table>
+        </div>
       </form>
     </p>
     <?php

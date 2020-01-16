@@ -8,6 +8,7 @@ if(@$_SESSION['status'] != "login") {
 <!doctype html>
 <html lang="en">
 <head>
+  <link rel="shortcut icon" type="image/png" href="../images/icon2.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
@@ -21,34 +22,34 @@ if(@$_SESSION['status'] != "login") {
     <div class="cd-content-wrapper">
 
 
-        <h2>Reset Password</h2><br>
-        <p>
-          <form action="" method="post">
-            <table cellpadding="5">
-              <tr>
-                <td>Current Password</td>
-              </tr>
-              <tr>
-                <td><input type="text" name="currpwd" required></td>
-              </tr>
-              <tr>
-                <td>New Password</td>
-              </tr>
-              <tr>
-                <td><input type="text" name="newpwd" required></td>
-              </tr>
-              <tr>
-                <td>Confirm Password</td>
-              </tr>
-              <tr>
-                <td><input type="text" name="confpwd" required></td>
-              </tr>
-              <tr>
-                <td><br><input class="btn btn--primary btn--sm" type="submit" name="submit" value="Reset"></td>
-              </tr>
-            </table>
-          </form>
-        </p>
+      <h2>Reset Password</h2><br>
+      <p>
+        <form action="" method="post">
+          <table cellpadding="5">
+            <tr>
+              <td>Current Password</td>
+            </tr>
+            <tr>
+              <td><input type="text" name="currpwd" required></td>
+            </tr>
+            <tr>
+              <td>New Password</td>
+            </tr>
+            <tr>
+              <td><input type="text" name="newpwd" required></td>
+            </tr>
+            <tr>
+              <td>Confirm Password</td>
+            </tr>
+            <tr>
+              <td><input type="text" name="confpwd" required></td>
+            </tr>
+            <tr>
+              <td><br><input class="btn btn--primary btn--sm" type="submit" name="submit" value="Reset"></td>
+            </tr>
+          </table>
+        </form>
+      </p>
 
     </div> <!-- .content-wrapper -->
   </main> <!-- .cd-main-content -->
@@ -67,17 +68,17 @@ if(isset($_POST["submit"])) {
   $sql = "SELECT * FROM tb_login WHERE username = '$username'";
   $query = $db->query($sql);
   $hasil = $query->fetch_array();
-   if($currpwd != $hasil['password']) {
-     echo "<script type='text/javascript'>alert('Password Salah!');window.location.href='reset-pass.php';</script>";
-   }
-   if($confpwd != $newpwd) {
-     echo "<script type='text/javascript'>alert('Cek kembali konfirmasi password');window.location.href='reset-pass.php';</script>";
-   }
-   if($currpwd == $hasil['password'] && $confpwd == $newpwd) {
-     $sql1 = "UPDATE tb_login SET password = '$newpwd' WHERE username = '$username'";
-     $query1 = $db->query($sql1);
-     $hasil1 = $query1->fetch_assoc();
-     header("Location:reset-pass.php?msg=success");
-    }
+  if($currpwd != $hasil['password']) {
+    echo "<script type='text/javascript'>alert('Password Salah!');window.location.href='reset-pass.php';</script>";
+  }
+  if($confpwd != $newpwd) {
+    echo "<script type='text/javascript'>alert('Cek kembali konfirmasi password');window.location.href='reset-pass.php';</script>";
+  }
+  if($currpwd == $hasil['password'] && $confpwd == $newpwd) {
+    $sql1 = "UPDATE tb_login SET password = '$newpwd' WHERE username = '$username'";
+    $query1 = $db->query($sql1);
+    $hasil1 = $query1->fetch_assoc();
+    header("Location:reset-pass.php?msg=success");
+  }
 }
 ?>

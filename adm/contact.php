@@ -8,40 +8,41 @@ if(@$_SESSION['status'] != "login") {
 <!doctype html>
 <html lang="en">
 <head>
+  <link rel="shortcut icon" type="image/png" href="../images/icon2.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
   <link rel="stylesheet" href="assets/css/style.css">
   <title>PT. Patraland - Administrator</title>
   <style>
-.tooltip {
-  position: relative;
-  display: inline-block;
-  font-size:10px;
-}
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    font-size:10px;
+  }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  background-color: #000000c9;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px;
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: #000000c9;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
 
-  /* Position the tooltip */
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  width:170px;
-  margin-left: -60px;
-  transition:0.3s;
-  opacity:0;
-}
+    /* Position the tooltip */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width:170px;
+    margin-left: -60px;
+    transition:0.3s;
+    opacity:0;
+  }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity:1;
-}
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity:1;
+  }
 </style>
 </head>
 <body>
@@ -55,9 +56,10 @@ if(@$_SESSION['status'] != "login") {
       $data = mysqli_fetch_assoc($sqlect1);
       ?>
 
-        <h2>Contact</h2><br>
-        <p>
-          <form action="" method="post">
+      <h2>Contact</h2><br>
+      <p>
+        <form action="" method="post">
+          <div style="overflow-x:auto;">
             <table cellpadding="5">
               <tr>
                 <td>Lokasi</td>
@@ -79,8 +81,8 @@ if(@$_SESSION['status'] != "login") {
               </tr>
               <tr>
                 <td>Google Maps
-                  <div class="tooltip"><sup>(❔ help)</sup>
-                    <span class="tooltiptext"><a href="https://www.google.com/maps" target="_blank">maps.google.com</a> => Cari Alamat > Klik menu ≡ > Bagikan atau Sematkan Peta > Pilih Sematkan Peta > Salin Link</span>
+                  <div class="tooltip"><sup><img src="../images/help.png" width="18"></sup>
+                    <span class="tooltiptext"><a href="https://www.google.com/maps" target="_blank">maps.google.com</a> > Cari Alamat > Klik menu ≡ > Bagikan atau Sematkan Peta > Pilih Sematkan Peta > Salin Link<br></br><span style="font-style:italic; color:#F00;">-- Tidak Support Mobile --</span></span>
                   </div>
                 </td>
               </tr>
@@ -94,8 +96,9 @@ if(@$_SESSION['status'] != "login") {
                 <td><br><input class="btn btn--primary btn--sm" type="submit" name="submit" value="Simpan"></td>
               </tr>
             </table>
-          </form>
-        </p>
+          </div>
+        </form>
+      </p>
 
     </div> <!-- .content-wrapper -->
   </main> <!-- .cd-main-content -->

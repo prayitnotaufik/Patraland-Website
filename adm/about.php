@@ -10,10 +10,11 @@ $data = mysqli_fetch_array($sql);
 <!doctype html>
 <html lang="en">
 <head>
+  <link rel="shortcut icon" type="image/png" href="../images/icon2.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
-<link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <title>PT. Patraland - Administrator</title>
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -42,57 +43,59 @@ $data = mysqli_fetch_array($sql);
       <h2>About the Company</h2><br>
       <p>
         <form action="proc/proc-edit-about.php" method="post" enctype="multipart/form-data">
-          <table cellpadding="5">
-            <tr>
-              <td>Image</td>
-            </tr>
-            <tr>
-              <td>
-                <img src="../images/about/<?php echo $data['image']; ?>" width="300"><br>
-                <input type="file" name="file">
-                <input type="hidden" name="idabout" value="<?php echo $data['id_about']; ?>">
-              </td>
-            </tr>
-            <tr>
-              <td>Title</td>
-            </tr>
-            <tr>
-              <td>
-                <input type="text" name="txttitle" value="<?php echo $data['title']; ?>" required>
-              </td>
-            </tr>
-            <tr>
-              <td>Description</td>
-            </tr>
-            <tr>
-              <td>
-                <textarea id="summernote" name="txtdescription"><?php echo $data['description']; ?></textarea>
-                <script>
-                $('#summernote').summernote({
-                  tabsize: 2,
-                  fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New'],
-                  height: 180,
-                  toolbar: [
-                    ['style', ['style']],
-                    ['font', ['bold', 'italic', 'underline', 'clear']],
-                    ['fontname', ['fontname']],
-                    ['color', ['color']],
-                    ['para', ['ul', 'ol', 'paragraph']],
-                    ['table', ['table']],
-                    ['insert', ['link', 'picture', 'video']],
-                    ['view', ['fullscreen', 'codeview', 'help']]
-                  ]
-                });
-                </script>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-            </tr>
-            <tr>
-              <td><br><input class="btn btn--primary btn--sm" type="submit" name="submit" value="Simpan"></td>
-            </tr>
-          </table>
+          <div style="overflow-x:auto;">
+            <table cellpadding="5">
+              <tr>
+                <td>Image</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="../images/about/<?php echo $data['image']; ?>" width="300"><br>
+                  <input type="file" name="file">
+                  <input type="hidden" name="idabout" value="<?php echo $data['id_about']; ?>">
+                </td>
+              </tr>
+              <tr>
+                <td>Title</td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" name="txttitle" value="<?php echo $data['title']; ?>" required>
+                </td>
+              </tr>
+              <tr>
+                <td>Description</td>
+              </tr>
+              <tr>
+                <td>
+                  <textarea id="summernote" name="txtdescription"><?php echo $data['description']; ?></textarea>
+                  <script>
+                  $('#summernote').summernote({
+                    tabsize: 2,
+                    fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New'],
+                    height: 180,
+                    toolbar: [
+                      ['style', ['style']],
+                      ['font', ['bold', 'italic', 'underline', 'clear']],
+                      ['fontname', ['fontname']],
+                      ['color', ['color']],
+                      ['para', ['ul', 'ol', 'paragraph']],
+                      ['table', ['table']],
+                      ['insert', ['link', 'picture', 'video']],
+                      ['view', ['fullscreen', 'codeview', 'help']]
+                    ]
+                  });
+                  </script>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+              </tr>
+              <tr>
+                <td><br><input class="btn btn--primary btn--sm" type="submit" name="submit" value="Simpan"></td>
+              </tr>
+            </table>
+          </div>
         </form>
       </p>
 
