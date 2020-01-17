@@ -53,7 +53,7 @@ a {
 
 .cd-content-wrapper {
   padding: var(--space-xl) var(--space-md);
-  
+
   @include breakpoint(md) {
     h1 {
       font-weight: 300;
@@ -447,7 +447,7 @@ a {
 }
 
 .cd-side__btn {
-  margin: var(--space-xs) var(--space-md); 
+  margin: var(--space-xs) var(--space-md);
 
   button {
     display: block;
@@ -491,7 +491,7 @@ a {
     &:last-of-type {
       margin-right: 0;
     }
-    
+
     a {
       font-size: 1.1em;
       color: var(--cd-color-3);

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2020 at 09:31 AM
+-- Generation Time: Jan 16, 2020 at 07:29 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -91,7 +91,8 @@ INSERT INTO `tb_gallery` (`id_gallery`, `image`, `category`, `title`, `caption`)
 (20, '11012020044503IMG_20200108_123913.jpg', '1', '', ''),
 (21, '11012020044508IMG_20200108_123913.jpg', '1', '', ''),
 (22, '11012020044513IMG_20200108_123913.jpg', '1', '', ''),
-(23, '11012020044817IMG_20200108_123913.jpg', '2', '', '');
+(23, '11012020044817IMG_20200108_123913.jpg', '2', '', ''),
+(24, '16012020053316i5.jpg', '3', 'Type 36', 'Luas Tanah 46*46');
 
 -- --------------------------------------------------------
 
@@ -133,8 +134,7 @@ CREATE TABLE `tb_message` (
 INSERT INTO `tb_message` (`id_message`, `name`, `email`, `website`, `message`) VALUES
 (1, 'Muhammad Taufik Prayitno', 'taufikprayitno16@gmail.com', 'facebook.com', 'kkmk'),
 (2, 'Muhammad Taufik Prayitno', 'test@gmail.com', 'facebook.com', 'mlmlml'),
-(3, 'Muhammad Taufik Prayitno', 'taufikprayitno16@gmail.com', 'sdf', 'sdfsdf'),
-(4, 'Muhammad Taufik Prayitno', 'taufikprayitno16@gmail.com', 'sdf', 'sdfsdf');
+(3, 'Muhammad Taufik Prayitno', 'taufikprayitno16@gmail.com', 'sdf', 'sdfsdf');
 
 -- --------------------------------------------------------
 
@@ -177,7 +177,8 @@ CREATE TABLE `tb_slider` (
 --
 
 INSERT INTO `tb_slider` (`id_slider`, `image`, `title`, `caption`) VALUES
-(4, '09012020075506placeholderslider1280x600.jpg', 'Kencana Residence', 'Nilai Keharmonisan Hunian dan Alam');
+(4, '09012020075506placeholderslider1280x600.jpg', 'Kencana Residence', 'Nilai Keharmonisan Hunian dan Alam'),
+(5, '16012020051315slide-3.jpg', 'Griya Madani', 'Harmonis dan Asri');
 
 -- --------------------------------------------------------
 
@@ -203,7 +204,9 @@ CREATE TABLE `tb_team` (
 INSERT INTO `tb_team` (`id_team`, `photo`, `name`, `position`, `whatsapp`, `instagram`, `facebook`, `twitter`) VALUES
 (1, '6.jpg', 'Ray White', 'Marketing Officer', '6282137899966', 'nurhidayats', '', ''),
 (2, '140120200537088.jpg', 'Toyo Ta', 'Marketing Coordinator', '6281237899966', '', 'https://facebook.com/Nurhidayat.Aldila', ''),
-(3, '140120200753439.jpg', 'M. Topek', 'Magang', '', '', '', '');
+(3, '140120200753439.jpg', 'M. Topek', 'Magang', '', '', '', ''),
+(4, '1601202005255210.jpg', 'Alice', 'Officer', '', '', '', ''),
+(5, '160120200712358.jpg', 'Rohiyan', 'Admintrasi', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -277,7 +280,7 @@ ALTER TABLE `tb_contact`
 -- AUTO_INCREMENT for table `tb_gallery`
 --
 ALTER TABLE `tb_gallery`
-  MODIFY `id_gallery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_gallery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `tb_login`
@@ -301,13 +304,13 @@ ALTER TABLE `tb_news`
 -- AUTO_INCREMENT for table `tb_slider`
 --
 ALTER TABLE `tb_slider`
-  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tb_team`
 --
 ALTER TABLE `tb_team`
-  MODIFY `id_team` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_team` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

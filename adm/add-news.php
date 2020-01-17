@@ -8,10 +8,11 @@ if(@$_SESSION['status'] != "login") {
 <!doctype html>
 <html lang="en">
 <head>
+  <link rel="shortcut icon" type="image/png" href="../images/icon2.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
-<link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <title>PT. Patraland - Administrator</title>
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -37,66 +38,68 @@ if(@$_SESSION['status'] != "login") {
       <h2>Add News</h2><br>
       <p>
         <form action="proc/proc-add-news.php" method="post" enctype="multipart/form-data">
-          <table cellpadding="5">
-            <tr>
-              <td>Image</td>
-            </tr>
-            <tr>
-              <td><input type="file" name="file"></td>
-            </tr>
-            <tr>
-              <td>Title</td>
-            </tr>
-            <tr>
-              <td>
-                <input type="text" name="txttitle" required>
-                <input type="hidden" name="txtauthor" value="<?php echo $_SESSION['username']; ?>">
-                <input type="hidden" name="txtdate" value="<?php echo date("d / m / Y"); ?>">
-              </td>
-            </tr>
-            <tr>
-              <td>Description</td>
-            </tr>
-            <tr>
-              <td>
-                <textarea id="summernote" name="txtdescription"></textarea>
-                <script>
-                $('#summernote').summernote({
-                  tabsize: 2,
-                  fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New'],
-                  height: 180,
-                  toolbar: [
-                    ['style', ['style']],
-                    ['font', ['bold', 'italic', 'underline', 'clear']],
-                    ['fontname', ['fontname']],
-                    ['color', ['color']],
-                    ['para', ['ul', 'ol', 'paragraph']],
-                    ['table', ['table']],
-                    ['insert', ['link', 'picture', 'video']],
-                    ['view', ['fullscreen', 'codeview', 'help']]
-                  ]
-                });
-                </script>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Status : <input type="radio" name="status" value="Draft" required> Draft&nbsp;
-              <input type="radio" name="status" value="Published" required> Publish</td>
-            </tr>
-            <tr>
-              <td><br><input class="btn btn--primary btn--sm" type="submit" name="submit" value="Simpan"></td>
-            </tr>
-          </table>
-        </form>
-      </p>
+          <div style="overflow-x:auto;">
+            <table cellpadding="5">
+              <tr>
+                <td>Image</td>
+              </tr>
+              <tr>
+                <td><input type="file" name="file"></td>
+              </tr>
+              <tr>
+                <td>Title</td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" name="txttitle" required>
+                  <input type="hidden" name="txtauthor" value="<?php echo $_SESSION['username']; ?>">
+                  <input type="hidden" name="txtdate" value="<?php echo date("d / m / Y"); ?>">
+                </td>
+              </tr>
+              <tr>
+                <td>Description</td>
+              </tr>
+              <tr>
+                <td>
+                  <textarea id="summernote" name="txtdescription"></textarea>
+                  <script>
+                  $('#summernote').summernote({
+                    tabsize: 2,
+                    fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New'],
+                    height: 180,
+                    toolbar: [
+                      ['style', ['style']],
+                      ['font', ['bold', 'italic', 'underline', 'clear']],
+                      ['fontname', ['fontname']],
+                      ['color', ['color']],
+                      ['para', ['ul', 'ol', 'paragraph']],
+                      ['table', ['table']],
+                      ['insert', ['link', 'picture', 'video']],
+                      ['view', ['fullscreen', 'codeview', 'help']]
+                    ]
+                  });
+                  </script>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Status : <input type="radio" name="status" value="Draft" required> Draft&nbsp;
+                  <input type="radio" name="status" value="Published" required> Publish</td>
+                </tr>
+                <tr>
+                  <td><br><input class="btn btn--primary btn--sm" type="submit" name="submit" value="Simpan"></td>
+                </tr>
+              </table>
+            </div>
+          </form>
+        </p>
 
-    </div> <!-- .content-wrapper -->
-  </main> <!-- .cd-main-content -->
-  <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
-  <script src="assets/js/menu-aim.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
+      </div> <!-- .content-wrapper -->
+    </main> <!-- .cd-main-content -->
+    <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+    <script src="assets/js/menu-aim.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+  </html>

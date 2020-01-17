@@ -14,7 +14,7 @@
       <a href="#0">About</a>
       <ul class="cd-side__sub-list">
         <li class="cd-side__sub-item"><a href="about.php">About the Company</a></li>
-        <li class="cd-side__sub-item"><a href="mot.php">Meet our Team</a></li>
+        <li class="cd-side__sub-item"><a href="mot.php">Marketing Team</a></li>
       </ul>
     </li>
 
@@ -43,8 +43,12 @@
       </ul>
     </li>
 
-    <li class="cd-side__item cd-side__item--comments">
-      <a href="contact.php">Contact</a>
+    <li class="cd-side__item cd-side__item--has-children cd-side__item--comments js-cd-item--has-children">
+      <a href="#0.php">Contact</a>
+      <ul class="cd-side__sub-list">
+        <li class="cd-side__sub-item"><a href="contact.php">Content</a></li>
+        <li class="cd-side__sub-item"><a href="msg.php">Messages</a></li>
+      </ul>
     </li>
   </ul>
 </nav>
