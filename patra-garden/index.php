@@ -37,17 +37,10 @@ $hasil = mysqli_query($db, $sql);
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script src="js/responsiveslides.min.js"></script>
-	<script type="text/javascript">
-		$(window).on('resize', function() {
-			var win = $(this);
-			if (win.width() < 1200) {
-				$('div').removeClass('mapper');
-			}
-			if (win.width > 1200) {
-				$('div').addClass('mapper');
-			}
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-		});
+	<script>
+
 	</script>
 	<script>
 		$(function() {
@@ -82,22 +75,12 @@ $hasil = mysqli_query($db, $sql);
 		<div class="slider">
 			<div class="callbacks_container">
 				<ul class="rslides" id="slider">
-					<?php
-					while ($data = mysqli_fetch_assoc($hasil)) {
-					?>
-						<li>
-							<div class="slider-img">
-								<img src="images/slide-ps4.jpg" class="img-responsive">
-							</div>
-							<!-- <div class="slider-info w3ls-1">
-  							<h3><?php echo $data['title']; ?></h3>
-  							<div class="underline"></div>
-  							<p><?php echo $data['caption']; ?></p>
-  						</div> -->
-						</li>
-					<?php } ?>
+					<li>
+						<div class="slider-img">
+							<img src="images/slide-ps4.jpg" class="img-responsive">
+						</div>
+					</li>
 				</ul>
-
 			</div>
 			<div class="clearfix"></div>
 		</div>
@@ -159,9 +142,12 @@ $hasil = mysqli_query($db, $sql);
 		<div class="container">
 			<h3>Site Plan</h3>
 			<div class="row siteplan">
-				<div class="">
-					<img src="images/siteplan.jpg" class="mapper" alt="map" usemap="#image-map">
-					<map name="image-map">
+				<div id="kecil" class="">
+					<img id="gambar" src="images/siteplan.jpg" class="" alt="map" usemap="">
+				</div>
+				<div id="besar" class="">
+					<img id="gambar" src="images/siteplan.jpg" class="mapper" alt="map" usemap="#image-map">
+					<map id="coord" name="image-map">
 						<area class="noborder icolor555" id="" rel="" target="" alt="" title="" href="" coords="361,188,548,295,557,289,560,266,557,240,551,217,535,192,525,180,511,184,501,190,485,190,454,186,415,190,388,182" shape="poly">
 						<area class="noborder icolor555" target="" alt="" title="" href="" coords="279,215,317,208,306,380,294,389,269,339,274,276" shape="poly">
 						<area class="noborder icolor555" target="" alt="" title="" href="" coords="335,219,342,205,362,214,549,319,526,349,504,373,489,371,337,285,330,275" shape="poly">
@@ -317,7 +303,42 @@ $hasil = mysqli_query($db, $sql);
 			});
 		});
 	</script>
+	<!-- <script type="text/javascript">
+		function width() {
+			if ($(window).width() < 1200) {
+				// $("#ilang").hide();
+				$("#kecil").removeClass("dis");
+				// $("#coord").hide();
+			}
+			if ($(window).width() > 1200) {
+				// $("#ilang").show();
+				$("#kecil").addClass("dis");
+				// $("$gak_ilang").hide();
+			}
+		}
+		$(window);
+	</script> -->
+	<script>
+		(function($) {
+			var $window = $(window),
+				$kecil = $("#kecil");
+				$besar = $("#besar");
 
+			function resize() {
+				if ($window.width() < 1200) {
+					return $besar.addClass("dis");
+				}else{
+					return $kecil.addClass("dis");
+				}
+
+				// $html.addClass('mobile');
+			}
+
+			$window
+				.resize(resize)
+				.trigger('resize');
+		})(jQuery);
+	</script>
 	<script type="text/javascript" src="js/wz_jsgraphics.js"></script>
 	<script type="text/javascript" src="js/mapper.js"></script>
 </body>

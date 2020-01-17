@@ -42,6 +42,7 @@ or see http://www.gnu.org/copyleft/lesser.html
 */
 
 
+
 var jg_ok, jg_ie, jg_fast, jg_dom, jg_moz;
 
 
