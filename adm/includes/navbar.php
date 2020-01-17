@@ -1,5 +1,6 @@
 <nav class="cd-side-nav js-cd-side-nav">
   <ul class="cd-side__list js-cd-side__list">
+    <li class="cd-side__label"><span>Main</span></li>
     <li class="cd-side__item cd-side__item--selected"></li>
 
     <li class="cd-side__item cd-side__item--has-children cd-side__item--overview js-cd-item--has-children">
@@ -22,19 +23,6 @@
       <a href="gallery.php">Gallery</a>
     </li>
 
-    <li class="cd-side__item cd-side__item--has-children cd-side__item--bookmarks js-cd-item--has-children">
-      <a href="#0">Project</a>
-      <ul class="cd-side__sub-list">
-        <li class="cd-side__sub-item"><a href="#0">Garden Residence</a></li>
-        <li class="cd-side__sub-item"><a href="#0">Kencana Residence</a></li>
-        <li class="cd-side__sub-item"><a href="#0">Griya Madani</a></li>
-        <li class="cd-side__sub-item"><a href="#0">The Island Cluster</a></li>
-      </ul>
-      <!-- <ul class="cd-side__sub-list">
-        <li class="cd-side__sub-item"><a href="#0">Patra Garden</a></li>
-      </ul> -->
-    </li>
-
     <li class="cd-side__item cd-side__item--has-children cd-side__item--notifications js-cd-item--has-children">
       <a href="#0">News</a>
       <ul class="cd-side__sub-list">
@@ -48,6 +36,45 @@
       <ul class="cd-side__sub-list">
         <li class="cd-side__sub-item"><a href="contact.php">Content</a></li>
         <li class="cd-side__sub-item"><a href="msg.php">Messages</a></li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="cd-side__list js-cd-side__list">
+    <li class="cd-side__label"><span>Project</span></li>
+    <li class="cd-side__item cd-side__item--has-children cd-side__item--bookmarks js-cd-item--has-children">
+      <a href="#0">Garden Residence</a>
+      <ul class="cd-side__sub-list">
+        <li class="cd-side__sub-item"><a href="#0">--</a></li>
+        <li class="cd-side__sub-item"><a href="#0">--</a></li>
+        <li class="cd-side__sub-item"><a href="#0">--</a></li>
+        <li class="cd-side__sub-item"><a href="#0">--</a></li>
+      </ul>
+    </li>
+    <li class="cd-side__item cd-side__item--has-children cd-side__item--bookmarks js-cd-item--has-children">
+      <a href="#0">Griya Madani</a>
+      <ul class="cd-side__sub-list">
+        <li class="cd-side__sub-item"><a href="#0">--</a></li>
+        <li class="cd-side__sub-item"><a href="#0">--</a></li>
+        <li class="cd-side__sub-item"><a href="#0">--</a></li>
+        <li class="cd-side__sub-item"><a href="#0">--</a></li>
+      </ul>
+    </li>
+    <li class="cd-side__item cd-side__item--has-children cd-side__item--bookmarks js-cd-item--has-children">
+      <a href="#0">Kencana Residence</a>
+      <ul class="cd-side__sub-list">
+        <li class="cd-side__sub-item"><a href="#0">--</a></li>
+        <li class="cd-side__sub-item"><a href="#0">--</a></li>
+        <li class="cd-side__sub-item"><a href="#0">--</a></li>
+        <li class="cd-side__sub-item"><a href="#0">--</a></li>
+      </ul>
+    </li>
+    <li class="cd-side__item cd-side__item--has-children cd-side__item--bookmarks js-cd-item--has-children">
+      <a href="#0">The Island Cluster</a>
+      <ul class="cd-side__sub-list">
+        <li class="cd-side__sub-item"><a href="#0">--</a></li>
+        <li class="cd-side__sub-item"><a href="#0">--</a></li>
+        <li class="cd-side__sub-item"><a href="#0">--</a></li>
+        <li class="cd-side__sub-item"><a href="#0">--</a></li>
       </ul>
     </li>
   </ul>

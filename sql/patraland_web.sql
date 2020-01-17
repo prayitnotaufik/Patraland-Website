@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2020 at 07:29 AM
+-- Generation Time: Jan 17, 2020 at 09:06 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -82,17 +82,17 @@ CREATE TABLE `tb_gallery` (
 --
 
 INSERT INTO `tb_gallery` (`id_gallery`, `image`, `category`, `title`, `caption`) VALUES
-(7, '11012020044055IMG_20200108_123913.jpg', '1', '', ''),
-(8, '11012020044101IMG_20200108_123913.jpg', '1', '', ''),
-(9, '11012020044106IMG_20200108_123913.jpg', '1', '', ''),
-(17, '11012020044442DSC00241.JPG', '1', '', ''),
-(18, '11012020044451DSC00241.JPG', '1', '', ''),
-(19, '11012020044456DSC00241.JPG', '1', '', ''),
-(20, '11012020044503IMG_20200108_123913.jpg', '1', '', ''),
-(21, '11012020044508IMG_20200108_123913.jpg', '1', '', ''),
-(22, '11012020044513IMG_20200108_123913.jpg', '1', '', ''),
-(23, '11012020044817IMG_20200108_123913.jpg', '2', '', ''),
-(24, '16012020053316i5.jpg', '3', 'Type 36', 'Luas Tanah 46*46');
+(25, '17012020072016.jpg', '2', '', ''),
+(26, '17012020072030.jpg', '2', '', ''),
+(27, '17012020072054.jpg', '2', '', ''),
+(28, '17012020072423.jpg', '2', 'Type 45', ''),
+(29, '17012020072500.jpg', '2', 'Type 45', ''),
+(30, '17012020072516.jpg', '2', 'Type 45', ''),
+(31, '17012020072610.jpg', '2', 'Type 45', ''),
+(32, '17012020084916.jpg', '2', 'Type 40', ''),
+(33, '17012020084931.jpg', '2', 'Type 40', ''),
+(34, '17012020084946.jpg', '2', 'Type 40', ''),
+(36, '17012020085228.jpg', '2', 'Type 48', '2 Lantai');
 
 -- --------------------------------------------------------
 
@@ -280,7 +280,7 @@ ALTER TABLE `tb_contact`
 -- AUTO_INCREMENT for table `tb_gallery`
 --
 ALTER TABLE `tb_gallery`
-  MODIFY `id_gallery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id_gallery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `tb_login`
@@ -292,7 +292,7 @@ ALTER TABLE `tb_login`
 -- AUTO_INCREMENT for table `tb_message`
 --
 ALTER TABLE `tb_message`
-  MODIFY `id_message` int(55) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_message` int(55) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tb_news`

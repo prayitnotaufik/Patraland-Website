@@ -139,6 +139,33 @@ if (@$_SESSION['status'] != "login") {
       width: 100%;
     }
   }
+
+  .pagination ul {
+    display: inline-block;
+  }
+
+  .pagination li {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    font-size:12px;
+    border: 1px solid #ddd;
+    margin:0px 5px;
+  }
+
+  .pagination a {
+    text-decoration: none;
+  }
+
+  .pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+  }
+
+  .pagination li:hover:not(.active) {background-color: #ddd;}
   </style>
 </head>
 
@@ -200,7 +227,7 @@ if (@$_SESSION['status'] != "login") {
         <?php
       } else {
         ?>
-        <button class="btn btn--primary btn--sm" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Tambah</button>
+        <button class="btn btn--primary btn--sm" onclick="document.getElementById('id01').style.display='block'" style="width:auto; position:absolute;">Tambah</button>
 
         <div id="id01" class="modal">
 
@@ -245,6 +272,44 @@ if (@$_SESSION['status'] != "login") {
         </script>
       <?php } ?>
       <p>
+        <?php
+        if (isset($_GET['pageno'])) {
+          $pageno = $_GET['pageno'];
+        } else {
+          $pageno = 1;
+        }
+        $no = 1;
+        $no_of_records_per_page = 10;
+        $offset = ($pageno-1) * $no_of_records_per_page;
+
+        $total_pages_sql = "SELECT COUNT(*) FROM tb_gallery";
+        $result = mysqli_query($db,$total_pages_sql);
+        $total_rows = mysqli_fetch_array($result)[0];
+        $total_pages = ceil($total_rows / $no_of_records_per_page);
+
+        $sql = "SELECT * FROM tb_gallery LIMIT $offset, $no_of_records_per_page";
+        $res_data = mysqli_query($db,$sql);
+        ?>
+        <?php if($total_rows > $no_of_records_per_page) { ?>
+          <div style="float:right;">
+            <ul class="pagination">
+              <a href="?pageno=1"><li>&laquo;</li></a>
+              <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">
+                <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
+                  <span>Prev</span>
+                </li>
+              </a>
+              <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">
+                <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
+                  <span>Next</span>
+                </li>
+              </a>
+              <a href="?pageno=<?php echo $total_pages; ?>">
+                <li>&raquo;</li>
+              </a>
+            </ul>
+          </div><br></br>
+        <?php } ?>
         <div style="overflow-x:auto;">
           <table cellpadding="5" width="100%" border=1>
             <tr style="background:#ddd; font-weight:bolder;">
@@ -256,10 +321,11 @@ if (@$_SESSION['status'] != "login") {
               <th colspan="2"></th>
             </tr>
             <?php
-            $no = 1;
-            $sql = "SELECT * FROM tb_gallery ";
-            $hasil = mysqli_query($db, $sql);
-            while ($data = mysqli_fetch_assoc($hasil)) {
+            while($data = mysqli_fetch_array($res_data)){
+              // $no = 1;
+              // $sql = "SELECT * FROM tb_gallery ";
+              // $hasil = mysqli_query($db, $sql);
+              // while ($data = mysqli_fetch_assoc($hasil)) {
               ?>
               <tr>
                 <td align="center"><?php echo $no++; ?></td>
@@ -286,22 +352,41 @@ if (@$_SESSION['status'] != "login") {
               </tr>
             <?php } ?>
           </table>
-        </div>
-      </form>
-    </p>
-    <?php
-    if (@$_GET['act'] == 'del') {
-      $id = $_GET['id'];
-      $sqldel = "DELETE FROM tb_gallery WHERE id_gallery = '$id'";
-      $result = mysqli_query($db, $sqldel);
-      echo "<script type='text/javascript'>alert('Hapus data berhasil!');window.location.href='gallery.php';</script>";
-    }
-    ?>
-  </div> <!-- .content-wrapper -->
-</main> <!-- .cd-main-content -->
-<script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
-<script src="assets/js/menu-aim.js"></script>
-<script src="assets/js/main.js"></script>
+        </div><br>
+        <?php if($total_rows > $no_of_records_per_page) { ?>
+          <div style="float:right;">
+            <ul class="pagination">
+              <a href="?pageno=1"><li>&laquo;</li></a>
+              <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">
+                <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
+                  <span>Prev</span>
+                </li>
+              </a>
+              <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">
+                <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
+                  <span>Next</span>
+                </li>
+              </a>
+              <a href="?pageno=<?php echo $total_pages; ?>">
+                <li>&raquo;</li>
+              </a>
+            </ul>
+          </div><br></br>
+        <?php } ?>
+      </p>
+      <?php
+      if (@$_GET['act'] == 'del') {
+        $id = $_GET['id'];
+        $sqldel = "DELETE FROM tb_gallery WHERE id_gallery = '$id'";
+        $result = mysqli_query($db, $sqldel);
+        echo "<script type='text/javascript'>alert('Hapus data berhasil!');window.location.href='gallery.php';</script>";
+      }
+      ?>
+    </div> <!-- .content-wrapper -->
+  </main> <!-- .cd-main-content -->
+  <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+  <script src="assets/js/menu-aim.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
