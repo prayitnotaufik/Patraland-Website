@@ -11,7 +11,14 @@ include("config/conn.php");
 	<!-- Meta-Tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="keywords" content="Premier Realty a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+  <meta name="description" content="Hunian berkelas dengan lokasi yang strategis di Malang!">
+  <meta name="keywords" content="perumahan di batu malang murah, perumahan murah batu malang, perumahan murah di batu malang, perumahan baru murah di batu malang, perumahan murah di sekitar batu malang, info perumahan murah batu malang">
+  <meta name="robots" content="index, follow">
+  <meta name="copyright" content="PT Patraland Griya Madani Development">
+  <meta name="author" content="PT Patraland Griya Madani Development">
+  <meta name="creationdate" content="Januari 2020">
+  <meta name="distribution" content="global">
+  <meta name="rating" content="general">
 	<script type="application/x-javascript">
 		addEventListener("load", function() {
 			setTimeout(hideURLbar, 0);
@@ -62,53 +69,6 @@ include("config/conn.php");
 				<button class="btn btn-default filter-button " data-filter="3">The Island Cluster</button>
 				<button class="btn btn-default filter-button " data-filter="4">Griya Madani</button>
 			</div>
-			<!-- <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
-			</div>
-
-			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
-			</div>
-
-			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
-			</div>
-
-			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
-			</div>
-
-			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
-			</div>
-
-			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
-			</div>
-
-			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
-			</div>
-
-			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
-			</div>
-
-			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
-			</div>
-
-			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
-			</div>
-
-			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
-			</div>
-
-			<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-				<img src="http://fakeimg.pl/365x365/" class="img-responsive">
-			</div> -->
 			<!-- GALLERY DEFAULT -->
 			<!-- CATEGORY 1 -->
 			<?php

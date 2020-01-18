@@ -18,6 +18,32 @@ if(@$_SESSION['status'] != "login") {
   table {
     font-size:17px;
   }
+  .pagination ul {
+    display: inline-block;
+  }
+
+  .pagination li {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    font-size:12px;
+    border: 1px solid #ddd;
+    margin:0px 5px;
+  }
+
+  .pagination a {
+    text-decoration: none;
+  }
+
+  .pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+  }
+
+  .pagination li:hover:not(.active) {background-color: #ddd;}
   </style>
 </head>
 <body>
@@ -29,6 +55,44 @@ if(@$_SESSION['status'] != "login") {
 
       <h2>News</h2></h2><br>
       <p>
+        <?php
+        if (isset($_GET['pageno'])) {
+          $pageno = $_GET['pageno'];
+        } else {
+          $pageno = 1;
+        }
+        $no = 1;
+        $no_of_records_per_page = 10;
+        $offset = ($pageno-1) * $no_of_records_per_page;
+
+        $total_pages_sql = "SELECT COUNT(*) FROM tb_news";
+        $result = mysqli_query($db,$total_pages_sql);
+        $total_rows = mysqli_fetch_array($result)[0];
+        $total_pages = ceil($total_rows / $no_of_records_per_page);
+
+        $sql = "SELECT * FROM tb_news LIMIT $offset, $no_of_records_per_page";
+        $res_data = mysqli_query($db,$sql);
+        ?>
+        <?php if($total_rows > $no_of_records_per_page) { ?>
+          <div style="float:right;">
+            <ul class="pagination">
+              <a href="?pageno=1"><li>&laquo;</li></a>
+              <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">
+                <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
+                  <span>Prev</span>
+                </li>
+              </a>
+              <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">
+                <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
+                  <span>Next</span>
+                </li>
+              </a>
+              <a href="?pageno=<?php echo $total_pages; ?>">
+                <li>&raquo;</li>
+              </a>
+            </ul>
+          </div><br></br>
+        <?php } ?>
         <div style="overflow-x:auto;">
           <table cellpadding="5" width="100%" border=1>
             <tr style="background:#ddd; font-weight:bolder;">
@@ -40,9 +104,7 @@ if(@$_SESSION['status'] != "login") {
             </tr>
             <?php
             $no = 1;
-            $sql = "SELECT * FROM tb_news";
-            $hasil = mysqli_query($db,$sql);
-            while($data = mysqli_fetch_assoc($hasil)) {
+            while($data = mysqli_fetch_array($res_data)) {
               ?>
               <tr>
                 <td><?php echo $data['title']; ?></td>
@@ -54,8 +116,27 @@ if(@$_SESSION['status'] != "login") {
               </tr>
             <?php } ?>
           </table>
-        </div>
-      </form>
+        </div><br>
+      <?php if($total_rows > $no_of_records_per_page) { ?>
+        <div style="float:right;">
+          <ul class="pagination">
+            <a href="?pageno=1"><li>&laquo;</li></a>
+            <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">
+              <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
+                <span>Prev</span>
+              </li>
+            </a>
+            <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">
+              <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
+                <span>Next</span>
+              </li>
+            </a>
+            <a href="?pageno=<?php echo $total_pages; ?>">
+              <li>&raquo;</li>
+            </a>
+          </ul>
+        </div><br></br>
+      <?php } ?>
     </p>
     <?php
     if(@$_GET['act']=='del') {
