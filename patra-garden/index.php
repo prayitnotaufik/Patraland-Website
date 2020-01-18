@@ -148,7 +148,7 @@ $hasil = mysqli_query($db, $sql);
 				<div id="besar" class="">
 					<img id="gambar" src="images/siteplan.jpg" class="mapper" alt="map" usemap="#image-map">
 					<map id="coord" name="image-map">
-						<area class="noborder icolor555" id="" rel="" target="" alt="" title="" href="" coords="361,188,548,295,557,289,560,266,557,240,551,217,535,192,525,180,511,184,501,190,485,190,454,186,415,190,388,182" shape="poly">
+						<area class="noborder icolor555" id="" rel="" target="" alt="" title="" href="blok.php" coords="361,188,548,295,557,289,560,266,557,240,551,217,535,192,525,180,511,184,501,190,485,190,454,186,415,190,388,182" shape="poly">
 						<area class="noborder icolor555" target="" alt="" title="" href="" coords="279,215,317,208,306,380,294,389,269,339,274,276" shape="poly">
 						<area class="noborder icolor555" target="" alt="" title="" href="" coords="335,219,342,205,362,214,549,319,526,349,504,373,489,371,337,285,330,275" shape="poly">
 						<area class="noborder icolor555" target="" alt="" title="" href="" coords="563,343,599,281,613,274,694,317,725,347,813,456,816,499,773,534,765,538,756,529,658,403,567,356" shape="poly">
@@ -163,7 +163,7 @@ $hasil = mysqli_query($db, $sql);
 			</div>
 			<div class="row">
 				<h3>Produk Kami</h3>
-				<a href="#1" class="">
+				<a href="blok.php" class="">
 					<div class="col-md-4 konten hvr-grow">
 						<img src="images/asoka.jpg" alt="" srcset="">
 					</div>
