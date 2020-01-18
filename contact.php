@@ -14,7 +14,14 @@ $data = mysqli_fetch_assoc($sql1);
 	<!-- Meta-Tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="keywords" content="Premier Realty a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+  <meta name="description" content="Hunian berkelas dengan lokasi yang strategis di Malang!">
+  <meta name="keywords" content="perumahan di batu malang murah, perumahan murah batu malang, perumahan murah di batu malang, perumahan baru murah di batu malang, perumahan murah di sekitar batu malang, info perumahan murah batu malang">
+  <meta name="robots" content="index, follow">
+  <meta name="copyright" content="PT Patraland Griya Madani Development">
+  <meta name="author" content="PT Patraland Griya Madani Development">
+  <meta name="creationdate" content="Januari 2020">
+  <meta name="distribution" content="global">
+  <meta name="rating" content="general">
 	<script type="application/x-javascript">
 		addEventListener("load", function() {
 			setTimeout(hideURLbar, 0);
@@ -81,7 +88,7 @@ $data = mysqli_fetch_assoc($sql1);
 							<div class="clearfix"> </div>
 						</div>
 						<textarea placeholder="Message" name="message" required=""></textarea>
-						<input type="submit" name="submit" value="submit">
+						<input type="submit" name="submit" value="Submit">
 					</div>
 				</form>
 			</div>

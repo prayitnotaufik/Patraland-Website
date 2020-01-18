@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 17, 2020 at 09:06 AM
+-- Generation Time: Jan 18, 2020 at 05:50 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -157,7 +157,8 @@ CREATE TABLE `tb_news` (
 --
 
 INSERT INTO `tb_news` (`id_news`, `image`, `title`, `author`, `date`, `status`, `description`) VALUES
-(1, 'ei33.jpg', 'Rumah Modifikasi Ei-33', 'Patraland', '09 / 01 / 2020', 'Published', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.');
+(1, 'ei33.jpg', 'Rumah Modifikasi Ei-33', 'Patraland', '09 / 01 / 2020', 'Published', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'),
+(2, '18012020031619DSC00187.JPG', 'Proses bangun rumah 2 lantai', 'admin', '18 / 01 / 2020', 'Published', '<p>Proses bangun disini butuh waktu lama yakni sekitar 4 bulan. Setelah pengerjaan selesai baru dilakukan proses pengecatan dan lain-lain.<br></p>');
 
 -- --------------------------------------------------------
 
@@ -298,7 +299,7 @@ ALTER TABLE `tb_message`
 -- AUTO_INCREMENT for table `tb_news`
 --
 ALTER TABLE `tb_news`
-  MODIFY `id_news` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_news` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tb_slider`

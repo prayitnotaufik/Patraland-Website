@@ -64,6 +64,7 @@ a:focus, a:hover {
     padding: 0px 0 0px;
     /* border-bottom:1px solid #6f6f6f; */
     background: #f4f4f4;
+    box-shadow: 0px 0px 17px #000000a1;
 }
 /*-- Logo --*/
 .logo {
