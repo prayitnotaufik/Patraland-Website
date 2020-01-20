@@ -77,7 +77,7 @@ $hasil = mysqli_query($db, $sql);
 				<ul class="rslides" id="slider">
 					<li>
 						<div class="slider-img">
-							<img src="images/slide-ps4.jpg" class="img-responsive">
+							<img src="images/banner-garden.jpg" class="img-responsive">
 						</div>
 					</li>
 				</ul>
@@ -148,16 +148,17 @@ $hasil = mysqli_query($db, $sql);
 				<div id="besar" class="">
 					<img id="gambar" src="images/siteplan.jpg" class="mapper" alt="map" usemap="#image-map">
 					<map id="coord" name="image-map">
-						<area class="noborder icolor555" id="" rel="" target="" alt="" title="" href="blok.php" coords="361,188,548,295,557,289,560,266,557,240,551,217,535,192,525,180,511,184,501,190,485,190,454,186,415,190,388,182" shape="poly">
-						<area class="noborder icolor555" target="" alt="" title="" href="" coords="279,215,317,208,306,380,294,389,269,339,274,276" shape="poly">
-						<area class="noborder icolor555" target="" alt="" title="" href="" coords="335,219,342,205,362,214,549,319,526,349,504,373,489,371,337,285,330,275" shape="poly">
-						<area class="noborder icolor555" target="" alt="" title="" href="" coords="563,343,599,281,613,274,694,317,725,347,813,456,816,499,773,534,765,538,756,529,658,403,567,356" shape="poly">
-						<area class="noborder icolor555" target="" alt="" title="" href="" coords="511,428,507,415,546,362,560,366,628,404,645,413,694,476,641,519,629,518,594,473,559,456" shape="poly">
-						<area class="noborder icolor555" target="" alt="" title="" href="" coords="560,616,558,603,700,496,710,499,746,546,745,557,601,666,591,662,574,642" shape="poly">
-						<area class="noborder icolor555" target="" alt="" title="" href="" coords="612,689,614,678,815,521,825,527,830,556,836,585,830,599,652,731,627,708" shape="poly">
-						<area class="noborder icolor555" target="" alt="" title="" href="" coords="680,730,676,742,685,749,716,749,764,753,804,721,800,709,771,666,760,671" shape="poly">
-						<area class="noborder icolor555" target="" alt="" title="" href="" coords="870,532,895,565,968,522,940,479,1026,415,935,359,860,413,854,423,866,500" shape="poly">
-						<area class="noborder icolor555" target="" alt="" title="" href="" coords="837,409,898,365,930,342,972,313,975,304,917,228,847,248,827,267,734,265,736,277" shape="poly">
+						<area class="noborder icolor555" id="" rel="" target="" alt="sakura" title="Sakura" href="blok.php" coords="361,188,548,295,557,289,560,266,557,240,551,217,535,192,525,180,511,184,501,190,485,190,454,186,415,190,388,182" shape="poly">
+						<area class="noborder icolor555" target="" alt="" title="Rosela" href="" coords="279,215,317,208,306,380,294,389,269,339,274,276" shape="poly">
+						<area class="noborder icolor555" target="" alt="camelia" title="Camelia" href="" coords="325,384,328,313,333,238,336,212,349,205,549,317,527,351,500,378,484,404,472,428,467,452,459,463" shape="poly">
+						<area class="noborder icolor555" target="" alt="Edelweis" title="edelweis" href="" coords="563,343,599,281,613,274,694,317,725,347,813,456,816,499,773,534,765,538,756,529,658,403,567,356" shape="poly">
+						<area class="noborder icolor555" target="" alt="magnolia" title="Magnolia" href="" coords="493,526,488,478,493,448,499,442,506,418,524,387,553,360,628,404,647,413,695,475,635,523,578,565,553,585,542,577,527,549,521,538" shape="poly">
+						<area class="noborder icolor555" target="" alt="tulip" title="Tulip" href="" coords="560,616,558,603,700,496,710,499,746,546,745,557,601,666,591,662,574,642" shape="poly">
+						<area class="noborder icolor555" target="" alt="asoka" title="Asoka" href="" coords="612,689,614,678,815,521,825,527,830,556,836,585,830,599,652,731,627,708" shape="poly">
+						<area class="noborder icolor555" target="" alt="lavender" title="Lavender" href="" coords="680,730,676,742,685,749,716,749,764,753,804,721,800,709,771,666,760,671" shape="poly">
+						<area class="noborder icolor555" target="" alt="aster" title="Aster" href="" coords="870,532,895,565,968,522,940,479,1026,415,935,359,860,413,854,423,866,500" shape="poly">
+						<area class="noborder icolor555" target="" alt="krisan" title="Krisan" href="" coords="837,409,898,365,930,342,972,313,975,304,917,228,847,248,827,267,734,265,736,277" shape="poly">
+						<area target="" alt="Blok-D" title="Blok-D" href="" coords="467,484,340,414,311,399,274,442,289,458,317,479,414,533,461,560,477,561" shape="poly">
 					</map>
 				</div>
 			</div>
@@ -208,73 +209,14 @@ $hasil = mysqli_query($db, $sql);
 						<img src="images/tulip.jpg" alt="" srcset="">
 					</div>
 				</a>
-			</div>
-		</div>
-	</div>
-	<!-- agileinfo -->
-	<div id="welcome" class="agileinfo">
-		<div class="container">
-			<h3>Welcome</h3>
-			<p class="ttt">when an unknown printer took a galley of type and scrambled Lorem Ipsum passages, and more recently it to make a type specimen book.</p>
-			<div class="flexslider-info">
-				<section class="slider">
-					<div class="flexslider">
-						<ul class="slides">
-							<li>
-								<div class="banner-info">
-									<div class="col-md-7 agileinfo-left">
-										<img src="images/slide-1.jpg" alt="">
-									</div>
-									<div class="col-md-5 agileinfo-grid grid-one">
-										<h4>Temporibus autem</h4>
-										<p>Libero tempore, cum soluta nobis est eligendi
-											optio cumque nihil impedit quo minus id quod maxime
-											placeat facere possimus ut
-											et voluptates repudiandae sint et molestiae non recusandae</p>
-
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</li>
-							<li>
-								<div class="banner-info">
-									<div class="col-md-7 agileinfo-left">
-										<img src="images/slide-2.jpg" alt="">
-									</div>
-									<div class="col-md-5 agileinfo-grid grid-one">
-										<h4>Temporibus autem</h4>
-										<p>Libero tempore, cum soluta nobis est eligendi
-											optio cumque nihil impedit quo minus id quod maxime
-											placeat facere possimus ut
-											et voluptates repudiandae sint et molestiae non recusandae</p>
-
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</li>
-							<li>
-								<div class="banner-info">
-									<div class="col-md-7 agileinfo-left">
-										<img src="images/slide-3.jpg" alt="">
-									</div>
-									<div class="col-md-5 agileinfo-grid grid-one">
-										<h4>Temporibus autem</h4>
-										<p>Libero tempore, cum soluta nobis est eligendi
-											optio cumque nihil impedit quo minus id quod maxime
-											placeat facere possimus ut
-											et voluptates repudiandae sint et molestiae non recusandae</p>
-
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</li>
-						</ul>
+				<a href="#1" class="">
+					<div class="col-md-4 konten hvr-grow">
+						<img src="images/blok-d.jpg" alt="" srcset="">
 					</div>
-				</section>
+				</a>
 			</div>
 		</div>
 	</div>
-	<!-- agileinfo -->
 
 	<!-- footer -->
 	<?php include("includes/footer.php"); ?>
