@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="shortcut icon" type="image/png" href="../images/icon2.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
   <link rel="stylesheet" href="assets/css/style.css">
   <title>PT. Patraland - Administrator</title>
+  <link rel="icon" type="image/x-icon" href="../images/icon2c.ico">
 </head>
 <body>
 
@@ -16,7 +16,7 @@
     <?php include("includes/navbar.php"); ?>
     <div class="cd-content-wrapper">
       <div class="text-component text-center">
-
+        <img src="../images/lgo1.png" width="500" style="margin-top:180px;">
       </div>
     </div> <!-- .content-wrapper -->
   </main> <!-- .cd-main-content -->

@@ -82,7 +82,7 @@ if(@$_SESSION['status'] != "login") {
               <tr>
                 <td>Google Maps
                   <div class="tooltip"><sup><img src="../images/help.png" width="18"></sup>
-                    <span class="tooltiptext"><a href="https://www.google.com/maps" target="_blank">maps.google.com</a> > Cari Alamat > Klik menu ≡ > Bagikan atau Sematkan Peta > Pilih Sematkan Peta > Salin Link<br></br><span style="font-style:italic; color:#F00;">-- Tidak Support Mobile --</span></span>
+                    <span class="tooltiptext"><a href="https://www.google.com/maps" target="_blank">Maps</a> > Cari Alamat > Klik menu ≡ > Bagikan atau Sematkan Peta > Pilih Sematkan Peta > Salin Link<br></br><span style="font-style:italic; color:#F00;">-- Tidak Support Mobile --</span></span>
                   </div>
                 </td>
               </tr>
