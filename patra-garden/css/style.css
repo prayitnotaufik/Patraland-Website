@@ -2662,4 +2662,32 @@ map{
 .dis{
     display: none;
 }
+
+.wrap h4{
+    text-align: left;
+    font-size: 15pt;
+}
+.wrap p{
+    text-align: left;
+    margin-top: -4px;
+    /* display: contents; */
+}
+.wrap{
+    /* display: contents; */
+    padding: 0;
+    margin-top: -4px;
+}
+
+.kontak-icon{
+    width:33%;
+    /* padding: 0; */
+}
+
+.kontak-col{
+    margin-top: 80px;
+}
+
+.kontak-col2{
+    margin-top: -35px;
+}
 /* ==================       CUSTOM CSS    ======================= */

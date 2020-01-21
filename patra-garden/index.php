@@ -217,6 +217,94 @@ $hasil = mysqli_query($db, $sql);
 			</div>
 		</div>
 	</div>
+	<!-- SECTION PART -->
+	<div id="kontak" class="agileinfo kontak">
+		<div class="container">
+			<h3>Hubungi Kami</h3>
+			<div class="row">
+				<div class="col-md-6 kontak-col2">
+					<div class="row">
+						<div class="col-md-6 kontak-col">
+							<div class="row">
+								<div class="col-md-4 kontak-icon">
+									<img src="images/icon/instagram.png" alt="">
+								</div>
+								<div class="col-md-8 wrap">
+									<h4>Follow Us</h4>
+									<!-- <br> -->
+									<p>@patraland</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 kontak-col">
+							<div class="row">
+								<div class="col-md-4 kontak-icon">
+									<img src="images/icon/facebook.png" alt="">
+								</div>
+								<div class="col-md-8 wrap">
+									<h4>Follow Us</h4>
+									<!-- <br> -->
+									<p>@patraland</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 kontak-col">
+							<div class="row">
+								<div class="col-md-4 kontak-icon">
+									<img src="images/icon/whatsapp.png" alt="">
+								</div>
+								<div class="col-md-8 wrap">
+									<h4>Follow Us</h4>
+									<!-- <br> -->
+									<p>@patraland</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 kontak-col">
+							<div class="row">
+								<div class="col-md-4 kontak-icon">
+									<img src="images/icon/email.png" alt="">
+								</div>
+								<div class="col-md-8 wrap">
+									<h4>Follow Us</h4>
+									<!-- <br> -->
+									<p>@patraland</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 kontak-col">
+							<div class="row">
+								<div class="col-md-4 kontak-icon">
+									<img src="images/icon/telepon.png" alt="">
+								</div>
+								<div class="col-md-8 wrap">
+									<h4>Follow Us</h4>
+									<!-- <br> -->
+									<p>@patraland</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 kontak-col">
+							<div class="row">
+								<div class="col-md-4 kontak-icon">
+									<img src="images/icon/instagram.png" alt="">
+								</div>
+								<div class="col-md-8 wrap">
+									<h4>Follow Us</h4>
+									<!-- <br> -->
+									<p>@patraland</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.812086876858!2d112.61239785820861!3d-7.914688740579999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7881fc7bf3a3b9%3A0xcad5da6cf7d0fcaa!2sPatra%20Garden%2C%20Kedawung%2C%20Ngijo%2C%20Kec.%20Karang%20Ploso%2C%20Malang%2C%20Jawa%20Timur%2065152!5e0!3m2!1sen!2sid!4v1579590118093!5m2!1sen!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- SECTION PART -->
 
 	<!-- footer -->
 	<?php include("includes/footer.php"); ?>
@@ -264,12 +352,12 @@ $hasil = mysqli_query($db, $sql);
 		(function($) {
 			var $window = $(window),
 				$kecil = $("#kecil");
-				$besar = $("#besar");
+			$besar = $("#besar");
 
 			function resize() {
 				if ($window.width() < 1200) {
 					return $besar.addClass("dis");
-				}else{
+				} else {
 					return $kecil.addClass("dis");
 				}
 
