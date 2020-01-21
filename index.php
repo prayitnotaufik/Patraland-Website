@@ -4,6 +4,9 @@ $sql = "SELECT * FROM tb_slider";
 $hasil = mysqli_query($db,$sql);
 $sql1 = "SELECT * FROM tb_news WHERE status = 'Published' ORDER BY id_news DESC LIMIT 3";
 $hasil1 = mysqli_query($db,$sql1);
+$sql2 = "SELECT * FROM tb_home";
+$hasil2 = mysqli_query($db,$sql2);
+$data2 = mysqli_fetch_assoc($hasil2);
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,6 +35,7 @@ $hasil1 = mysqli_query($db,$sql1);
   <!-- Web-Fonts -->
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" 	type="text/css">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" 				type="text/css">
+  <!-- <link rel="stylesheet" href="css/card.css"> -->
   <!-- //Web-Fonts -->
   <!-- Default-JavaScript-File -->
   <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
@@ -115,106 +119,157 @@ $hasil1 = mysqli_query($db,$sql1);
         <img src="images/star.png" style="width:50px;">
         <img src="images/star.png" style="width:50px;">
       </h3>
-      <p class="ttt" style="border-bottom:1px solid #ddd; border-top:1px solid #ddd; padding:20px;"><i><span style="font-size:30px;">&ldquo;</span>Berdiri sejak awal tahun 2011, PT Patraland Griya Madani Development mampu membuktikan komitmen untuk pantang menyerah demi mewujudkan sebuah perumahan dengan banyak nilai plus di dalamnya seperti lokasi strategis, harga bersaing, fasilitas lengkap, dan sebagainya.<span style="font-size:30px;">&rdquo;</span></i></p>
-      </div>
+      <p class="ttt" style="border-bottom:1px solid #ddd; border-top:1px solid #ddd; padding:20px;"><i><span style="font-size:30px;">&ldquo;</span><?php echo $data2['quotes']; ?><span style="font-size:30px;">&rdquo;</span></i></p>
     </div>
-    <!-- agileinfo -->
-    <div class="featured-section">
-      <div class="container">
-        <h3 class="tittle">Keunggulan</h3>
-        <div class="featured-grids w3ls-2">
-          <div class="row justify-content-md-center">
+  </div>
+  <!-- agileinfo -->
+  <div class="featured-section">
+    <div class="container">
+      <h3 class="tittle">Keunggulan</h3>
+      <div class="featured-grids w3ls-2">
+        <div class="row justify-content-md-center">
           <div class="col-md-3 agile-3">
             <div class="icon hi-icon-wrap hi-icon-effect-6">
               <i><a href="#" class="hi-icon hi-icon-cog glyphicon glyphicon-ok"></a></i>
             </div>
-            <h4>Siap Bangun</h4>
-            <p>Kami siap membangun rumah sesaat setelah pembelian sudah berlangsung</p>
+            <h4><?php echo $data2['k1']; ?></h4>
+            <p><?php echo $data2['desc1']; ?></p>
           </div>
           <div class="col-md-3 agile-3">
             <div class="icon hi-icon-wrap hi-icon-effect-6">
               <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-ok"></a>
             </div>
-            <h4>Diskon Puluhan Juta</h4>
-            <p>Dapatkan potongan harga spesial selama masa promo hingga 30%.</p>
+            <h4><?php echo $data2['k2']; ?></h4>
+            <p><?php echo $data2['desc2']; ?></p>
           </div>
           <div class="col-md-3 agile-3">
             <div class="icon hi-icon-wrap hi-icon-effect-6">
               <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-ok"></a>
             </div>
-            <h4>1 Gate & CCTV System</h4>
-            <p>Diharapkan penghuni Patraland dapat merasakan kenyamanan tanpa mengkhawatirkan sistem keamanan lingkungan.</p>
+            <h4><?php echo $data2['k3']; ?></h4>
+            <p><?php echo $data2['desc3']; ?></p>
           </div>
           <div class="col-md-3 agile-3">
             <div class="icon hi-icon-wrap hi-icon-effect-6">
               <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-ok"></a>
             </div>
-            <h4>Free Semua Pajak</h4>
-            <p>Bebas PPN, BPHTB, Notaris, AJB dan Balik Nama, PLN, Air Bersih, dan Taman Depan Kavling.</p>
+            <h4><?php echo $data2['k4']; ?></h4>
+            <p><?php echo $data2['desc4']; ?></p>
           </div>
           <div class="clearfix"></div>
-          </div>
         </div>
       </div>
     </div>
-    <!-- friend-agent -->
-    <div class="friend-agent agileits-1">
-      <div class="container">
-        <h3 class="tittle">Latest News</h3>
-        <div class="friend-grids">
-          <?php while($data1 = mysqli_fetch_assoc($hasil1)) { ?>
-            <div class="col-md-4 friend-grid" style="min-height:470px;">
-              <a href="news-detail.php?id=<?php echo $data1['id_news']; ?>"><img src="images/news/<?php echo $data1['image']; ?>" alt="" class="img-responsive" width="350" height="237" ></a>
-              <h4><a style="color:#EFA52C;" href="news-detail.php?id=<?php echo $data1['id_news']; ?>"><?php echo $data1['title']; ?></a></h4>
-              <a href="news-detail.php?id=<?php echo $data1['id_news']; ?>">
-                <p>
-                  <?php echo substr($data1['description'], 0, 170); ?>
-                  <?php
-                  $string = $data1['description'];
-                  if(strlen($string) > 170) {
-                    echo "...";
-                  }
-                  ?>
-                </p>
-              </a>
-              <div style="bottom:0; left:0; position:absolute; width:100%;">
-                <a href="news-detail.php?id=<?php echo $data1['id_news']; ?>"><button class="btn btn-primary">Read More</button></a>
+  </div>
+  <!-- friend-agent -->
+  <div class="friend-agent agileits-1">
+    <div class="container">
+      <h3 class="tittle">Latest News</h3>
+      <div class="friend-grids">
+        <?php while($data1 = mysqli_fetch_assoc($hasil1)) { ?>
+          <div class="col-md-4 friend-grid" style="min-height:470px;">
+            <a href="news-detail.php?id=<?php echo $data1['id_news']; ?>"><img src="images/news/<?php echo $data1['image']; ?>" alt="" class="img-responsive" width="350" height="237" ></a>
+            <h4><a style="color:#EFA52C;" href="news-detail.php?id=<?php echo $data1['id_news']; ?>"><?php echo $data1['title']; ?></a></h4>
+            <a href="news-detail.php?id=<?php echo $data1['id_news']; ?>">
+              <p>
+                <?php echo substr($data1['description'], 0, 170); ?>
+                <?php
+                $string = $data1['description'];
+                if(strlen($string) > 170) {
+                  echo "...";
+                }
+                ?>
+              </p>
+            </a>
+            <div style="bottom:0; left:0; position:absolute; width:100%;">
+              <a href="news-detail.php?id=<?php echo $data1['id_news']; ?>"><button class="btn btn-primary">Read More</button></a>
+            </div>
+          </div>
+        <?php } ?>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+  <!-- friend-agent -->
+  <div class="services wthree-3">
+    <div class="container">
+      <h2 class="tittle">Our Project</h2>
+      <div class="friend-grids">
+        <div class="col-md-3 friend-grid shad">
+          <div class="boxx">
+            <a href="patra-garden">
+              <img src="images/image1.jpg" alt="Avatar">
+              <div class="pad">
+                <b>Garden Residence</b>
+                <p><i>Kepuharjo, Karangploso</i></p>
               </div>
-            </div>
-          <?php } ?>
-          <div class="clearfix"></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3 friend-grid shad">
+          <div class="boxx">
+            <a href="">
+              <img src="images/image1.jpg" alt="Avatar">
+              <div class="pad">
+                <b>Griya Madani</b>
+                <p><i>Curungrejo, Kepanjen</i></p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3 friend-grid shad">
+          <div class="boxx">
+            <a href="">
+              <img src="images/image1.jpg" alt="Avatar">
+              <div class="pad">
+                <b>Kencana Residence</b>
+                <p><i>Ngijo, Karangploso</i></p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3 friend-grid shad">
+          <div class="boxx">
+            <a href="">
+              <img src="images/image1.jpg" alt="Avatar">
+              <div class="pad">
+                <b>The Island Cluster</b>
+                <p><i>Tasikmadu, Lowokwaru</i></p>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
+      <div class="clearfix"> </div>
     </div>
-    <!-- friend-agent -->
-
-    <!-- footer -->
-    <?php include("includes/footer.php"); ?>
-    <!-- footer -->
-    <!--FlexSlider-->
-    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
-    <script defer src="js/jquery.flexslider.js"></script>
-    <script type="text/javascript">
-    $(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "slide",
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
+  </div>
+  <!-- footer -->
+  <?php include("includes/footer.php"); ?>
+  <!-- footer -->
+  <!--FlexSlider-->
+  <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+  <script defer src="js/jquery.flexslider.js"></script>
+  <script type="text/javascript">
+  $(window).load(function(){
+    $('.flexslider').flexslider({
+      animation: "slide",
+      start: function(slider){
+        $('body').removeClass('loading');
+      }
     });
-    </script>
-    <!--End-slider-script-->
-    <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
-    <script type="text/javascript">
-    $(document).ready(function () {
-      $('#horizontalTab').easyResponsiveTabs({
-        type: 'default', //Types: default, vertical, accordion
-        width: 'auto', //auto or any width like 600px
-        fit: true   // 100% fit in a container
-      });
+  });
+  </script>
+  <!--End-slider-script-->
+  <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    $('#horizontalTab').easyResponsiveTabs({
+      type: 'default', //Types: default, vertical, accordion
+      width: 'auto', //auto or any width like 600px
+      fit: true   // 100% fit in a container
     });
-    </script>
-  </body>
-  <!-- //Body -->
-  </html>
+  });
+  </script>
+</body>
+<!-- //Body -->
+</html>

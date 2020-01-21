@@ -1,17 +1,13 @@
 <?php
     // Include DB connection file
 include("../../config/conn.php");
+$id_banner = $_POST['id_banner'];
 
-    // Get the form value
-$txttitle = $_POST["txttitle"];
-$txtcaption = $_POST["txtcaption"];
-$id_slider = $_POST["id_slider"];
-
-if (isset($_POST["edit"])) {
+if (isset($_POST["submitBG"])) {
     $code_img = $_FILES["file"]["error"];
     if ($code_img === 0) {
         $error = "";
-        $nama_folder = "../../images/slider";
+        $nama_folder = "../../patra-garden/images/banner";
         $image_tmp = $_FILES["file"]["tmp_name"];
         $image_name = $_FILES["file"]["name"];
         $image_ext = strtolower(end(explode('.',$_FILES['file']['name'])));
@@ -22,22 +18,22 @@ if (isset($_POST["edit"])) {
 
         if (file_exists($path_image)) {
             $error = urldecode("File dengan Nama yang sama sudah tersimpan, coba lagi");
-            header("Location: ../slider.php?error=$error");
+            header("Location: ../banner-garden.php?error=$error");
             die();
         }
 
         if (move_uploaded_file($image_tmp, $path_image)) {
-            $querydetail = "UPDATE tb_slider SET image = '$newfilename', title = '$txttitle', caption = '$txtcaption' WHERE id_slider = '$id_slider'";
+            $querydetail = "UPDATE tb_banner SET image = '$newfilename', category = 'Garden' WHERE id_banner = '$id_banner'";
             mysqli_query($db, $querydetail);
-            header("Location: ../slider.php");
+            header("Location: ../banner-garden.php");
         }
 
     } else {
         // $error = urldecode("Upload Gagal, Tidak Ada File yang Terupload");
-        $querydetail = "UPDATE tb_slider SET title = '$txttitle', caption = '$txtcaption' WHERE id_slider = '$id_slider'";
+        $querydetail = "UPDATE tb_banner SET category = 'Garden' WHERE id_banner = '$id_banner'";
         mysqli_query($db, $querydetail);
         // header("Location: ../slider.php?error=$error");
-        header("Location: ../slider.php");
+        header("Location: ../banner-garden.php");
         die();
     }
 }

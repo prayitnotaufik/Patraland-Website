@@ -2550,3 +2550,53 @@ ul li a{
 }
 
 /* ================== CUSTOM MEDIA SCREEN ======================= */
+
+/* Individual */
+.pad {
+  padding:10px;
+  text-align: center;
+}
+.pad b {
+  font-size:16px;
+}
+.pad p {
+  font-size:12px;
+}
+.shad {
+  border-left:0px solid #fff;
+  border-right:0px solid #fff;
+  margin-bottom:20px;
+}
+.shad a {
+  color:#515151;
+}
+.shad img {
+  border: none;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+.shad img:hover {
+  border: none;
+  transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
+}
+.boxx {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+  padding:0;
+  transition: 0.5s all;
+}
+.boxx:hover {
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2);
+  padding:0;
+  transition: 0.5s all;
+  color:#EFA52C;
+}
+.boxx a:hover {
+  color:#EFA52C;
+}
