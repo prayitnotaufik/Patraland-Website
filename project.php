@@ -69,7 +69,7 @@
 					<div class="col-md-4 card">
 						<img src="images/image1.jpg" alt="Avatar">
 						<div class="container-card">
-							<h4><b>Patra Garden</b></h4>
+							<h4><b>Garden Residence</b></h4>
 							<p>Kata kata patra garden</p>
 						</div>
 					</div>
