@@ -32,7 +32,7 @@
               <li><a href="#">One more separated link</a></li>
             </ul>
           </li> -->
-            <li><a href="#">Contact</a></li>
+            <!-- <li><a href="#">Contact</a></li> -->
             <!-- <li><a href="adm">Login</a></li> -->
           </ul>
         
