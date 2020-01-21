@@ -54,7 +54,21 @@ $hasil1 = mysqli_query($db,$sql1);
     });
   });
   </script>
-
+  <style>
+  iframe {
+    width:100%;
+    position:absolute;
+    height: 311.717px;
+    top: 0;
+    left: 0;
+  }
+  .agileinfo {
+    padding-bottom:0;
+  }
+  .featured-section {
+    padding: 3em 0;
+  }
+  </style>
 
 </head>
 <!-- //Head -->
@@ -94,27 +108,55 @@ $hasil1 = mysqli_query($db,$sql1);
   <!-- agileinfo -->
   <div class="agileinfo">
     <div class="container">
-      <h3>Welcome</h3>
-      <p class="ttt">when an unknown printer took a galley of type and scrambled Lorem Ipsum passages, and more recently it to make a type specimen book.</p>
-      <div class="flexslider-info">
-        <div class="banner-info">
-          <div class="col-md-7 agileinfo-left">
-            <iframe width="100%" height="311.717" src="https://www.youtube.com/embed/6wfc0SZodCQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="col-md-5 agileinfo-grid grid-one">
-            <h4>Temporibus autem</h4>
-            <p>Libero tempore, cum soluta nobis est eligendi
-              optio cumque nihil impedit quo minus id quod maxime
-              placeat facere possimus  ut
-              et voluptates repudiandae sint et molestiae non recusandae</p>
-
+      <h3>
+        <img src="images/star.png" style="width:50px;">
+        <img src="images/star.png" style="width:50px;">
+        <img src="images/star.png" style="width:50px;">
+        <img src="images/star.png" style="width:50px;">
+        <img src="images/star.png" style="width:50px;">
+      </h3>
+      <p class="ttt" style="border-bottom:1px solid #ddd; border-top:1px solid #ddd; padding:20px;"><i><span style="font-size:30px;">&ldquo;</span>Berdiri sejak awal tahun 2011, PT Patraland Griya Madani Development mampu membuktikan komitmen untuk pantang menyerah demi mewujudkan sebuah perumahan dengan banyak nilai plus di dalamnya seperti lokasi strategis, harga bersaing, fasilitas lengkap, dan sebagainya.<span style="font-size:30px;">&rdquo;</span></i></p>
+      </div>
+    </div>
+    <!-- agileinfo -->
+    <div class="featured-section">
+      <div class="container">
+        <h3 class="tittle">Keunggulan</h3>
+        <div class="featured-grids w3ls-2">
+          <div class="row justify-content-md-center">
+          <div class="col-md-3 agile-3">
+            <div class="icon hi-icon-wrap hi-icon-effect-6">
+              <i><a href="#" class="hi-icon hi-icon-cog glyphicon glyphicon-ok"></a></i>
             </div>
-            <div class="clearfix"></div>
+            <h4>Siap Bangun</h4>
+            <p>Kami siap membangun rumah sesaat setelah pembelian sudah berlangsung</p>
+          </div>
+          <div class="col-md-3 agile-3">
+            <div class="icon hi-icon-wrap hi-icon-effect-6">
+              <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-ok"></a>
+            </div>
+            <h4>Diskon Puluhan Juta</h4>
+            <p>Dapatkan potongan harga spesial selama masa promo hingga 30%.</p>
+          </div>
+          <div class="col-md-3 agile-3">
+            <div class="icon hi-icon-wrap hi-icon-effect-6">
+              <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-ok"></a>
+            </div>
+            <h4>1 Gate & CCTV System</h4>
+            <p>Diharapkan penghuni Patraland dapat merasakan kenyamanan tanpa mengkhawatirkan sistem keamanan lingkungan.</p>
+          </div>
+          <div class="col-md-3 agile-3">
+            <div class="icon hi-icon-wrap hi-icon-effect-6">
+              <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-ok"></a>
+            </div>
+            <h4>Free Semua Pajak</h4>
+            <p>Bebas PPN, BPHTB, Notaris, AJB dan Balik Nama, PLN, Air Bersih, dan Taman Depan Kavling.</p>
+          </div>
+          <div class="clearfix"></div>
           </div>
         </div>
       </div>
     </div>
-    <!-- agileinfo -->
     <!-- friend-agent -->
     <div class="friend-agent agileits-1">
       <div class="container">
@@ -145,42 +187,7 @@ $hasil1 = mysqli_query($db,$sql1);
       </div>
     </div>
     <!-- friend-agent -->
-    <div class="featured-section">
-      <div class="container">
-        <h3 class="tittle">Keunggulan</h3>
-        <div class="featured-grids w3ls-2">
-          <div class="col-md-3 agile-3">
-            <div class="icon hi-icon-wrap hi-icon-effect-6">
-              <i><a href="#" class="hi-icon hi-icon-cog glyphicon glyphicon-usd"></a></i>
-            </div>
-            <h4>Siap Bangun</h4>
-            <p>Kami siap membangun rumah sesaat setelah pembelian sudah berlangsung</p>
-          </div>
-          <div class="col-md-3 agile-3">
-            <div class="icon hi-icon-wrap hi-icon-effect-6">
-              <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-tag"></a>
-            </div>
-            <h4>Diskon Puluhan Juta</h4>
-            <p>Dapatkan potongan harga spesial selama masa promo hingga 30%.</p>
-          </div>
-          <div class="col-md-3 agile-3">
-            <div class="icon hi-icon-wrap hi-icon-effect-6">
-              <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-lock"></a>
-            </div>
-            <h4>1 Gate & CCTV System</h4>
-            <p>Diharapkan penghuni Patraland dapat merasakan kenyamanan tanpa mengkhawatirkan sistem keamanan lingkungan.</p>
-          </div>
-          <div class="col-md-3 agile-3">
-            <div class="icon hi-icon-wrap hi-icon-effect-6">
-              <a href="#" class="hi-icon hi-icon-support glyphicon glyphicon-heart"></a>
-            </div>
-            <h4>Free Semua Pajak</h4>
-            <p>Bebas PPN, BPHTB, Notaris, AJB dan Balik Nama, PLN, Air Bersih, dan Taman Depan Kavling.</p>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-      </div>
-    </div>
+
     <!-- footer -->
     <?php include("includes/footer.php"); ?>
     <!-- footer -->

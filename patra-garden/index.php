@@ -158,7 +158,7 @@ $hasil = mysqli_query($db, $sql);
 						<area class="noborder icolor555" target="" alt="lavender" title="Lavender" href="" coords="680,730,676,742,685,749,716,749,764,753,804,721,800,709,771,666,760,671" shape="poly">
 						<area class="noborder icolor555" target="" alt="aster" title="Aster" href="" coords="870,532,895,565,968,522,940,479,1026,415,935,359,860,413,854,423,866,500" shape="poly">
 						<area class="noborder icolor555" target="" alt="krisan" title="Krisan" href="" coords="837,409,898,365,930,342,972,313,975,304,917,228,847,248,827,267,734,265,736,277" shape="poly">
-						<area target="" alt="Blok-D" title="Blok-D" href="" coords="467,484,340,414,311,399,274,442,289,458,317,479,414,533,461,560,477,561" shape="poly">
+						<area class="noborder icolor555" target="" alt="Blok-D" title="Blok-D" href="" coords="467,484,340,414,311,399,274,442,289,458,317,479,414,533,461,560,477,561" shape="poly">
 					</map>
 				</div>
 			</div>

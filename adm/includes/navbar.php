@@ -7,7 +7,7 @@
       <a href="#0">Home</a>
       <ul class="cd-side__sub-list">
         <li class="cd-side__sub-item"><a href="slider.php">Slider</a></li>
-        <li class="cd-side__sub-item"><a href="#0">Content</a></li>
+        <li class="cd-side__sub-item"><a href="homec.php">Content</a></li>
       </ul>
     </li>
 
