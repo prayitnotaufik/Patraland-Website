@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 18, 2020 at 05:50 AM
+-- Generation Time: Jan 22, 2020 at 02:42 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -41,6 +41,26 @@ CREATE TABLE `tb_about` (
 
 INSERT INTO `tb_about` (`id_about`, `image`, `title`, `description`) VALUES
 (1, 'slide-5.jpg', 'Patraland Place (Hunian Berkelas di Lokasi Strategis)', 'PT. Patraland Griya Madani Development menawarkan sebuah hunian pilihan \r\nyang sangat sesuai untuk Anda yang ingin setiap saat menikmati keindahan\r\n dan kesejukan kota Malang. Perumahan Patraland adalah proyek perumahan \r\ndengan pemilihan lokasi yang sangat strategis, dan telah melalui \r\npertimbangan yang matang demi kepuasan penghuninya.PT. Patraland Griya \r\nMadani Development menawarkan sebuah hunian pilihan yang sangat sesuai \r\nuntuk Anda yang ingin setiap saat menikmati keindahan dan kesejukan kota\r\n Malang. Perumahan Patraland adalah proyek perumahan dengan pemilihan \r\nlokasi yang sangat strategis, dan telah melalui pertimbangan yang matang\r\n demi kepuasan penghuninya.PT. Patraland Griya Madani Development \r\nmenawarkan sebuah hunian pilihan yang sangat sesuai untuk Anda yang \r\ningin setiap saat menikmati keindahan dan kesejukan kota Malang. \r\nPerumahan Patraland adalah proyek perumahan dengan pemilihan lokasi yang\r\n sangat strategis, dan telah melalui pertimbangan yang matang demi \r\nkepuasan penghuninya.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_banner`
+--
+
+CREATE TABLE `tb_banner` (
+  `id_banner` int(11) NOT NULL,
+  `image` mediumtext NOT NULL,
+  `category` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_banner`
+--
+
+INSERT INTO `tb_banner` (`id_banner`, `image`, `category`) VALUES
+(1, '21012020092042.jpg', 'Garden'),
+(2, 'banner-garden.jpg', 'Kencana');
 
 -- --------------------------------------------------------
 
@@ -93,6 +113,32 @@ INSERT INTO `tb_gallery` (`id_gallery`, `image`, `category`, `title`, `caption`)
 (33, '17012020084931.jpg', '2', 'Type 40', ''),
 (34, '17012020084946.jpg', '2', 'Type 40', ''),
 (36, '17012020085228.jpg', '2', 'Type 48', '2 Lantai');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_home`
+--
+
+CREATE TABLE `tb_home` (
+  `id_home` int(11) NOT NULL,
+  `quotes` longtext NOT NULL,
+  `k1` varchar(255) NOT NULL,
+  `desc1` mediumtext NOT NULL,
+  `k2` varchar(255) NOT NULL,
+  `desc2` mediumtext NOT NULL,
+  `k3` varchar(255) NOT NULL,
+  `desc3` mediumtext NOT NULL,
+  `k4` varchar(255) NOT NULL,
+  `desc4` mediumtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_home`
+--
+
+INSERT INTO `tb_home` (`id_home`, `quotes`, `k1`, `desc1`, `k2`, `desc2`, `k3`, `desc3`, `k4`, `desc4`) VALUES
+(1, 'Berdiri sejak awal tahun 2011, PT Patraland Griya Madani Development mampu membuktikan komitmen untuk pantang menyerah demi mewujudkan sebuah perumahan dengan banyak nilai plus di dalamnya seperti lokasi strategis, harga bersaing, fasilitas lengkap, dan sebagainya', 'Siap Bangun Rumah', 'Kami siap membangun rumah sesaat setelah pembelian sudah berlangsung saat ini', 'Diskon Puluhan Juta', 'Dapatkan potongan harga spesial selama masa promo hingga 30%.', '1 Gate & CCTV System', 'Diharapkan penghuni Patraland dapat merasakan kenyamanan tanpa mengkhawatirkan sistem keamanan lingkungan.', 'Free Semua Pajak', 'Bebas PPN, BPHTB, Notaris, AJB dan Balik Nama, PLN, Air Bersih, dan Taman Depan Kavling.');
 
 -- --------------------------------------------------------
 
@@ -220,6 +266,12 @@ ALTER TABLE `tb_about`
   ADD PRIMARY KEY (`id_about`);
 
 --
+-- Indexes for table `tb_banner`
+--
+ALTER TABLE `tb_banner`
+  ADD PRIMARY KEY (`id_banner`);
+
+--
 -- Indexes for table `tb_contact`
 --
 ALTER TABLE `tb_contact`
@@ -230,6 +282,12 @@ ALTER TABLE `tb_contact`
 --
 ALTER TABLE `tb_gallery`
   ADD PRIMARY KEY (`id_gallery`);
+
+--
+-- Indexes for table `tb_home`
+--
+ALTER TABLE `tb_home`
+  ADD PRIMARY KEY (`id_home`);
 
 --
 -- Indexes for table `tb_login`
@@ -272,6 +330,12 @@ ALTER TABLE `tb_about`
   MODIFY `id_about` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `tb_banner`
+--
+ALTER TABLE `tb_banner`
+  MODIFY `id_banner` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `tb_contact`
 --
 ALTER TABLE `tb_contact`
@@ -282,6 +346,12 @@ ALTER TABLE `tb_contact`
 --
 ALTER TABLE `tb_gallery`
   MODIFY `id_gallery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
+-- AUTO_INCREMENT for table `tb_home`
+--
+ALTER TABLE `tb_home`
+  MODIFY `id_home` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_login`
