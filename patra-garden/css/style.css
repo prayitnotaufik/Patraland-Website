@@ -2724,4 +2724,14 @@ map{
 .mb-5{
    margin-bottom: 50px;
 }
+
+.kontak-col2 a{
+    color: #333333;
+}
+
+.kontak-col:hover{
+    -webkit-transition: 0.5s all;
+    -webkit-transform: scale(1.05);
+}
+
 /* ==================       CUSTOM CSS    ======================= */

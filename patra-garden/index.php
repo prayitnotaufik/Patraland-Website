@@ -224,78 +224,90 @@ $hasil = mysqli_query($db, $sql);
 			<div class="row">
 				<div class="col-md-6 kontak-col2 mb-5">
 					<div class="row">
-						<div class="col-md-6 kontak-col">
-							<div class="row">
-								<div class="col-md-4 kontak-icon">
-									<img src="images/icon/instagram.png" alt="">
-								</div>
-								<div class="col-md-8 wrap">
-									<h4>Follow Us</h4>
-									<!-- <br> -->
-									<p>@patraland</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 kontak-col">
-							<div class="row">
-								<div class="col-md-4 kontak-icon">
-									<img src="images/icon/facebook.png" alt="">
-								</div>
-								<div class="col-md-8 wrap">
-									<h4>Follow Us</h4>
-									<!-- <br> -->
-									<p>@patraland</p>
+						<a href="">
+							<div class="col-md-6 kontak-col">
+								<div class="row">
+									<div class="col-md-4 kontak-icon">
+										<img src="images/icon/instagram.png" alt="">
+									</div>
+									<div class="col-md-8 wrap">
+										<h4>Instagram</h4>
+										<!-- <br> -->
+										<p>@patraland</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-md-6 kontak-col">
-							<div class="row">
-								<div class="col-md-4 kontak-icon">
-									<img src="images/icon/whatsapp.png" alt="">
-								</div>
-								<div class="col-md-8 wrap">
-									<h4>Follow Us</h4>
-									<!-- <br> -->
-									<p>@patraland</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 kontak-col">
-							<div class="row">
-								<div class="col-md-4 kontak-icon">
-									<img src="images/icon/email.png" alt="">
-								</div>
-								<div class="col-md-8 wrap">
-									<h4>Follow Us</h4>
-									<!-- <br> -->
-									<p>@patraland</p>
+						</a>
+						<a href="">
+							<div class="col-md-6 kontak-col">
+								<div class="row">
+									<div class="col-md-4 kontak-icon">
+										<img src="images/icon/facebook.png" alt="">
+									</div>
+									<div class="col-md-8 wrap">
+										<h4>Facebook</h4>
+										<!-- <br> -->
+										<p>facebook.com/patraland</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-md-6 kontak-col">
-							<div class="row">
-								<div class="col-md-4 kontak-icon">
-									<img src="images/icon/telepon.png" alt="">
-								</div>
-								<div class="col-md-8 wrap">
-									<h4>Follow Us</h4>
-									<!-- <br> -->
-									<p>@patraland</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 kontak-col">
-							<div class="row">
-								<div class="col-md-4 kontak-icon">
-									<img src="images/icon/instagram.png" alt="">
-								</div>
-								<div class="col-md-8 wrap">
-									<h4>Follow Us</h4>
-									<!-- <br> -->
-									<p>@patraland</p>
+						</a>
+						<a href="">
+							<div class="col-md-6 kontak-col">
+								<div class="row">
+									<div class="col-md-4 kontak-icon">
+										<img src="images/icon/whatsapp.png" alt="">
+									</div>
+									<div class="col-md-8 wrap">
+										<h4>Whatsapp</h4>
+										<!-- <br> -->
+										<p>+62823220918</p>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
+						<a href="">
+							<div class="col-md-6 kontak-col">
+								<div class="row">
+									<div class="col-md-4 kontak-icon">
+										<img src="images/icon/email.png" alt="">
+									</div>
+									<div class="col-md-8 wrap">
+										<h4>E-Mail</h4>
+										<!-- <br> -->
+										<p>Patraland@gmail.com</p>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="">
+							<div class="col-md-6 kontak-col">
+								<div class="row">
+									<div class="col-md-4 kontak-icon">
+										<img src="images/icon/telepon.png" alt="">
+									</div>
+									<div class="col-md-8 wrap">
+										<h4>Call</h4>
+										<!-- <br> -->
+										<p>(0341)-1232133</p>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="">
+							<div class="col-md-6 kontak-col">
+								<div class="row">
+									<div class="col-md-4 kontak-icon">
+										<img src="images/icon/lokasi.png" alt="">
+									</div>
+									<div class="col-md-8 wrap">
+										<h4>Office</h4>
+										<!-- <br> -->
+										<p>Jl Candi Panggung Barat 3a</p>
+									</div>
+								</div>
+							</div>
+						</a>
 					</div>
 				</div>
 				<div class="col-md-6 center">
