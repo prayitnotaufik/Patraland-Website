@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 22, 2020 at 02:42 AM
+-- Generation Time: Jan 22, 2020 at 09:09 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -255,6 +255,31 @@ INSERT INTO `tb_team` (`id_team`, `photo`, `name`, `position`, `whatsapp`, `inst
 (4, '1601202005255210.jpg', 'Alice', 'Officer', '', '', '', ''),
 (5, '160120200712358.jpg', 'Rohiyan', 'Admintrasi', '', '', '', '');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_thumbnail`
+--
+
+CREATE TABLE `tb_thumbnail` (
+  `id_thumbnail` int(11) NOT NULL,
+  `image` mediumtext NOT NULL,
+  `proyek_name` text NOT NULL,
+  `location` mediumtext NOT NULL,
+  `link` varchar(260) NOT NULL,
+  `category` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_thumbnail`
+--
+
+INSERT INTO `tb_thumbnail` (`id_thumbnail`, `image`, `proyek_name`, `location`, `link`, `category`) VALUES
+(1, '22012020032611.jpg', 'Garden Residence', 'Kepuharjo, Karangploso', 'patra-garden', 'Garden'),
+(2, '22012020032611.jpg', 'Griya Madani', 'Curungrejo, Kepanjen', '', 'Griya'),
+(3, '22012020032611.jpg', 'Kencana Residence', 'Ngijo, Karangploso', '', 'Kencana'),
+(4, '22012020032611.jpg', 'The Island Cluster', 'Tasikmadu, Lowokwaru', '', 'Island');
+
 --
 -- Indexes for dumped tables
 --
@@ -320,6 +345,12 @@ ALTER TABLE `tb_team`
   ADD PRIMARY KEY (`id_team`);
 
 --
+-- Indexes for table `tb_thumbnail`
+--
+ALTER TABLE `tb_thumbnail`
+  ADD PRIMARY KEY (`id_thumbnail`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -382,6 +413,12 @@ ALTER TABLE `tb_slider`
 --
 ALTER TABLE `tb_team`
   MODIFY `id_team` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tb_thumbnail`
+--
+ALTER TABLE `tb_thumbnail`
+  MODIFY `id_thumbnail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

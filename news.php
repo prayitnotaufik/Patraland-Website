@@ -76,7 +76,15 @@ $result = mysqli_query($db,$sql);
           <div class="col-md-7 agileinfo_about_bottom_grid">
             <h5><b><a href="news-detail.php?id=<?php echo $data['id_news']; ?>" style="color:black;"><?php echo $data['title']; ?></a></b></h5>
             <div style="position:inherit"><small><i>(Posted by <u style="text-transform:capitalize;"><?php echo $data['author']; ?></u> - <?php echo $data['date']; ?>)</i></small></div>
-            <p><?php echo substr($data['description'], 0, 400); ?> ... - <a style="color:#EFA52C;" href="news-detail.php?id=<?php echo $data['id_news']; ?>"><u>Baca Selengkapnya</u></a></p>
+            <p>
+              <?php echo substr($data['description'], 0, 400); ?>
+              <?php
+              $string = $data['description'];
+              if(strlen($string) > 400) {
+                echo "... - ";
+              }
+              ?>
+              <br><a style="color:#EFA52C;" href="news-detail.php?id=<?php echo $data['id_news']; ?>"><u>Baca Selengkapnya</u></a></p>
 
           </div>
           <div class="col-md-5 agileinfo_about_bottom_grid">

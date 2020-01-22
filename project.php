@@ -1,3 +1,8 @@
+<?php
+include("config/conn.php");
+$sql3 = "SELECT * FROM tb_thumbnail";
+$hasil3 = mysqli_query($db,$sql3);
+?>
 <!DOCTYPE html>
 <html>
 <!-- Head -->
@@ -64,7 +69,22 @@
 	<div class="services wthree-3">
 		<div class="container">
 			<h2 class="tittle">Project</h2>
-			<div class="row">
+      <div class="friend-grids">
+        <?php while($data3 = mysqli_fetch_assoc($hasil3)) { ?>
+        <div class="col-md-3 friend-grid shad">
+          <div class="boxx">
+            <a href="<?php echo $data3['link']; ?>">
+              <img src="patra-garden/images/thumbnail/<?php echo $data3['image']; ?>" alt="Project Thumbnail">
+              <div class="pad">
+                <b><?php echo $data3['proyek_name']; ?></b>
+                <p><i><?php echo $data3['location']; ?></i></p>
+              </div>
+            </a>
+          </div>
+        </div>
+      <?php } ?>
+      </div>
+			<!-- <div class="row">
 				<a href="patra-garden" class="a-project stretched-link">
 					<div class="col-md-4 card">
 						<img src="images/image1.jpg" alt="Avatar">
@@ -92,7 +112,7 @@
 						</div>
 					</div>
 				</a>
-			</div>
+			</div> -->
 			<div class="clearfix"> </div>
 		</div>
 	</div>

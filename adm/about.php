@@ -24,7 +24,6 @@ $data = mysqli_fetch_array($sql);
   <style>
   input[type=text] {
     width:500px;
-    padding:5px;
   }
   .cd-content-wrapper {
     font-size:17px;

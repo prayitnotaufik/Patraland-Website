@@ -7,6 +7,8 @@ $hasil1 = mysqli_query($db,$sql1);
 $sql2 = "SELECT * FROM tb_home";
 $hasil2 = mysqli_query($db,$sql2);
 $data2 = mysqli_fetch_assoc($hasil2);
+$sql3 = "SELECT * FROM tb_thumbnail ORDER BY RAND()";
+$hasil3 = mysqli_query($db,$sql3);
 ?>
 <!DOCTYPE html>
 <html>
@@ -195,50 +197,19 @@ $data2 = mysqli_fetch_assoc($hasil2);
     <div class="container">
       <h2 class="tittle">Our Project</h2>
       <div class="friend-grids">
+        <?php while($data3 = mysqli_fetch_assoc($hasil3)) { ?>
         <div class="col-md-3 friend-grid shad">
           <div class="boxx">
-            <a href="patra-garden">
-              <img src="images/image1.jpg" alt="Avatar">
+            <a href="<?php echo $data3['link']; ?>">
+              <img src="patra-garden/images/thumbnail/<?php echo $data3['image']; ?>" alt="Project Thumbnail">
               <div class="pad">
-                <b>Garden Residence</b>
-                <p><i>Kepuharjo, Karangploso</i></p>
+                <b><?php echo $data3['proyek_name']; ?></b>
+                <p><i><?php echo $data3['location']; ?></i></p>
               </div>
             </a>
           </div>
         </div>
-        <div class="col-md-3 friend-grid shad">
-          <div class="boxx">
-            <a href="">
-              <img src="images/image1.jpg" alt="Avatar">
-              <div class="pad">
-                <b>Griya Madani</b>
-                <p><i>Curungrejo, Kepanjen</i></p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3 friend-grid shad">
-          <div class="boxx">
-            <a href="">
-              <img src="images/image1.jpg" alt="Avatar">
-              <div class="pad">
-                <b>Kencana Residence</b>
-                <p><i>Ngijo, Karangploso</i></p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3 friend-grid shad">
-          <div class="boxx">
-            <a href="">
-              <img src="images/image1.jpg" alt="Avatar">
-              <div class="pad">
-                <b>The Island Cluster</b>
-                <p><i>Tasikmadu, Lowokwaru</i></p>
-              </div>
-            </a>
-          </div>
-        </div>
+      <?php } ?>
       </div>
       <div class="clearfix"> </div>
     </div>

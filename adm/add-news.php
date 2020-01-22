@@ -22,7 +22,6 @@ if(@$_SESSION['status'] != "login") {
   <style>
   input[type=text] {
     width:500px;
-    padding:5px;
   }
   .cd-content-wrapper {
     font-size:17px;
