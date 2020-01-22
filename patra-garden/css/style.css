@@ -2015,6 +2015,13 @@ p.ttt {
 .content-pro-head.content-pro-head3.agile-6 {
     margin-bottom: 2em;
 }
+.wrap h4{
+    text-align: center;
+}
+.wrap p{
+    text-align: center;
+}
+
 }
 @media screen and (max-width:800px) {
 .slider-info {
@@ -2593,6 +2600,14 @@ ul li a{
     .konten{
         width: 33% ;
     }
+
+    .wrap h4{
+        text-align: left;
+    }
+
+    .wrap p{
+        text-align: left;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -2664,12 +2679,14 @@ map{
 }
 
 .wrap h4{
-    text-align: left;
+    /* text-align: left; */
     font-size: 15pt;
+    /* text-align: center; */
 }
 .wrap p{
-    text-align: left;
+    /* text-align: left; */
     margin-top: -4px;
+    /* text-align: center; */
     /* display: contents; */
 }
 .wrap{
@@ -2684,10 +2701,37 @@ map{
 }
 
 .kontak-col{
-    margin-top: 80px;
+    margin-top: 60px;
+    float: left;
+    text-align: -webkit-center;
+    width: 50%;
 }
 
 .kontak-col2{
     margin-top: -35px;
 }
+
+.iframe{
+    width: 100%;
+    height: 400px;
+    
+}
+
+.center{
+    text-align: center;
+}
+
+.mb-5{
+   margin-bottom: 50px;
+}
+
+.kontak-col2 a{
+    color: #333333;
+}
+
+.kontak-col:hover{
+    -webkit-transition: 0.5s all;
+    -webkit-transform: scale(1.05);
+}
+
 /* ==================       CUSTOM CSS    ======================= */
