@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 22, 2020 at 09:09 AM
+-- Generation Time: Jan 23, 2020 at 10:00 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -280,6 +280,32 @@ INSERT INTO `tb_thumbnail` (`id_thumbnail`, `image`, `proyek_name`, `location`, 
 (3, '22012020032611.jpg', 'Kencana Residence', 'Ngijo, Karangploso', '', 'Kencana'),
 (4, '22012020032611.jpg', 'The Island Cluster', 'Tasikmadu, Lowokwaru', '', 'Island');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_type`
+--
+
+CREATE TABLE `tb_type` (
+  `id_type` int(11) NOT NULL,
+  `image` mediumtext NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `category` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_type`
+--
+
+INSERT INTO `tb_type` (`id_type`, `image`, `type`, `category`) VALUES
+(1, '23012020073429.jpg', '36', 'Garden'),
+(2, '23012020094909.jpg', '40', 'Garden'),
+(3, '23012020095135.jpg', '45', 'Garden'),
+(4, '23012020095153.jpg', '54', 'Garden'),
+(5, '23012020095202.jpg', '48*', 'Garden'),
+(6, '23012020095211.jpg', '54*', 'Garden'),
+(7, '23012020095221.jpg', '70*', 'Garden');
+
 --
 -- Indexes for dumped tables
 --
@@ -351,6 +377,12 @@ ALTER TABLE `tb_thumbnail`
   ADD PRIMARY KEY (`id_thumbnail`);
 
 --
+-- Indexes for table `tb_type`
+--
+ALTER TABLE `tb_type`
+  ADD PRIMARY KEY (`id_type`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -419,6 +451,12 @@ ALTER TABLE `tb_team`
 --
 ALTER TABLE `tb_thumbnail`
   MODIFY `id_thumbnail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tb_type`
+--
+ALTER TABLE `tb_type`
+  MODIFY `id_type` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

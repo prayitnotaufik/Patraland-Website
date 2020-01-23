@@ -44,11 +44,9 @@
     <li class="cd-side__item cd-side__item--has-children cd-side__item--bookmarks js-cd-item--has-children">
       <a href="#0">Garden Residence</a>
       <ul class="cd-side__sub-list">
-        <li class="cd-side__sub-item"><a href="thumb.php">Thumbnail</a></li>
         <li class="cd-side__sub-item"><a href="banner-garden.php">Banner</a></li>
         <li class="cd-side__sub-item"><a href="#0">About Garden Residence</a></li>
-        <li class="cd-side__sub-item"><a href="#0">Type</a></li>
-        <li class="cd-side__sub-item"><a href="#0">Siteplan</a></li>
+        <li class="cd-side__sub-item"><a href="type-garden.php">Type</a></li>
         <li class="cd-side__sub-item"><a href="#0">Contact</a></li>
       </ul>
     </li>
