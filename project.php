@@ -1,7 +1,7 @@
 <?php
 include("config/conn.php");
 $sql3 = "SELECT * FROM tb_thumbnail";
-$hasil3 = mysqli_query($db,$sql3);
+$hasil3 = mysqli_query($db, $sql3);
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,14 +13,14 @@ $hasil3 = mysqli_query($db,$sql3);
 	<!-- Meta-Tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="description" content="Hunian berkelas dengan lokasi yang strategis di Malang!">
-  <meta name="keywords" content="perumahan di batu malang murah, perumahan murah batu malang, perumahan murah di batu malang, perumahan baru murah di batu malang, perumahan murah di sekitar batu malang, info perumahan murah batu malang">
-  <meta name="robots" content="index, follow">
-  <meta name="copyright" content="PT Patraland Griya Madani Development">
-  <meta name="author" content="PT Patraland Griya Madani Development">
-  <meta name="creationdate" content="Januari 2020">
-  <meta name="distribution" content="global">
-  <meta name="rating" content="general">
+	<meta name="description" content="Hunian berkelas dengan lokasi yang strategis di Malang!">
+	<meta name="keywords" content="perumahan di batu malang murah, perumahan murah batu malang, perumahan murah di batu malang, perumahan baru murah di batu malang, perumahan murah di sekitar batu malang, info perumahan murah batu malang">
+	<meta name="robots" content="index, follow">
+	<meta name="copyright" content="PT Patraland Griya Madani Development">
+	<meta name="author" content="PT Patraland Griya Madani Development">
+	<meta name="creationdate" content="Januari 2020">
+	<meta name="distribution" content="global">
+	<meta name="rating" content="general">
 	<script type="application/x-javascript">
 		addEventListener("load", function() {
 			setTimeout(hideURLbar, 0);
@@ -69,21 +69,52 @@ $hasil3 = mysqli_query($db,$sql3);
 	<div class="services wthree-3">
 		<div class="container">
 			<h2 class="tittle">Project</h2>
-      <div class="friend-grids">
-        <?php while($data3 = mysqli_fetch_assoc($hasil3)) { ?>
-        <div class="col-md-3 friend-grid shad">
-          <div class="boxx">
-            <a href="<?php echo $data3['link']; ?>">
-              <img src="patra-garden/images/thumbnail/<?php echo $data3['image']; ?>" alt="Project Thumbnail">
-              <div class="pad">
-                <b><?php echo $data3['proyek_name']; ?></b>
-                <p><i><?php echo $data3['location']; ?></i></p>
-              </div>
-            </a>
-          </div>
-        </div>
-      <?php } ?>
-      </div>
+			<div class="friend-grids">
+				<div class="col-md-3 friend-grid shad">
+					<div class="boxx">
+						<a href="patra-garden">
+							<img src="images/thumbnail/garden.jpg" alt="Project Thumbnail">
+							<div class="pad">
+								<b>Garden Residence</b>
+								<p><i>Ngijo, Karangploso</i></p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3 friend-grid shad">
+					<div class="boxx">
+						<a href="patra-garden">
+							<img src="images/thumbnail/kencana.jpg" alt="Project Thumbnail">
+							<div class="pad">
+								<b>Kencana Residence</b>
+								<p><i>Kepuharjo, Karangploso</i></p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3 friend-grid shad">
+					<div class="boxx">
+						<a href="patra-garden">
+							<img src="images/thumbnail/island.jpg" alt="Project Thumbnail">
+							<div class="pad">
+								<b>The Island Cluster</b>
+								<p><i>Tasikmadu, Lowokwaru</i></p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3 friend-grid shad">
+					<div class="boxx">
+						<a href="patra-garden">
+							<img src="images/thumbnail/madani.jpg" alt="Project Thumbnail">
+							<div class="pad">
+								<b>Griya Madani</b>
+								<p><i>Curungrejo, Kepanjen</i></p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
 			<!-- <div class="row">
 				<a href="patra-garden" class="a-project stretched-link">
 					<div class="col-md-4 card">
