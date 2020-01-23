@@ -1,18 +1,19 @@
 <?php
 include("config/conn.php");
 $sql = "SELECT * FROM tb_slider";
-$hasil = mysqli_query($db,$sql);
+$hasil = mysqli_query($db, $sql);
 $sql1 = "SELECT * FROM tb_news WHERE status = 'Published' ORDER BY id_news DESC LIMIT 3";
-$hasil1 = mysqli_query($db,$sql1);
+$hasil1 = mysqli_query($db, $sql1);
 $sql2 = "SELECT * FROM tb_home";
-$hasil2 = mysqli_query($db,$sql2);
+$hasil2 = mysqli_query($db, $sql2);
 $data2 = mysqli_fetch_assoc($hasil2);
 $sql3 = "SELECT * FROM tb_thumbnail ORDER BY RAND()";
-$hasil3 = mysqli_query($db,$sql3);
+$hasil3 = mysqli_query($db, $sql3);
 ?>
 <!DOCTYPE html>
 <html>
 <!-- Head -->
+
 <head>
   <title>PT. Patraland Griya Madani</title>
   <link rel="shortcut icon" type="image/png" href="images/icon2.png">
@@ -27,7 +28,15 @@ $hasil3 = mysqli_query($db,$sql3);
   <meta name="creationdate" content="Januari 2020">
   <meta name="distribution" content="global">
   <meta name="rating" content="general">
-  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <script type="application/x-javascript">
+    addEventListener("load", function() {
+      setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+      window.scrollTo(0, 1);
+    }
+  </script>
   <!-- //Meta-Tags -->
   <!-- Custom-Theme-Files -->
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
@@ -35,8 +44,8 @@ $hasil3 = mysqli_query($db,$sql3);
   <link rel="stylesheet" type="text/css" href="css/component.css" />
   <!-- //Custom-Theme-Files -->
   <!-- Web-Fonts -->
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" 	type="text/css">
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" 				type="text/css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
   <!-- <link rel="stylesheet" href="css/card.css"> -->
   <!-- //Web-Fonts -->
   <!-- Default-JavaScript-File -->
@@ -44,41 +53,44 @@ $hasil3 = mysqli_query($db,$sql3);
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script src="js/responsiveslides.min.js"></script>
   <script>
-  $(function () {
-    $("#slider").responsiveSlides({
-      auto: true,
-      pager: true,
-      nav: true,
-      speed: 1000,
-      namespace: "callbacks",
-      before: function () {
-        $('.events').append("<li>before event fired.</li>");
-      },
-      after: function () {
-        $('.events').append("<li>after event fired.</li>");
-      }
+    $(function() {
+      $("#slider").responsiveSlides({
+        auto: true,
+        pager: true,
+        nav: true,
+        speed: 1000,
+        namespace: "callbacks",
+        before: function() {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function() {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
     });
-  });
   </script>
   <style>
-  iframe {
-    width:100%;
-    position:absolute;
-    height: 311.717px;
-    top: 0;
-    left: 0;
-  }
-  .agileinfo {
-    padding-bottom:0;
-  }
-  .featured-section {
-    padding: 3em 0;
-  }
+    iframe {
+      width: 100%;
+      position: absolute;
+      height: 311.717px;
+      top: 0;
+      left: 0;
+    }
+
+    .agileinfo {
+      padding-bottom: 0;
+    }
+
+    .featured-section {
+      padding: 3em 0;
+    }
   </style>
 
 </head>
 <!-- //Head -->
 <!-- Body -->
+
 <body>
   <!-- Header -->
   <div class="header w3layouts-1">
@@ -90,8 +102,8 @@ $hasil3 = mysqli_query($db,$sql3);
       <div class="callbacks_container">
         <ul class="rslides" id="slider">
           <?php
-          while($data = mysqli_fetch_assoc($hasil)) {
-            ?>
+          while ($data = mysqli_fetch_assoc($hasil)) {
+          ?>
             <li>
               <div class="slider-img">
                 <img src="images/slider/<?php echo $data['image']; ?>" class="img-responsive">
@@ -168,16 +180,16 @@ $hasil3 = mysqli_query($db,$sql3);
     <div class="container">
       <h3 class="tittle">Latest News</h3>
       <div class="friend-grids">
-        <?php while($data1 = mysqli_fetch_assoc($hasil1)) { ?>
+        <?php while ($data1 = mysqli_fetch_assoc($hasil1)) { ?>
           <div class="col-md-4 friend-grid" style="min-height:470px;">
-            <a href="news-detail.php?id=<?php echo $data1['id_news']; ?>"><img src="images/news/<?php echo $data1['image']; ?>" alt="" class="img-responsive" width="350" height="237" ></a>
+            <a href="news-detail.php?id=<?php echo $data1['id_news']; ?>"><img src="images/news/<?php echo $data1['image']; ?>" alt="" class="img-responsive" width="350" height="237"></a>
             <h4><a style="color:#EFA52C;" href="news-detail.php?id=<?php echo $data1['id_news']; ?>"><?php echo $data1['title']; ?></a></h4>
             <a href="news-detail.php?id=<?php echo $data1['id_news']; ?>">
               <p>
                 <?php echo substr($data1['description'], 0, 170); ?>
                 <?php
                 $string = $data1['description'];
-                if(strlen($string) > 170) {
+                if (strlen($string) > 170) {
                   echo "...";
                 }
                 ?>
@@ -197,19 +209,50 @@ $hasil3 = mysqli_query($db,$sql3);
     <div class="container">
       <h2 class="tittle">Our Project</h2>
       <div class="friend-grids">
-        <?php while($data3 = mysqli_fetch_assoc($hasil3)) { ?>
         <div class="col-md-3 friend-grid shad">
           <div class="boxx">
-            <a href="<?php echo $data3['link']; ?>">
-              <img src="patra-garden/images/thumbnail/<?php echo $data3['image']; ?>" alt="Project Thumbnail">
+            <a href="patra-garden">
+              <img src="images/thumbnail/garden.jpg" alt="Project Thumbnail">
               <div class="pad">
-                <b><?php echo $data3['proyek_name']; ?></b>
-                <p><i><?php echo $data3['location']; ?></i></p>
+                <b>Garden Residence</b>
+                <p><i>Ngijo, Karangploso</i></p>
               </div>
             </a>
           </div>
         </div>
-      <?php } ?>
+        <div class="col-md-3 friend-grid shad">
+          <div class="boxx">
+            <a href="patra-garden">
+              <img src="images/thumbnail/kencana.jpg" alt="Project Thumbnail">
+              <div class="pad">
+                <b>Kencana Residence</b>
+                <p><i>Kepuharjo, Karangploso</i></p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3 friend-grid shad">
+          <div class="boxx">
+            <a href="patra-garden">
+              <img src="images/thumbnail/island.jpg" alt="Project Thumbnail">
+              <div class="pad">
+                <b>The Island Cluster</b>
+                <p><i>Tasikmadu, Lowokwaru</i></p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3 friend-grid shad">
+          <div class="boxx">
+            <a href="patra-garden">
+              <img src="images/thumbnail/madani.jpg" alt="Project Thumbnail">
+              <div class="pad">
+                <b>Griya Madani</b>
+                <p><i>Curungrejo, Kepanjen</i></p>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
       <div class="clearfix"> </div>
     </div>
@@ -221,26 +264,27 @@ $hasil3 = mysqli_query($db,$sql3);
   <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
   <script defer src="js/jquery.flexslider.js"></script>
   <script type="text/javascript">
-  $(window).load(function(){
-    $('.flexslider').flexslider({
-      animation: "slide",
-      start: function(slider){
-        $('body').removeClass('loading');
-      }
+    $(window).load(function() {
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider) {
+          $('body').removeClass('loading');
+        }
+      });
     });
-  });
   </script>
   <!--End-slider-script-->
   <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
   <script type="text/javascript">
-  $(document).ready(function () {
-    $('#horizontalTab').easyResponsiveTabs({
-      type: 'default', //Types: default, vertical, accordion
-      width: 'auto', //auto or any width like 600px
-      fit: true   // 100% fit in a container
+    $(document).ready(function() {
+      $('#horizontalTab').easyResponsiveTabs({
+        type: 'default', //Types: default, vertical, accordion
+        width: 'auto', //auto or any width like 600px
+        fit: true // 100% fit in a container
+      });
     });
-  });
   </script>
 </body>
 <!-- //Body -->
+
 </html>
