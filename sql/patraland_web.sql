@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 23, 2020 at 10:00 AM
+-- Generation Time: Jan 24, 2020 at 07:47 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -40,7 +40,31 @@ CREATE TABLE `tb_about` (
 --
 
 INSERT INTO `tb_about` (`id_about`, `image`, `title`, `description`) VALUES
-(1, 'slide-5.jpg', 'Patraland Place (Hunian Berkelas di Lokasi Strategis)', 'PT. Patraland Griya Madani Development menawarkan sebuah hunian pilihan \r\nyang sangat sesuai untuk Anda yang ingin setiap saat menikmati keindahan\r\n dan kesejukan kota Malang. Perumahan Patraland adalah proyek perumahan \r\ndengan pemilihan lokasi yang sangat strategis, dan telah melalui \r\npertimbangan yang matang demi kepuasan penghuninya.PT. Patraland Griya \r\nMadani Development menawarkan sebuah hunian pilihan yang sangat sesuai \r\nuntuk Anda yang ingin setiap saat menikmati keindahan dan kesejukan kota\r\n Malang. Perumahan Patraland adalah proyek perumahan dengan pemilihan \r\nlokasi yang sangat strategis, dan telah melalui pertimbangan yang matang\r\n demi kepuasan penghuninya.PT. Patraland Griya Madani Development \r\nmenawarkan sebuah hunian pilihan yang sangat sesuai untuk Anda yang \r\ningin setiap saat menikmati keindahan dan kesejukan kota Malang. \r\nPerumahan Patraland adalah proyek perumahan dengan pemilihan lokasi yang\r\n sangat strategis, dan telah melalui pertimbangan yang matang demi \r\nkepuasan penghuninya.');
+(1, 'slide-5.jpg', 'Patraland Place (Hunian Berkelas di Lokasi Strategis)', 'PT. Patraland Griya Madani Development menawarkan sebuah hunian pilihan \r\nyang sangat sesuai untuk Anda yang ingin setiap saat menikmati keindahan\r\n dan kesejukan kota Malang. Perumahan Patraland adalah proyek perumahan \r\ndengan pemilihan lokasi yang sangat strategis, dan telah melalui \r\npertimbangan yang matang demi kepuasan penghuninya. PT. Patraland Griya \r\nMadani Development menawarkan sebuah hunian pilihan yang sangat sesuai \r\nuntuk Anda yang ingin setiap saat menikmati keindahan dan kesejukan kota\r\n Malang. Perumahan Patraland adalah proyek perumahan dengan pemilihan \r\nlokasi yang sangat strategis, dan telah melalui pertimbangan yang matang\r\n demi kepuasan penghuninya.PT. Patraland Griya Madani Development \r\nmenawarkan sebuah hunian pilihan yang sangat sesuai untuk Anda yang \r\ningin setiap saat menikmati keindahan dan kesejukan kota Malang. \r\nPerumahan Patraland adalah proyek perumahan dengan pemilihan lokasi yang\r\n sangat strategis, dan telah melalui pertimbangan yang matang demi \r\nkepuasan penghuninya.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_about_proyek`
+--
+
+CREATE TABLE `tb_about_proyek` (
+  `id_about_proyek` int(11) NOT NULL,
+  `image` mediumtext NOT NULL,
+  `title` mediumtext NOT NULL,
+  `description` longtext NOT NULL,
+  `category` varchar(255) NOT NULL,
+  `content_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_about_proyek`
+--
+
+INSERT INTO `tb_about_proyek` (`id_about_proyek`, `image`, `title`, `description`, `category`, `content_id`) VALUES
+(1, '24012020070559.jpg', 'Lokasi Strategis', 'Lokasi ini strategis sekali karena berdekatan dengan Yonkes, Kampus ITN, Pasar karangploso dan lain-lain', 'Garden', 1),
+(2, '24012020070623.jpg', 'View Gunung Fuji', 'Pemandangan disini cukup indah karena terlihat ada gunung ketika anda melihat sebuah kaca belakang rumah', 'Garden', 2),
+(3, '24012020070612.jpg', 'Akses Jalan Mudah', 'Dibuatnya akses jalan besar memungkinkan penghuni bisa merasakan kenyamanan saat berkendara di sekitar hunian ini', 'Garden', 3);
 
 -- --------------------------------------------------------
 
@@ -275,7 +299,7 @@ CREATE TABLE `tb_thumbnail` (
 --
 
 INSERT INTO `tb_thumbnail` (`id_thumbnail`, `image`, `proyek_name`, `location`, `link`, `category`) VALUES
-(1, '22012020032611.jpg', 'Garden Residence', 'Kepuharjo, Karangploso', 'garden-residence', 'Garden'),
+(1, '22012020032611.jpg', 'Garden Residence', 'Kepuharjo, Karangploso', 'patra-garden', 'Garden'),
 (2, '22012020032611.jpg', 'Griya Madani', 'Curungrejo, Kepanjen', '', 'Griya'),
 (3, '22012020032611.jpg', 'Kencana Residence', 'Ngijo, Karangploso', '', 'Kencana'),
 (4, '22012020032611.jpg', 'The Island Cluster', 'Tasikmadu, Lowokwaru', '', 'Island');
@@ -315,6 +339,12 @@ INSERT INTO `tb_type` (`id_type`, `image`, `type`, `category`) VALUES
 --
 ALTER TABLE `tb_about`
   ADD PRIMARY KEY (`id_about`);
+
+--
+-- Indexes for table `tb_about_proyek`
+--
+ALTER TABLE `tb_about_proyek`
+  ADD PRIMARY KEY (`id_about_proyek`);
 
 --
 -- Indexes for table `tb_banner`
@@ -391,6 +421,12 @@ ALTER TABLE `tb_type`
 --
 ALTER TABLE `tb_about`
   MODIFY `id_about` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tb_about_proyek`
+--
+ALTER TABLE `tb_about_proyek`
+  MODIFY `id_about_proyek` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tb_banner`
