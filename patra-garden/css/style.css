@@ -504,7 +504,10 @@ a.navbar-brand span {
 /*-- banner-bottom --*/
 .agileinfo{
 /* padding:5em 0; */
-padding: 130px 10px;
+padding-top:130px; 
+padding-right: 10px;
+padding-left: 10px;
+padding-bottom: 50px;
 }
 h3.tittle-one{
 text-align:center;

@@ -76,7 +76,7 @@ include("../config/conn.php");
 			<h3>Asoka Siteplan</h3>
 			<div class="row siteplan">
 				<div id="kecil" class="">
-					<img id="gambar" src="images/blok/asoka3.jpg" class="" alt="map" usemap="">
+					<img id="gambar" src="images/blok/asoka.png" class="" alt="map" usemap="">
 				</div>
 			</div>
 		</div>
