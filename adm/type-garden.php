@@ -14,12 +14,13 @@ if(@$_SESSION['status'] != "login") {
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
   <link rel="stylesheet" href="assets/css/style.css">
   <title>PT. Patraland - Administrator</title>
+  <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
   <style>
   table {
     font-size:17px;
   }
   /* Full-width input fields */
-  input[type=text], input[type=file], textarea {
+  input[type=text], input[type=file], textarea, select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -136,6 +137,13 @@ if(@$_SESSION['status'] != "login") {
       width: 100%;
     }
   }
+
+  .small {
+    font-size:12px;
+    font-style:italic;
+    margin-top:-5px;
+    color: red;
+  }
   </style>
 </head>
 <body>
@@ -145,12 +153,41 @@ if(@$_SESSION['status'] != "login") {
     <div class="cd-content-wrapper">
 
 
-      <h2>Banner</h2><br>
+      <h2>Type</h2><br>
+      <form action="" id="opttype" method="post">
+        <select name="tphouse" id="tphouse">
+          <option value="">Choose Type</option>
+          <option value="?tp=36&cat=Garden">36</option>
+          <option value="?tp=40&cat=Garden">40</option>
+          <option value="?tp=45&cat=Garden">45</option>
+          <option value="?tp=54&cat=Garden">54</option>
+          <option value="?tp=48*&cat=Garden">48*</option>
+          <option value="?tp=54*&cat=Garden">54*</option>
+          <option value="?tp=70*&cat=Garden">70*</option>
+        </select>
+      </form>
+      <script type="text/javascript">
+      $(function(){
+        // bind change event to select
+        $('#tphouse').on('change', function () {
+          var url = $(this).val(); // get selected value
+          if (url) { // require a URL
+            window.location = url; // redirect
+          }
+          return false;
+        });
+      });
+      </script>
+      <div class="small">* 2 Lantai</div><br>
+
+      <?php
+      if(isset($_GET['tp'])) {
+        ?>
         <button class="btn btn--primary btn--sm" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Edit</button>
 
         <div id="id01" class="modal">
 
-          <form class="modal-content animate" action="proc/proc-edit-banner.php" method="post" enctype="multipart/form-data">
+          <form class="modal-content animate" action="proc/proc-edit-type.php" method="post" enctype="multipart/form-data">
             <div class="imgcontainer">
               <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             </div>
@@ -158,9 +195,10 @@ if(@$_SESSION['status'] != "login") {
             <div class="container">
               <label for="image"><b>Image</b></label>
               <input type="file" name="file">
-              <input type="hidden" name="id_banner" value="1">
+              <input type="hidden" name="txttype" value="<?php echo $_GET['tp']; ?>">
+              <input type="hidden" name="txtcat" value="<?php echo $_GET['cat']; ?>">
 
-              <button class="btn btn--primary btn--sm" type="submit" name="submitBG">Simpan</button>
+              <button class="btn btn--primary btn--sm" type="submit" name="submitTG">Simpan</button>
             </div>
           </form>
         </div>
@@ -176,18 +214,21 @@ if(@$_SESSION['status'] != "login") {
           }
         }
         </script>
-      <p>
-        <?php
-          $sql = mysqli_query($db, "SELECT * FROM tb_banner WHERE category = 'Garden'");
+        <p>
+          <?php
+          $type = @$_GET['tp'];
+          $cat = @$_GET['cat'];
+          $sql = mysqli_query($db, "SELECT * FROM tb_type WHERE type = '$type' AND category = '$cat'");
           $data = mysqli_fetch_assoc($sql);
-        ?>
-        <img src="../garden-residence/images/banner/<?php echo $data['image']; ?>" width="100%">
-    </p>
-  </div> <!-- .content-wrapper -->
-</main> <!-- .cd-main-content -->
-<script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
-<script src="assets/js/menu-aim.js"></script>
-<script src="assets/js/main.js"></script>
+          ?>
+          <img src="../garden-residence/images/type/<?php echo $data['image']; ?>" width="385">
+        </p>
+      <?php } ?>
+    </div> <!-- .content-wrapper -->
+  </main> <!-- .cd-main-content -->
+  <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+  <script src="assets/js/menu-aim.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
 

@@ -72,7 +72,7 @@ $hasil3 = mysqli_query($db, $sql3);
 			<div class="friend-grids">
 				<div class="col-md-3 friend-grid shad">
 					<div class="boxx">
-						<a href="patra-garden">
+						<a href="garden-residence">
 							<img src="images/thumbnail/garden.jpg" alt="Project Thumbnail">
 							<div class="pad">
 								<b>Garden Residence</b>
@@ -83,7 +83,7 @@ $hasil3 = mysqli_query($db, $sql3);
 				</div>
 				<div class="col-md-3 friend-grid shad">
 					<div class="boxx">
-						<a href="patra-garden">
+						<a href="garden-residence">
 							<img src="images/thumbnail/kencana.jpg" alt="Project Thumbnail">
 							<div class="pad">
 								<b>Kencana Residence</b>
@@ -94,7 +94,7 @@ $hasil3 = mysqli_query($db, $sql3);
 				</div>
 				<div class="col-md-3 friend-grid shad">
 					<div class="boxx">
-						<a href="patra-garden">
+						<a href="garden-residence">
 							<img src="images/thumbnail/island.jpg" alt="Project Thumbnail">
 							<div class="pad">
 								<b>The Island Cluster</b>
@@ -105,7 +105,7 @@ $hasil3 = mysqli_query($db, $sql3);
 				</div>
 				<div class="col-md-3 friend-grid shad">
 					<div class="boxx">
-						<a href="patra-garden">
+						<a href="garden-residence">
 							<img src="images/thumbnail/madani.jpg" alt="Project Thumbnail">
 							<div class="pad">
 								<b>Griya Madani</b>
@@ -116,7 +116,7 @@ $hasil3 = mysqli_query($db, $sql3);
 				</div>
 			</div>
 			<!-- <div class="row">
-				<a href="patra-garden" class="a-project stretched-link">
+				<a href="garden-residence" class="a-project stretched-link">
 					<div class="col-md-4 card">
 						<img src="images/image1.jpg" alt="Avatar">
 						<div class="container-card">
@@ -125,7 +125,7 @@ $hasil3 = mysqli_query($db, $sql3);
 						</div>
 					</div>
 				</a>
-				<a href="patra-garden" class="a-project">
+				<a href="garden-residence" class="a-project">
 					<div class="col-md-4 card">
 						<img src="images/image1.jpg" alt="Avatar">
 						<div class="container-card">
@@ -134,7 +134,7 @@ $hasil3 = mysqli_query($db, $sql3);
 						</div>
 					</div>
 				</a>
-				<a href="patra-garden" class="a-project">
+				<a href="garden-residence" class="a-project">
 					<div class="col-md-4 card">
 						<img src="images/image1.jpg" alt="Avatar">
 						<div class="container-card">
