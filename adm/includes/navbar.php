@@ -45,7 +45,7 @@
       <a href="#0">Garden Residence</a>
       <ul class="cd-side__sub-list">
         <li class="cd-side__sub-item"><a href="banner-garden.php">Banner</a></li>
-        <li class="cd-side__sub-item"><a href="#0">About Garden Residence</a></li>
+        <li class="cd-side__sub-item"><a href="about-garden.php">About Garden Residence</a></li>
         <li class="cd-side__sub-item"><a href="type-garden.php">Type</a></li>
         <li class="cd-side__sub-item"><a href="#0">Contact</a></li>
       </ul>

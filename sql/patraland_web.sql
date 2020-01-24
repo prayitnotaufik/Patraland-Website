@@ -275,7 +275,7 @@ CREATE TABLE `tb_thumbnail` (
 --
 
 INSERT INTO `tb_thumbnail` (`id_thumbnail`, `image`, `proyek_name`, `location`, `link`, `category`) VALUES
-(1, '22012020032611.jpg', 'Garden Residence', 'Kepuharjo, Karangploso', 'patra-garden', 'Garden'),
+(1, '22012020032611.jpg', 'Garden Residence', 'Kepuharjo, Karangploso', 'garden-residence', 'Garden'),
 (2, '22012020032611.jpg', 'Griya Madani', 'Curungrejo, Kepanjen', '', 'Griya'),
 (3, '22012020032611.jpg', 'Kencana Residence', 'Ngijo, Karangploso', '', 'Kencana'),
 (4, '22012020032611.jpg', 'The Island Cluster', 'Tasikmadu, Lowokwaru', '', 'Island');

@@ -181,7 +181,7 @@ if(@$_SESSION['status'] != "login") {
           $sql = mysqli_query($db, "SELECT * FROM tb_banner WHERE category = 'Garden'");
           $data = mysqli_fetch_assoc($sql);
         ?>
-        <img src="../patra-garden/images/banner/<?php echo $data['image']; ?>" width="100%">
+        <img src="../garden-residence/images/banner/<?php echo $data['image']; ?>" width="100%">
     </p>
   </div> <!-- .content-wrapper -->
 </main> <!-- .cd-main-content -->

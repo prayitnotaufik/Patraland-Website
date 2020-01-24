@@ -8,7 +8,7 @@ if (isset($_POST["submitTG"])) {
     $code_img = $_FILES["file"]["error"];
     if ($code_img === 0) {
         $error = "";
-        $nama_folder = "../../patra-garden/images/type";
+        $nama_folder = "../../garden-residence/images/type";
         $image_tmp = $_FILES["file"]["tmp_name"];
         $image_name = $_FILES["file"]["name"];
         $image_ext = strtolower(end(explode('.',$_FILES['file']['name'])));

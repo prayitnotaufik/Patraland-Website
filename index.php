@@ -211,7 +211,7 @@ $hasil3 = mysqli_query($db, $sql3);
       <div class="friend-grids">
         <div class="col-md-3 friend-grid shad">
           <div class="boxx">
-            <a href="patra-garden">
+            <a href="garden-residence">
               <img src="images/thumbnail/garden.jpg" alt="Project Thumbnail">
               <div class="pad">
                 <b>Garden Residence</b>
@@ -222,7 +222,7 @@ $hasil3 = mysqli_query($db, $sql3);
         </div>
         <div class="col-md-3 friend-grid shad">
           <div class="boxx">
-            <a href="patra-garden">
+            <a href="garden-residence">
               <img src="images/thumbnail/kencana.jpg" alt="Project Thumbnail">
               <div class="pad">
                 <b>Kencana Residence</b>
@@ -233,7 +233,7 @@ $hasil3 = mysqli_query($db, $sql3);
         </div>
         <div class="col-md-3 friend-grid shad">
           <div class="boxx">
-            <a href="patra-garden">
+            <a href="garden-residence">
               <img src="images/thumbnail/island.jpg" alt="Project Thumbnail">
               <div class="pad">
                 <b>The Island Cluster</b>
@@ -244,7 +244,7 @@ $hasil3 = mysqli_query($db, $sql3);
         </div>
         <div class="col-md-3 friend-grid shad">
           <div class="boxx">
-            <a href="patra-garden">
+            <a href="garden-residence">
               <img src="images/thumbnail/madani.jpg" alt="Project Thumbnail">
               <div class="pad">
                 <b>Griya Madani</b>

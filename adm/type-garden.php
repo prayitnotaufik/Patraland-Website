@@ -221,7 +221,7 @@ if(@$_SESSION['status'] != "login") {
           $sql = mysqli_query($db, "SELECT * FROM tb_type WHERE type = '$type' AND category = '$cat'");
           $data = mysqli_fetch_assoc($sql);
           ?>
-          <img src="../patra-garden/images/type/<?php echo $data['image']; ?>" width="385">
+          <img src="../garden-residence/images/type/<?php echo $data['image']; ?>" width="385">
         </p>
       <?php } ?>
     </div> <!-- .content-wrapper -->
