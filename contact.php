@@ -73,7 +73,7 @@ $data = mysqli_fetch_assoc($sql1);
 				</ul>
 			</div>
 			<div class="col-md-8 content-pro-head1 w3agile-6">
-				<form action="proc/add-message.php" method="post">
+				<form action="proc/contact-submit.php" method="post">
 					<div class=" grid-contact agileinfo-6">
 						<div class="your-top">
 							<input type="text" placeholder="Name" name="name" required="">
@@ -84,7 +84,7 @@ $data = mysqli_fetch_assoc($sql1);
 							<div class="clearfix"> </div>
 						</div>
 						<div class="your-top">
-							<input type="text" placeholder="Website" name="website" required="">
+							<input type="text" placeholder="Telephone" name="telp" required="">
 							<div class="clearfix"> </div>
 						</div>
 						<textarea placeholder="Message" name="message" required=""></textarea>
