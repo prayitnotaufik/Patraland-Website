@@ -48,33 +48,25 @@
         <li class="cd-side__sub-item"><a href="about-garden.php">About Garden Residence</a></li>
         <li class="cd-side__sub-item"><a href="type-garden.php">Type</a></li>
         <li class="cd-side__sub-item"><a href="contact-garden.php">Contact</a></li>
+        <li class="cd-side__sub-item"><a href="blok-garden.php">Blok</a></li>
       </ul>
     </li>
     <li class="cd-side__item cd-side__item--has-children cd-side__item--bookmarks js-cd-item--has-children">
       <a href="#0">Griya Madani</a>
       <ul class="cd-side__sub-list">
-        <li class="cd-side__sub-item"><a href="#0">--</a></li>
-        <li class="cd-side__sub-item"><a href="#0">--</a></li>
-        <li class="cd-side__sub-item"><a href="#0">--</a></li>
-        <li class="cd-side__sub-item"><a href="#0">--</a></li>
+        <!-- <li class="cd-side__sub-item"><a href="#0">--</a></li> -->
       </ul>
     </li>
     <li class="cd-side__item cd-side__item--has-children cd-side__item--bookmarks js-cd-item--has-children">
       <a href="#0">Kencana Residence</a>
       <ul class="cd-side__sub-list">
-        <li class="cd-side__sub-item"><a href="#0">--</a></li>
-        <li class="cd-side__sub-item"><a href="#0">--</a></li>
-        <li class="cd-side__sub-item"><a href="#0">--</a></li>
-        <li class="cd-side__sub-item"><a href="#0">--</a></li>
+        <!-- <li class="cd-side__sub-item"><a href="#0">--</a></li> -->
       </ul>
     </li>
     <li class="cd-side__item cd-side__item--has-children cd-side__item--bookmarks js-cd-item--has-children">
       <a href="#0">The Island Cluster</a>
       <ul class="cd-side__sub-list">
-        <li class="cd-side__sub-item"><a href="#0">--</a></li>
-        <li class="cd-side__sub-item"><a href="#0">--</a></li>
-        <li class="cd-side__sub-item"><a href="#0">--</a></li>
-        <li class="cd-side__sub-item"><a href="#0">--</a></li>
+        <!-- <li class="cd-side__sub-item"><a href="#0">--</a></li> -->
       </ul>
     </li>
   </ul>

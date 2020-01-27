@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 27, 2020 at 04:53 AM
+-- Generation Time: Jan 27, 2020 at 09:51 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -85,6 +85,36 @@ CREATE TABLE `tb_banner` (
 INSERT INTO `tb_banner` (`id_banner`, `image`, `category`) VALUES
 (1, '21012020092042.jpg', 'Garden'),
 (2, 'banner-garden.jpg', 'Kencana');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_blok`
+--
+
+CREATE TABLE `tb_blok` (
+  `id_blok` int(11) NOT NULL,
+  `siteplan` varchar(255) NOT NULL,
+  `name_blok` varchar(255) NOT NULL,
+  `category` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_blok`
+--
+
+INSERT INTO `tb_blok` (`id_blok`, `siteplan`, `name_blok`, `category`) VALUES
+(1, 'asoka.png', 'Asoka', 'Garden'),
+(2, 'aster.png', 'Aster', 'Garden'),
+(3, 'camelia.png', 'Camelia', 'Garden'),
+(4, 'edelweis.png', 'Edelweis', 'Garden'),
+(5, 'lavender.png', 'Lavender', 'Garden'),
+(6, 'magnolia.png', 'Magnolia', 'Garden'),
+(7, 'rosela.png', 'Rosela', 'Garden'),
+(8, 'sakura.png', 'Sakura', 'Garden'),
+(9, 'tulip.png', 'Tulip', 'Garden'),
+(10, 'blok-d.png', 'Blok-D', 'Garden'),
+(11, '', 'Krisan', 'Garden');
 
 -- --------------------------------------------------------
 
@@ -307,31 +337,6 @@ INSERT INTO `tb_team` (`id_team`, `photo`, `name`, `position`, `whatsapp`, `inst
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_thumbnail`
---
-
-CREATE TABLE `tb_thumbnail` (
-  `id_thumbnail` int(11) NOT NULL,
-  `image` mediumtext NOT NULL,
-  `proyek_name` text NOT NULL,
-  `location` mediumtext NOT NULL,
-  `link` varchar(260) NOT NULL,
-  `category` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tb_thumbnail`
---
-
-INSERT INTO `tb_thumbnail` (`id_thumbnail`, `image`, `proyek_name`, `location`, `link`, `category`) VALUES
-(1, '22012020032611.jpg', 'Garden Residence', 'Kepuharjo, Karangploso', 'patra-garden', 'Garden'),
-(2, '22012020032611.jpg', 'Griya Madani', 'Curungrejo, Kepanjen', '', 'Griya'),
-(3, '22012020032611.jpg', 'Kencana Residence', 'Ngijo, Karangploso', '', 'Kencana'),
-(4, '22012020032611.jpg', 'The Island Cluster', 'Tasikmadu, Lowokwaru', '', 'Island');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tb_type`
 --
 
@@ -376,6 +381,12 @@ ALTER TABLE `tb_about_proyek`
 --
 ALTER TABLE `tb_banner`
   ADD PRIMARY KEY (`id_banner`);
+
+--
+-- Indexes for table `tb_blok`
+--
+ALTER TABLE `tb_blok`
+  ADD PRIMARY KEY (`id_blok`);
 
 --
 -- Indexes for table `tb_contact`
@@ -432,12 +443,6 @@ ALTER TABLE `tb_team`
   ADD PRIMARY KEY (`id_team`);
 
 --
--- Indexes for table `tb_thumbnail`
---
-ALTER TABLE `tb_thumbnail`
-  ADD PRIMARY KEY (`id_thumbnail`);
-
---
 -- Indexes for table `tb_type`
 --
 ALTER TABLE `tb_type`
@@ -464,6 +469,12 @@ ALTER TABLE `tb_about_proyek`
 --
 ALTER TABLE `tb_banner`
   MODIFY `id_banner` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `tb_blok`
+--
+ALTER TABLE `tb_blok`
+  MODIFY `id_blok` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tb_contact`
@@ -518,12 +529,6 @@ ALTER TABLE `tb_slider`
 --
 ALTER TABLE `tb_team`
   MODIFY `id_team` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `tb_thumbnail`
---
-ALTER TABLE `tb_thumbnail`
-  MODIFY `id_thumbnail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tb_type`
