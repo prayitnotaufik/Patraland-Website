@@ -737,6 +737,9 @@ ul.fb_icons2 {
 .fb_icons2 li a.drib{
     background: url(../images/social2.png) no-repeat -171px -7px;
 }
+.fb_icons2 li a.ig{
+    background: url(../images/social2.png) no-repeat -209px -7px;
+}
 p.copyright {
     text-align: center;
     color: #fff;

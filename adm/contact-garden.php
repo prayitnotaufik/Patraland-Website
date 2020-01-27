@@ -43,6 +43,10 @@ if(@$_SESSION['status'] != "login") {
     visibility: visible;
     opacity:1;
   }
+  iframe {
+    width:100%;
+    height:200px;
+  }
 </style>
 </head>
 <body>
@@ -51,7 +55,7 @@ if(@$_SESSION['status'] != "login") {
     <?php include("includes/navbar.php"); ?>
     <div class="cd-content-wrapper">
       <?php
-      $sqlslct = "SELECT * FROM tb_contact WHERE id_contact = '1'";
+      $sqlslct = "SELECT * FROM tb_contact_proyek WHERE category = 'Garden'";
       $sqlect1 = mysqli_query($db, $sqlslct);
       $data = mysqli_fetch_assoc($sqlect1);
       ?>
@@ -63,73 +67,50 @@ if(@$_SESSION['status'] != "login") {
             <table cellpadding="5" width="100%">
               <tr>
                 <td width="80"><img src="../garden-residence/images/icon/instagram.png" alt="" width="50"></td>
-                <td><input type="text" name="txtig" placeholder="Instagram"></td>
+                <td><input type="text" name="txtig" placeholder="Instagram" value="<?php echo $data['instagram']; ?>"></td>
               </tr>
               <tr>
                 <td><img src="../garden-residence/images/icon/facebook.png" alt="" width="50"></td>
-                <td><input type="text" name="txtfb" placeholder="Facebook"></td>
+                <td><input type="text" name="txtfb" placeholder="Facebook" value="<?php echo $data['facebook']; ?>"></td>
               </tr>
               <tr>
                 <td><img src="../garden-residence/images/icon/whatsapp.png" alt="" width="50"></td>
-                <td><input type="text" name="txtwa" placeholder="Whatsapp"></td>
+                <td><input type="text" name="txtwa" placeholder="Whatsapp" value="<?php echo $data['whatsapp']; ?>"></td>
               </tr>
               <tr>
                 <td><img src="../garden-residence/images/icon/email.png" alt="" width="50"></td>
-                <td><input type="text" name="txtemail" placeholder="Email"></td>
+                <td><input type="text" name="txtemail" placeholder="Email" value="<?php echo $data['email']; ?>"></td>
               </tr>
               <tr>
                 <td><img src="../garden-residence/images/icon/telepon.png" alt="" width="50"></td>
-                <td><input type="text" name="txttelp" placeholder="Telepon"></td>
+                <td><input type="text" name="txttelp" placeholder="Telepon" value="<?php echo $data['telephone']; ?>"></td>
               </tr>
               <tr>
                 <td><img src="../garden-residence/images/icon/lokasi.png" alt="" width="50"></td>
-                <td><input type="text" name="txtlokasi" placeholder="Lokasi"></td>
+                <td><input type="text" name="txtlokasi" placeholder="Lokasi" value="<?php echo $data['location']; ?>"></td>
+              </tr>
+              <tr>
+                <td colspan="2">&nbsp;</td>
+              </tr>
+              <tr>
+                <td colspan="2"><div style="border:1px dotted #ddd;"></div></td>
+              </tr>
+              <tr>
+                <td colspan="2">&nbsp;</td>
               </tr>
               <tr>
                 <td valign="top" colspan="3">
-                  Maps<br>
-                  <textarea name="txtmaps" cols="40"></textarea><br><br>
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.812086876858!2d112.61239785820861!3d-7.914688740579999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7881fc7bf3a3b9%3A0xcad5da6cf7d0fcaa!2sPatra%20Garden%2C%20Kedawung%2C%20Ngijo%2C%20Kec.%20Karang%20Ploso%2C%20Malang%2C%20Jawa%20Timur%2065152!5e0!3m2!1sen!2sid!4v1579590118093!5m2!1sen!2sid" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                  Maps<div class="tooltip"><sup><img src="../images/help.png" width="18"></sup>
+                    <span class="tooltiptext"><a href="https://www.google.com/maps" target="_blank">Maps</a> > Cari Alamat > Klik menu ≡ > Bagikan atau Sematkan Peta > Pilih Sematkan Peta > Salin Link<br></br><span style="font-style:italic; color:#F00;">-- Tidak Support Mobile --</span></span>
+                  </div><br>
+                  <textarea name="txtmaps" rows="4" style="width:100%;"><?php echo $data['maps']; ?></textarea><br><br>
+                  <?php echo $data['maps']; ?></iframe>
                 </td>
               </tr>
+              <tr>
+                <td><input class="btn btn--primary btn--sm" type="submit" name="submit" value="Simpan"></td>
+              </tr>
             </table>
-
-            <!-- <table cellpadding="5">
-            <tr>
-            <td>Lokasi</td>
-          </tr>
-          <tr>
-          <td><textarea name="txtlokasi" cols="30" required><?php echo $data['lokasi']; ?></textarea></td>
-        </tr>
-        <tr>
-        <td>Email</td>
-      </tr>
-      <tr>
-      <td><input type="email" name="txtemail" placeholder="example@domain.com" value="<?php echo $data['email']; ?>" required></td>
-    </tr>
-    <tr>
-    <td>Telepon</td>
-  </tr>
-  <tr>
-  <td><input type="text" name="txttelp" value="<?php echo $data['telp']; ?>" required></td>
-</tr>
-<tr>
-<td>Google Maps
-<div class="tooltip"><sup><img src="../images/help.png" width="18"></sup>
-<span class="tooltiptext"><a href="https://www.google.com/maps" target="_blank">Maps</a> > Cari Alamat > Klik menu ≡ > Bagikan atau Sematkan Peta > Pilih Sematkan Peta > Salin Link<br></br><span style="font-style:italic; color:#F00;">-- Tidak Support Mobile --</span></span>
-</div>
-</td>
-</tr>
-<tr>
-<td><textarea name="txtgmaps" cols="50" rows="5" required><?php echo $data['maps']; ?></textarea></td>
-</tr>
-<tr>
-<td><?php echo $data['maps']; ?></td>
-</tr>
-<tr>
-<td><br><input class="btn btn--primary btn--sm" type="submit" name="submit" value="Simpan"></td>
-</tr>
-</table> -->
 </div>
 </form>
 </p>
@@ -144,15 +125,18 @@ if(@$_SESSION['status'] != "login") {
 
 <?php
 if(isset($_POST["submit"])) {
-  $lokasi = $_POST['txtlokasi'];
+  $ig = $_POST['txtig'];
+  $fb = $_POST['txtfb'];
+  $wa = $_POST['txtwa'];
   $email = $_POST['txtemail'];
-  $telepon = $_POST['txttelp'];
-  $gmaps = $_POST['txtgmaps'];
-  $sql = "UPDATE tb_contact SET lokasi = '$lokasi', email = '$email', telp = '$telepon', maps = '$gmaps' WHERE id_contact = '1'";
+  $telp = $_POST['txttelp'];
+  $lokasi = $_POST['txtlokasi'];
+  $maps = $_POST['txtmaps'];
+  $sql = "UPDATE tb_contact_proyek SET instagram = '$ig', facebook = '$fb', whatsapp = '$wa', email = '$email', telephone = '$telp', location = '$lokasi', maps = '$maps' WHERE id_contact_proyek = '1' AND category = 'Garden'";
   $exec = mysqli_query($db,$sql);
   echo ("<script LANGUAGE='JavaScript'>
   window.alert('Data berhasil disimpan!');
-  window.location.href='contact.php';
+  window.location.href='contact-garden.php';
   </script>");
 }
 ?>

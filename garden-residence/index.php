@@ -60,7 +60,11 @@ $data = mysqli_fetch_assoc($hasil);
     });
   });
   </script>
-
+  <style type="text/css">
+  .wrap p {
+    word-wrap: break-word;
+  }
+  </style>
 
 </head>
 <!-- //Head -->
@@ -210,132 +214,137 @@ $data = mysqli_fetch_assoc($hasil);
     </div>
   </div>
   <!-- SECTION PART -->
-  <div id="kontak" class="agileinfo kontak">
-    <div class="container">
-      <h3>Hubungi Kami</h3>
-      <div class="row">
-        <div class="col-md-6 kontak-col2 mb-5">
-          <div class="row">
-            <a href="">
-              <div class="col-md-6 kontak-col">
-                <div class="row">
-                  <div class="col-md-4 kontak-icon">
-                    <img src="images/icon/instagram.png" alt="">
-                  </div>
-                  <div class="col-md-8 wrap">
-                    <h4>Instagram</h4>
-                    <!-- <br> -->
-                    <p>@patraland</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="">
-              <div class="col-md-6 kontak-col">
-                <div class="row">
-                  <div class="col-md-4 kontak-icon">
-                    <img src="images/icon/facebook.png" alt="">
-                  </div>
-                  <div class="col-md-8 wrap">
-                    <h4>Facebook</h4>
-                    <!-- <br> -->
-                    <p>facebook.com/patraland</p>
+  <?php
+  $sql3 = mysqli_query($db, "SELECT * FROM tb_contact_proyek WHERE category = 'Garden'");
+  $data3 = mysqli_fetch_array($sql3);
+    ?>
+    <div id="kontak" class="agileinfo kontak">
+      <div class="container">
+        <h3>Hubungi Kami</h3>
+        <div class="row">
+          <div class="col-md-6 kontak-col2 mb-5">
+            <div class="row">
+              <a href="https://www.instagram.com/<?php echo $data3['instagram']; ?>">
+                <div class="col-md-6 kontak-col">
+                  <div class="row">
+                    <div class="col-md-4 kontak-icon">
+                      <img src="images/icon/instagram.png" alt="">
+                    </div>
+                    <div class="col-md-8 wrap">
+                      <h4>Instagram</h4>
+                      <!-- <br> -->
+                      <p>&#64;<?php echo $data3['instagram']; ?></p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a href="">
-              <div class="col-md-6 kontak-col">
-                <div class="row">
-                  <div class="col-md-4 kontak-icon">
-                    <img src="images/icon/whatsapp.png" alt="">
-                  </div>
-                  <div class="col-md-8 wrap">
-                    <h4>Whatsapp</h4>
-                    <!-- <br> -->
-                    <p>+62823220918</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="">
-              <div class="col-md-6 kontak-col">
-                <div class="row">
-                  <div class="col-md-4 kontak-icon">
-                    <img src="images/icon/email.png" alt="">
-                  </div>
-                  <div class="col-md-8 wrap">
-                    <h4>E-Mail</h4>
-                    <!-- <br> -->
-                    <p>Patraland@gmail.com</p>
+              </a>
+              <a href="<?php echo $data3['facebook']; ?>">
+                <div class="col-md-6 kontak-col">
+                  <div class="row">
+                    <div class="col-md-4 kontak-icon">
+                      <img src="images/icon/facebook.png" alt="">
+                    </div>
+                    <div class="col-md-8 wrap">
+                      <h4>Facebook</h4>
+                      <!-- <br> -->
+                      <p>PT Patraland Griya Madani</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a href="">
-              <div class="col-md-6 kontak-col">
-                <div class="row">
-                  <div class="col-md-4 kontak-icon">
-                    <img src="images/icon/telepon.png" alt="">
-                  </div>
-                  <div class="col-md-8 wrap">
-                    <h4>Call</h4>
-                    <!-- <br> -->
-                    <p>(0341)-1232133</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="">
-              <div class="col-md-6 kontak-col">
-                <div class="row">
-                  <div class="col-md-4 kontak-icon">
-                    <img src="images/icon/lokasi.png" alt="">
-                  </div>
-                  <div class="col-md-8 wrap">
-                    <h4>Office</h4>
-                    <!-- <br> -->
-                    <p>Jl Candi Panggung Barat 3a</p>
+              </a>
+              <a href="">
+                <div class="col-md-6 kontak-col">
+                  <div class="row">
+                    <div class="col-md-4 kontak-icon">
+                      <img src="images/icon/whatsapp.png" alt="">
+                    </div>
+                    <div class="col-md-8 wrap">
+                      <h4>Whatsapp</h4>
+                      <!-- <br> -->
+                      <p><?php echo $data3['whatsapp']; ?></p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </a>
+              </a>
+              <a href="">
+                <div class="col-md-6 kontak-col">
+                  <div class="row">
+                    <div class="col-md-4 kontak-icon">
+                      <img src="images/icon/email.png" alt="">
+                    </div>
+                    <div class="col-md-8 wrap">
+                      <h4>E-Mail</h4>
+                      <!-- <br> -->
+                      <p><?php echo $data3['email']; ?></p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="">
+                <div class="col-md-6 kontak-col">
+                  <div class="row">
+                    <div class="col-md-4 kontak-icon">
+                      <img src="images/icon/telepon.png" alt="">
+                    </div>
+                    <div class="col-md-8 wrap">
+                      <h4>Call</h4>
+                      <!-- <br> -->
+                      <p><?php echo $data3['telephone']; ?></p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="">
+                <div class="col-md-6 kontak-col">
+                  <div class="row">
+                    <div class="col-md-4 kontak-icon">
+                      <img src="images/icon/lokasi.png" alt="">
+                    </div>
+                    <div class="col-md-8 wrap">
+                      <h4>Office</h4>
+                      <!-- <br> -->
+                      <p><?php echo $data3['location']; ?></p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6 center">
-          <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.812086876858!2d112.61239785820861!3d-7.914688740579999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7881fc7bf3a3b9%3A0xcad5da6cf7d0fcaa!2sPatra%20Garden%2C%20Kedawung%2C%20Ngijo%2C%20Kec.%20Karang%20Ploso%2C%20Malang%2C%20Jawa%20Timur%2065152!5e0!3m2!1sen!2sid!4v1579590118093!5m2!1sen!2sid" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          <div class="col-md-6 center">
+            <?php echo $data3['maps']; ?>
+            <!-- <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.812086876858!2d112.61239785820861!3d-7.914688740579999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7881fc7bf3a3b9%3A0xcad5da6cf7d0fcaa!2sPatra%20Garden%2C%20Kedawung%2C%20Ngijo%2C%20Kec.%20Karang%20Ploso%2C%20Malang%2C%20Jawa%20Timur%2065152!5e0!3m2!1sen!2sid!4v1579590118093!5m2!1sen!2sid" frameborder="0" style="border:0;" allowfullscreen=""></iframe> -->
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- SECTION PART -->
+    <!-- SECTION PART -->
 
-  <!-- footer -->
-  <?php include("includes/footer.php"); ?>
-  <!-- footer -->
-  <!--FlexSlider-->
-  <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
-  <script defer src="js/jquery.flexslider.js"></script>
+    <!-- footer -->
+    <?php include("../includes/footer.php"); ?>
+    <!-- footer -->
+    <!--FlexSlider-->
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <script defer src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider) {
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+  <!--End-slider-script-->
+  <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
   <script type="text/javascript">
-  $(window).load(function() {
-    $('.flexslider').flexslider({
-      animation: "slide",
-      start: function(slider) {
-        $('body').removeClass('loading');
-      }
+  $(document).ready(function() {
+    $('#horizontalTab').easyResponsiveTabs({
+      type: 'default', //Types: default, vertical, accordion
+      width: 'auto', //auto or any width like 600px
+      fit: true // 100% fit in a container
     });
   });
-</script>
-<!--End-slider-script-->
-<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-  $('#horizontalTab').easyResponsiveTabs({
-    type: 'default', //Types: default, vertical, accordion
-    width: 'auto', //auto or any width like 600px
-    fit: true // 100% fit in a container
-  });
-});
 </script>
 <!-- <script type="text/javascript">
 function width() {
