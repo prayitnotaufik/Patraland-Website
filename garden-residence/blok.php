@@ -84,68 +84,29 @@ include("../config/conn.php");
 	<!-- agileinfo -->
 	<div id="welcome" class="agileinfo">
 		<div class="container">
-			<h3>Welcome</h3>
-			<p class="ttt">when an unknown printer took a galley of type and scrambled Lorem Ipsum passages, and more recently it to make a type specimen book.</p>
-			<div class="flexslider-info">
-				<section class="slider">
-					<div class="flexslider">
-						<ul class="slides">
-							<li>
-								<div class="banner-info">
-									<div class="col-md-7 agileinfo-left">
-										<img src="images/slide-1.jpg" alt="">
-									</div>
-									<div class="col-md-5 agileinfo-grid grid-one">
-										<h4>Temporibus autem</h4>
-										<p>Libero tempore, cum soluta nobis est eligendi
-											optio cumque nihil impedit quo minus id quod maxime
-											placeat facere possimus ut
-											et voluptates repudiandae sint et molestiae non recusandae</p>
-
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</li>
-							<li>
-								<div class="banner-info">
-									<div class="col-md-7 agileinfo-left">
-										<img src="images/slide-2.jpg" alt="">
-									</div>
-									<div class="col-md-5 agileinfo-grid grid-one">
-										<h4>Temporibus autem</h4>
-										<p>Libero tempore, cum soluta nobis est eligendi
-											optio cumque nihil impedit quo minus id quod maxime
-											placeat facere possimus ut
-											et voluptates repudiandae sint et molestiae non recusandae</p>
-
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</li>
-							<li>
-								<div class="banner-info">
-									<div class="col-md-7 agileinfo-left">
-										<img src="images/slide-3.jpg" alt="">
-									</div>
-									<div class="col-md-5 agileinfo-grid grid-one">
-										<h4>Temporibus autem</h4>
-										<p>Libero tempore, cum soluta nobis est eligendi
-											optio cumque nihil impedit quo minus id quod maxime
-											placeat facere possimus ut
-											et voluptates repudiandae sint et molestiae non recusandae</p>
-
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</section>
-			</div>
+			<h3>Daftar Unit</h3>
+			<p class="ttt">Daftar unit yang tersedia selalu di update oleh admin website,untuk data yang lebih akurat silahkan hubungi Marketing</p>
+			<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Blok</th>
+					<th>Tipe Rumah</th>
+					<th>Luas Tanah/Bangunan</th>
+					<th>Keterangan</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Blok-1</td>
+					<td>36</td>
+					<td>78m/56m</td>
+					<td><b>TERSEDIA</b></td>
+				</tr>
+			</tbody>
+			</table>
 		</div>
 	</div>
 	<!-- agileinfo -->
-
 	<!-- footer -->
 	<?php include("includes/footer.php"); ?>
 	<!-- footer -->
