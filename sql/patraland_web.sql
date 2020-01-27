@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2020 at 07:47 AM
+-- Generation Time: Jan 27, 2020 at 04:53 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -106,6 +106,31 @@ CREATE TABLE `tb_contact` (
 
 INSERT INTO `tb_contact` (`id_contact`, `lokasi`, `email`, `telp`, `maps`) VALUES
 (1, 'Jl. Candi Panggung Bar. No.3a, Mojolangu,\r\nKec. Lowokwaru, Kota Malang, Jawa Timur 65143', 'mail@example.com', '(0341) 488489', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.6134462468017!2d112.61464261428439!3d-7.935377994284005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788208dabed68f%3A0xc6aff25df0f92357!2sPT.%20Patraland!5e0!3m2!1sid!2sid!4v1578285560952!5m2!1sid!2sid\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\"></iframe>');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_contact_proyek`
+--
+
+CREATE TABLE `tb_contact_proyek` (
+  `id_contact_proyek` int(11) NOT NULL,
+  `instagram` mediumtext NOT NULL,
+  `facebook` longtext NOT NULL,
+  `whatsapp` varchar(20) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `telephone` varchar(255) NOT NULL,
+  `location` mediumtext NOT NULL,
+  `maps` longtext NOT NULL,
+  `category` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_contact_proyek`
+--
+
+INSERT INTO `tb_contact_proyek` (`id_contact_proyek`, `instagram`, `facebook`, `whatsapp`, `email`, `telephone`, `location`, `maps`, `category`) VALUES
+(1, 'patralands', 'https://www.facebook.com/PT-Patraland-Griya-Madani-876849345684720/', '081234461688', 'pt.patralandgriyamadani@gmail.com', '(0341) 488489', 'Jl Candi Panggung Barat no 3aKota Malang ', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7903.6268152364155!2d112.614533!3d-7.914551!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7881fc7bf3a3b9%3A0xcad5da6cf7d0fcaa!2sPatra%20Garden%2C%20Kedawung%2C%20Ngijo%2C%20Kec.%20Karang%20Ploso%2C%20Malang%2C%20Jawa%20Timur%2065152!5e0!3m2!1sen!2sid!4v1580093293263!5m2!1sen!2sid\" width=\"800\" height=\"600\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\"></iframe>', 'Garden');
 
 -- --------------------------------------------------------
 
@@ -359,6 +384,12 @@ ALTER TABLE `tb_contact`
   ADD PRIMARY KEY (`id_contact`);
 
 --
+-- Indexes for table `tb_contact_proyek`
+--
+ALTER TABLE `tb_contact_proyek`
+  ADD PRIMARY KEY (`id_contact_proyek`);
+
+--
 -- Indexes for table `tb_gallery`
 --
 ALTER TABLE `tb_gallery`
@@ -439,6 +470,12 @@ ALTER TABLE `tb_banner`
 --
 ALTER TABLE `tb_contact`
   MODIFY `id_contact` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tb_contact_proyek`
+--
+ALTER TABLE `tb_contact_proyek`
+  MODIFY `id_contact_proyek` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_gallery`
