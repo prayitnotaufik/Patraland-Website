@@ -222,7 +222,7 @@ $hasil3 = mysqli_query($db, $sql3);
         </div>
         <div class="col-md-3 friend-grid shad">
           <div class="boxx">
-            <a href="garden-residence">
+            <a href="kencana-residence">
               <img src="images/thumbnail/kencana.jpg" alt="Project Thumbnail">
               <div class="pad">
                 <b>Kencana Residence</b>
