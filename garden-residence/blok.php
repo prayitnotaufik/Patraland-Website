@@ -89,7 +89,7 @@ include("../config/conn.php");
 			<table class="table table-hover">
 			<thead>
 				<tr>
-					<th>Blok</th>
+					<th>Unit</th>
 					<th>Tipe Rumah</th>
 					<th>Luas Tanah/Bangunan</th>
 					<th>Keterangan</th>
@@ -97,9 +97,9 @@ include("../config/conn.php");
 			</thead>
 			<tbody>
 				<tr>
-					<td>Blok-1</td>
+					<td>Unit-1</td>
 					<td>36</td>
-					<td>78m/56m</td>
+					<td>9mx12m/56m</td>
 					<td><b>TERSEDIA</b></td>
 				</tr>
 			</tbody>
