@@ -233,7 +233,7 @@ $hasil3 = mysqli_query($db, $sql3);
         </div>
         <div class="col-md-3 friend-grid shad">
           <div class="boxx">
-            <a href="garden-residence">
+            <a href="island-cluster">
               <img src="images/thumbnail/island.jpg" alt="Project Thumbnail">
               <div class="pad">
                 <b>The Island Cluster</b>

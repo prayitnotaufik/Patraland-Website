@@ -82,7 +82,7 @@ $data = mysqli_fetch_assoc($hasil);
         <ul class="rslides" id="slider">
           <li>
             <div class="slider-img">
-              <img src="images/kencana2.jpg" class="img-responsive">
+              <img src="images/island.jpg" class="img-responsive">
             </div>
           </li>
         </ul>
@@ -309,7 +309,7 @@ $data = mysqli_fetch_assoc($hasil);
           </div>
         </div>
         <div class="col-md-6 center">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15808.242313634839!2d112.6062825!3d-7.8887314!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf173619d2ca1ff3e!2sPatra%20kencana!5e0!3m2!1sen!2sid!4v1580111420024!5m2!1sen!2sid" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15806.935789579526!2d112.6202997!3d-7.9228337!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4bfed20174169a08!2sPatra%20Island!5e0!3m2!1sen!2sid!4v1580194163815!5m2!1sen!2sid" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </div>
       </div>
     </div>
