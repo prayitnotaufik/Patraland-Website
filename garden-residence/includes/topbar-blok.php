@@ -30,10 +30,10 @@
               <li><a href="#">One more separated link</a></li>
             </ul>
           </li> -->
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#kontak">Contact Us</a></li>
             <!-- <li><a href="adm">Login</a></li> -->
           </ul>
-        
+
       </div><!-- /navbar-collapse -->
       <!-- search-scripts -->
       <script src="js/classie.js"></script>
