@@ -180,6 +180,12 @@ $data = mysqli_fetch_assoc($hasil);
             <img src="images/edelweis.jpg" alt="" srcset="">
           </div>
         </a>
+        </a>
+        <a href="#1" class="">
+          <div class="col-md-4 konten hvr-grow">
+            <img src="images/krisan.jpg" alt="" srcset="">
+          </div>
+        </a>
         <a href="#1" class="">
           <div class="col-md-4 konten hvr-grow">
             <img src="images/lavender.jpg" alt="" srcset="">
