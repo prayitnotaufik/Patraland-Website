@@ -160,10 +160,10 @@ if(@$_SESSION['status'] != "login") {
 
             // Option
             if($_GET['id'] == $blokid) {
-            echo "<option value='?id=".$blokid."&cat=Garden' selected>".$blok_name."</option>";
-          } else {
-            echo "<option value='?id=".$blokid."&cat=Garden'>".$blok_name."</option>";
-          }
+              echo "<option value='?id=".$blokid."&cat=Garden' selected>".$blok_name."</option>";
+            } else {
+              echo "<option value='?id=".$blokid."&cat=Garden'>".$blok_name."</option>";
+            }
           }
           ?>
         </select>
@@ -220,42 +220,80 @@ if(@$_SESSION['status'] != "login") {
           $cat = @$_GET['cat'];
           $sql = mysqli_query($db, "SELECT * FROM tb_blok WHERE id_blok = '$id' AND category = '$cat'");
           $data = mysqli_fetch_assoc($sql);
+
           ?>
           <img src="../garden-residence/images/blok/<?php echo $data['siteplan']; ?>" width="385">
-        </p>
-      <?php } ?>
-    </div> <!-- .content-wrapper -->
-  </main> <!-- .cd-main-content -->
-  <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
-  <script src="assets/js/menu-aim.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
+          <div style="border:1px solid #ddd; margin:20px 0px;"></div>
+          <table cellpadding="5">
+            <tr>
+              <td>Unit</td>
+              <td><input type="text" name="txtunit"></td>
+              </tr>
+              <tr>
+                <td>Type</td>
+                <td>
+                  <select name="txttype">
+                    <option value="">Choose Type</option>
+                    <?php
+                    $sql_type = mysqli_query($db,"SELECT * FROM tb_type WHERE category = '$cat'");
+                    while($row1 = mysqli_fetch_assoc($sql_type)) {
+                      ?>
+                        <option value="<?php echo $row1['type']; ?>"><?php echo $row1['type']; ?></option>
+                      <?php } ?>
+                    </select>
+                  </td>
+                </td>
+              </tr>
+              <tr>
+                <td>Luas Tanah / Bangunan</td>
+                <td><input type="text" name="txtltb"></td>
+              </tr>
+              <tr>
+                <td>Status</td>
+                <td>
+                    <input type="radio" name="txtstatus" value="tersedia">&nbsp;Tersedia<br>
+                    <input type="radio" name="txtstatus" value="terjual">&nbsp;Terjual
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><input class="btn btn--primary btn--sm" type="submit" name="submit" value="Simpan"></td>
+              </tr>
+            </table>
+          </p>
+        <?php } ?>
+      </div> <!-- .content-wrapper -->
+    </main> <!-- .cd-main-content -->
+    <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+    <script src="assets/js/menu-aim.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+  </html>
 
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
+  <script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+  // When the user clicks the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
     modal.style.display = "none";
   }
-}
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
 </script>

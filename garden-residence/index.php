@@ -144,17 +144,17 @@ $data = mysqli_fetch_assoc($hasil);
         <div id="besar" class="">
           <img id="gambar" src="images/siteplan.jpg" class="mapper" alt="map" usemap="#image-map">
           <map id="coord" name="image-map">
-            <area class="noborder icolor555" id="" rel="" target="" alt="sakura" title="Sakura" href="blok.php" coords="361,188,548,295,557,289,560,266,557,240,551,217,535,192,525,180,511,184,501,190,485,190,454,186,415,190,388,182" shape="poly">
-            <area class="noborder icolor555" target="" alt="" title="Rosela" href="" coords="279,215,317,208,306,380,294,389,269,339,274,276" shape="poly">
-            <area class="noborder icolor555" target="" alt="camelia" title="Camelia" href="" coords="325,384,328,313,333,238,336,212,349,205,549,317,527,351,500,378,484,404,472,428,467,452,459,463" shape="poly">
-            <area class="noborder icolor555" target="" alt="Edelweis" title="edelweis" href="" coords="563,343,599,281,613,274,694,317,725,347,813,456,816,499,773,534,765,538,756,529,658,403,567,356" shape="poly">
-            <area class="noborder icolor555" target="" alt="magnolia" title="Magnolia" href="" coords="493,526,488,478,493,448,499,442,506,418,524,387,553,360,628,404,647,413,695,475,635,523,578,565,553,585,542,577,527,549,521,538" shape="poly">
-            <area class="noborder icolor555" target="" alt="tulip" title="Tulip" href="" coords="560,616,558,603,700,496,710,499,746,546,745,557,601,666,591,662,574,642" shape="poly">
-            <area class="noborder icolor555" target="" alt="asoka" title="Asoka" href="" coords="612,689,614,678,815,521,825,527,830,556,836,585,830,599,652,731,627,708" shape="poly">
-            <area class="noborder icolor555" target="" alt="lavender" title="Lavender" href="" coords="680,730,676,742,685,749,716,749,764,753,804,721,800,709,771,666,760,671" shape="poly">
-            <area class="noborder icolor555" target="" alt="aster" title="Aster" href="" coords="870,532,895,565,968,522,940,479,1026,415,935,359,860,413,854,423,866,500" shape="poly">
-            <area class="noborder icolor555" target="" alt="krisan" title="Krisan" href="" coords="837,409,898,365,930,342,972,313,975,304,917,228,847,248,827,267,734,265,736,277" shape="poly">
-            <area class="noborder icolor555" target="" alt="Blok-D" title="Blok-D" href="" coords="467,484,340,414,311,399,274,442,289,458,317,479,414,533,461,560,477,561" shape="poly">
+            <area class="noborder icolor555" id="" rel="" target="" alt="sakura" title="Sakura" href="blok.php?nb=Sakura" coords="361,188,548,295,557,289,560,266,557,240,551,217,535,192,525,180,511,184,501,190,485,190,454,186,415,190,388,182" shape="poly">
+            <area class="noborder icolor555" target="" alt="" title="Rosela" href="blok.php?nb=Rosela" coords="279,215,317,208,306,380,294,389,269,339,274,276" shape="poly">
+            <area class="noborder icolor555" target="" alt="camelia" title="Camelia" href="blok.php?nb=Camelia" coords="325,384,328,313,333,238,336,212,349,205,549,317,527,351,500,378,484,404,472,428,467,452,459,463" shape="poly">
+            <area class="noborder icolor555" target="" alt="edelweis" title="Edelweis" href="blok.php?nb=Edelweis" coords="563,343,599,281,613,274,694,317,725,347,813,456,816,499,773,534,765,538,756,529,658,403,567,356" shape="poly">
+            <area class="noborder icolor555" target="" alt="magnolia" title="Magnolia" href="blok.php?nb=Magnolia" coords="493,526,488,478,493,448,499,442,506,418,524,387,553,360,628,404,647,413,695,475,635,523,578,565,553,585,542,577,527,549,521,538" shape="poly">
+            <area class="noborder icolor555" target="" alt="tulip" title="Tulip" href="blok.php?nb=Tulip" coords="560,616,558,603,700,496,710,499,746,546,745,557,601,666,591,662,574,642" shape="poly">
+            <area class="noborder icolor555" target="" alt="asoka" title="Asoka" href="blok.php?nb=Asoka" coords="612,689,614,678,815,521,825,527,830,556,836,585,830,599,652,731,627,708" shape="poly">
+            <area class="noborder icolor555" target="" alt="lavender" title="Lavender" href="blok.php?nb=Lavender" coords="680,730,676,742,685,749,716,749,764,753,804,721,800,709,771,666,760,671" shape="poly">
+            <area class="noborder icolor555" target="" alt="aster" title="Aster" href="blok.php?nb=Aster" coords="870,532,895,565,968,522,940,479,1026,415,935,359,860,413,854,423,866,500" shape="poly">
+            <area class="noborder icolor555" target="" alt="krisan" title="Krisan" href="blok.php?nb=Krisan" coords="837,409,898,365,930,342,972,313,975,304,917,228,847,248,827,267,734,265,736,277" shape="poly">
+            <area class="noborder icolor555" target="" alt="Blok-D" title="Blok-D" href="blok.php?nb=Blok-D" coords="467,484,340,414,311,399,274,442,289,458,317,479,414,533,461,560,477,561" shape="poly">
           </map>
         </div>
       </div>

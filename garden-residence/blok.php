@@ -1,5 +1,11 @@
 <?php
 include("../config/conn.php");
+$nb = @$_GET['nb'];
+$sql_blok = mysqli_query($db, "SELECT * FROM tb_blok WHERE name_blok = '$nb'");
+$row = mysqli_fetch_assoc($sql_blok);
+$id_blok = $row['id_blok'];
+$sql_unit = mysqli_query($db, "SELECT * FROM tb_unit_blok WHERE id_blok = '$id_blok'");
+$row1 = mysqli_fetch_assoc($sql_unit);
 ?>
 <!DOCTYPE html>
 <html>
@@ -57,7 +63,11 @@ include("../config/conn.php");
 			});
 		});
 	</script>
-
+  <style type="text/css">
+  .wrap p {
+    word-wrap: break-word;
+  }
+  </style>
 
 </head>
 <!-- //Head -->
@@ -73,10 +83,10 @@ include("../config/conn.php");
 	<!-- SECTION PART -->
 	<div id="project" class="agileinfo produk-page">
 		<div class="container">
-			<h3>Asoka Siteplan</h3>
+			<h3><?php echo $row['name_blok']; ?> Siteplan</h3>
 			<div class="row siteplan">
 				<div id="kecil" class="">
-					<img id="gambar" src="images/blok/asoka.png" class="" alt="map" usemap="">
+					<img id="gambar" src="images/blok/<?php echo $row['siteplan']; ?>" class="" alt="map" usemap="">
 				</div>
 			</div>
 		</div>
@@ -85,7 +95,7 @@ include("../config/conn.php");
 	<div id="ready" class="agileinfo ready">
 		<div class="container">
 			<h3>Daftar Unit</h3>
-			<p class="ttt">Daftar unit yang tersedia selalu di update oleh admin website,untuk data yang lebih akurat silahkan hubungi Marketing</p>
+			<p class="ttt">Daftar unit yang tersedia selalu di update oleh admin website, untuk data yang lebih akurat silahkan hubungi Marketing</p>
 			<table class="table table-hover">
 				<thead>
 					<tr>
@@ -96,11 +106,14 @@ include("../config/conn.php");
 					</tr>
 				</thead>
 				<tbody>
+          <?php
+
+          ?>
 					<tr>
-						<td>Unit-1</td>
-						<td>36</td>
-						<td>9mx12m/56m</td>
-						<td><b>TERSEDIA</b></td>
+						<td><?php echo $row1['unit']; ?></td>
+						<td><?php echo $row1['type']; ?></td>
+						<td><?php echo $row1['lt_b']; ?></td>
+						<td style="text-transform:uppercase;"><b><?php echo $row1['status']; ?></b></td>
 					</tr>
 				</tbody>
 			</table>
