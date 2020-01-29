@@ -32,11 +32,11 @@
     </li>
 
     <li class="cd-side__item cd-side__item--has-children cd-side__item--comments js-cd-item--has-children">
-      <a href="#0.php">Contact</a>
-      <ul class="cd-side__sub-list">
+      <a href="contact.php">Contact</a>
+      <!-- <ul class="cd-side__sub-list">
         <li class="cd-side__sub-item"><a href="contact.php">Content</a></li>
         <li class="cd-side__sub-item"><a href="msg.php">Messages</a></li>
-      </ul>
+      </ul> -->
     </li>
   </ul>
   <ul class="cd-side__list js-cd-side__list">

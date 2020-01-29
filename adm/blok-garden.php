@@ -4,6 +4,10 @@ include("../config/conn.php");
 if(@$_SESSION['status'] != "login") {
   echo "<script type='text/javascript'>alert('Login terlebih dahulu!');window.location.href='index.php';</script>";
 }
+if(isset($_GET['act'])) {
+  $id_unit_blok = $_GET['id'];
+  $query = mysqli_query($db, "DELETE FROM tb_unit_blok WHERE id_unit_blok = '$id_unit_blok'");
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -183,7 +187,7 @@ if(@$_SESSION['status'] != "login") {
       <?php
       if(isset($_GET['id'])) {
         ?>
-        <button class="btn btn--primary btn--sm" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Edit</button>
+        <button class="btn btn--primary btn--sm" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Change Siteplan</button>
 
         <div id="id01" class="modal">
 
@@ -206,10 +210,14 @@ if(@$_SESSION['status'] != "login") {
         <script>
         // Get the modal
         var modal = document.getElementById('id01');
+        var modal2 = document.getElementById('id02');
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
           if (event.target == modal) {
+            modal.style.display = "none";
+          }
+          if (event.target == modal2) {
             modal.style.display = "none";
           }
         }
@@ -224,76 +232,101 @@ if(@$_SESSION['status'] != "login") {
           ?>
           <img src="../garden-residence/images/blok/<?php echo $data['siteplan']; ?>" width="385">
           <div style="border:1px solid #ddd; margin:20px 0px;"></div>
-          <table cellpadding="5">
-            <tr>
-              <td>Unit</td>
-              <td><input type="text" name="txtunit"></td>
-              </tr>
-              <tr>
-                <td>Type</td>
-                <td>
-                  <select name="txttype">
-                    <option value="">Choose Type</option>
-                    <?php
-                    $sql_type = mysqli_query($db,"SELECT * FROM tb_type WHERE category = '$cat'");
-                    while($row1 = mysqli_fetch_assoc($sql_type)) {
-                      ?>
-                        <option value="<?php echo $row1['type']; ?>"><?php echo $row1['type']; ?></option>
-                      <?php } ?>
-                    </select>
-                  </td>
-                </td>
-              </tr>
-              <tr>
-                <td>Luas Tanah / Bangunan</td>
-                <td><input type="text" name="txtltb"></td>
-              </tr>
-              <tr>
-                <td>Status</td>
-                <td>
-                    <input type="radio" name="txtstatus" value="tersedia">&nbsp;Tersedia<br>
-                    <input type="radio" name="txtstatus" value="terjual">&nbsp;Terjual
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-                <td><input class="btn btn--primary btn--sm" type="submit" name="submit" value="Simpan"></td>
-              </tr>
-            </table>
-          </p>
-        <?php } ?>
-      </div> <!-- .content-wrapper -->
-    </main> <!-- .cd-main-content -->
-    <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
-    <script src="assets/js/menu-aim.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
-  </html>
 
-  <script>
-  // Get the modal
-  var modal = document.getElementById("myModal");
+          <button class="btn btn--primary btn--sm" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Add Information</button>
+          <div id="id02" class="modal">
 
-  // Get the button that opens the modal
-  var btn = document.getElementById("myBtn");
+            <form class="modal-content animate" action="proc/proc-add-unit-blok.php" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+              </div>
 
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
+              <div class="container">
+                <label for="unit"><b>Unit</b></label>
+                <input type="text" name="txtunit" required>
+                <input type="hidden" name="id_blok" value="<?php echo $_GET['id']; ?>">
+                <input type="hidden" name="txtcat" value="<?php echo $_GET['cat']; ?>">
 
-  // When the user clicks the button, open the modal
-  btn.onclick = function() {
-    modal.style.display = "block";
-  }
+                <label for="type"><b>Type</b></label>
+                <select name="txttype" required>
+                  <option value="">Choose Type</option>
+                  <?php
+                  $sql_type = mysqli_query($db,"SELECT * FROM tb_type WHERE category = '$cat'");
+                  while($row1 = mysqli_fetch_assoc($sql_type)) {
+                    ?>
+                    <option value="<?php echo $row1['type']; ?>"><?php echo $row1['type']; ?></option>
+                  <?php } ?>
+                </select>
 
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
+                <label for="ltb"><b>Luas Tanah / Bangunan</b></label>
+                <input type="text" name="txtltb" required>
+
+                <label for="status"><b>Status</b></label><br>
+                <input type="radio" name="txtstatus" value="Tersedia" required>&nbsp;Tersedia<br>
+                <input type="radio" name="txtstatus" value="Terjual" required>&nbsp;Terjual<br><br>
+                <button class="btn btn--primary btn--sm" type="submit" name="submitUnitBlokG">Simpan</button>
+              </div>
+            </form>
+          </div>
+
+          <div style="overflow-x:auto;">
+            <table cellpadding="5" width="100%" border="1">
+              <tr style="background:#ddd; font-weight:bolder;">
+                <th>Unit</th>
+                <th>Type</th>
+                <th>Luas Tanah / Bangunan</th>
+                <th>Status</th>
+                <th colspan="2"></th>
+              </tr>
+              <?php
+              $no = 1;
+              $sql_unit_blok = mysqli_query($db,"SELECT * FROM tb_unit_blok WHERE id_blok = '$id' AND category = '$cat'");
+              while($data = mysqli_fetch_assoc($sql_unit_blok)) {
+                ?>
+                <tr>
+                  <td><?php echo $data['unit']; ?></td>
+                  <td><?php echo $data['type']; ?></a></td>
+                  <td><?php echo $data['lt_b']; ?></td>
+                  <td><?php echo $data['status']; ?></td>
+                  <td align="center"><br><a class="btn btn--accent btn--sm" href="?id=<?php echo $data['id_unit_blok']; ?>&cat=<?php echo $data['category']; ?>&act=del">Hapus</a><br><br></td>
+                </tr>
+              <?php } ?>
+          </table>
+        </div>
+      </p>
+    <?php } ?>
+  </div> <!-- .content-wrapper -->
+</main> <!-- .cd-main-content -->
+<script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+<script src="assets/js/menu-aim.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
     modal.style.display = "none";
   }
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
+}
 </script>

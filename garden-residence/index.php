@@ -160,58 +160,58 @@ $data = mysqli_fetch_assoc($hasil);
       </div>
       <div class="row">
         <h3>Produk Kami</h3>
-        <a href="blok.php" class="">
+        <a href="blok.php?nb=Asoka" class="">
           <div class="col-md-4 konten hvr-grow">
             <img src="images/asoka.jpg" alt="" srcset="">
           </div>
         </a>
-        <a href="#1" class="">
+        <a href="blok.php?nb=Aster" class="">
           <div class="col-md-4 konten hvr-grow">
             <img src="images/aster.jpg" alt="" srcset="">
           </div>
         </a>
-        <a href="#1" class="">
+        <a href="blok.php?nb=Camelia" class="">
           <div class="col-md-4 konten hvr-grow">
             <img src="images/camelia.jpg" alt="" srcset="">
           </div>
         </a>
-        <a href="#1" class="">
+        <a href="blok.php?nb=Edelweis" class="">
           <div class="col-md-4 konten hvr-grow">
             <img src="images/edelweis.jpg" alt="" srcset="">
           </div>
         </a>
         </a>
-        <a href="#1" class="">
+        <a href="blok.php?nb=Krisan" class="">
           <div class="col-md-4 konten hvr-grow">
             <img src="images/krisan.jpg" alt="" srcset="">
           </div>
         </a>
-        <a href="#1" class="">
+        <a href="blok.php?nb=Lavender" class="">
           <div class="col-md-4 konten hvr-grow">
             <img src="images/lavender.jpg" alt="" srcset="">
           </div>
         </a>
-        <a href="#1" class="">
+        <a href="blok.php?nb=Magnolia" class="">
           <div class="col-md-4 konten hvr-grow">
             <img src="images/magnolia.jpg" alt="" srcset="">
           </div>
         </a>
-        <a href="#1" class="">
+        <a href="blok.php?nb=Rosela" class="">
           <div class="col-md-4 konten hvr-grow">
             <img src="images/rosela.jpg" alt="" srcset="">
           </div>
         </a>
-        <a href="#1" class="">
+        <a href="blok.php?nb=Sakura" class="">
           <div class="col-md-4 konten hvr-grow">
             <img src="images/sakura.jpg" alt="" srcset="">
           </div>
         </a>
-        <a href="#1" class="">
+        <a href="blok.php?nb=Tulip" class="">
           <div class="col-md-4 konten hvr-grow">
             <img src="images/tulip.jpg" alt="" srcset="">
           </div>
         </a>
-        <a href="#1" class="">
+        <a href="blok.php?nb=Blok-D" class="">
           <div class="col-md-4 konten hvr-grow">
             <img src="images/blok-d.jpg" alt="" srcset="">
           </div>

@@ -146,7 +146,7 @@ if(@$_SESSION['status'] != "login") {
 
 
       <h2>Banner</h2><br>
-        <button class="btn btn--primary btn--sm" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Edit</button>
+        <button class="btn btn--primary btn--sm" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Change Banner</button>
 
         <div id="id01" class="modal">
 
