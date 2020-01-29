@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 28, 2020 at 07:29 AM
+-- Generation Time: Jan 29, 2020 at 09:58 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -114,7 +114,7 @@ INSERT INTO `tb_blok` (`id_blok`, `siteplan`, `name_blok`, `category`) VALUES
 (8, 'sakura.png', 'Sakura', 'Garden'),
 (9, 'tulip.png', 'Tulip', 'Garden'),
 (10, 'blok-d.png', 'Blok-D', 'Garden'),
-(11, '', 'Krisan', 'Garden');
+(11, '29012020030506.png', 'Krisan', 'Garden');
 
 -- --------------------------------------------------------
 
@@ -381,7 +381,9 @@ CREATE TABLE `tb_unit_blok` (
 --
 
 INSERT INTO `tb_unit_blok` (`id_unit_blok`, `unit`, `type`, `lt_b`, `status`, `id_blok`, `category`) VALUES
-(1, '1', '36', '9mx12m/56m', 'Tersedia', 1, 'Garden');
+(1, '1', '36', '9mx12m/56m', 'Tersedia', 1, 'Garden'),
+(5, '3', '40', '6mx12m/5m', 'Tersedia', 1, 'Garden'),
+(6, '1', '45', 'wdqwd', 'Tersedia', 3, 'Garden');
 
 --
 -- Indexes for dumped tables
@@ -569,7 +571,7 @@ ALTER TABLE `tb_type`
 -- AUTO_INCREMENT for table `tb_unit_blok`
 --
 ALTER TABLE `tb_unit_blok`
-  MODIFY `id_unit_blok` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_unit_blok` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
