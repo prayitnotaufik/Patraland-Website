@@ -121,7 +121,7 @@ $data = mysqli_fetch_assoc($result);
               <h3>Recent Post</h3>
               <ul>
                 <?php
-                $sql1 = "SELECT * FROM tb_news ORDER BY date DESC LIMIT 5";
+                $sql1 = "SELECT * FROM tb_news WHERE status = 'Published' ORDER BY date DESC LIMIT 5";
                 $result1 = mysqli_query($db,$sql1);
                 while($data1 = mysqli_fetch_assoc($result1)) {
                   ?>
