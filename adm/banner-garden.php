@@ -136,6 +136,11 @@ if(@$_SESSION['status'] != "login") {
       width: 100%;
     }
   }
+  .small-text {
+    font-size:12px;
+    font-style:italic;
+    color:red;
+  }
   </style>
 </head>
 <body>
@@ -156,7 +161,7 @@ if(@$_SESSION['status'] != "login") {
             </div>
 
             <div class="container">
-              <label for="image"><b>Image</b></label>
+              <label for="image"><b>Image</b></label>&nbsp;<span class="small-text">(Ukuran : 1280 x 720)</span>
               <input type="file" name="file">
               <input type="hidden" name="id_banner" value="1">
 

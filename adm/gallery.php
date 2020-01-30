@@ -166,6 +166,11 @@ if (@$_SESSION['status'] != "login") {
   }
 
   .pagination li:hover:not(.active) {background-color: #ddd;}
+  .small-text {
+    font-size:12px;
+    font-style:italic;
+    color:red;
+  }
   </style>
 </head>
 
@@ -188,7 +193,7 @@ if (@$_SESSION['status'] != "login") {
         <form action="proc/proc-edit-gallery.php" method="post" enctype="multipart/form-data">
           <table cellpadding="5">
             <tr>
-              <td>Image</td>
+              <td>Image<br><span class="small-text">(Rasio : 16:9 / 4:3)</span></td>
               <td>:</td>
               <td>
                 <img src="../images/gallery/<?php echo $data['image']; ?>" width="200"><br>
@@ -237,7 +242,7 @@ if (@$_SESSION['status'] != "login") {
             </div>
 
             <div class="container">
-              <label for="image"><b>Image</b></label>
+              <label for="image"><b>Image</b></label>&nbsp;<span class="small-text">(Rasio : 16:9 / 4:3)</span>
               <input type="file" name="file">
 
               <label for="category"><b>Category</b></label>

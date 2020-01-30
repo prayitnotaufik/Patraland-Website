@@ -26,6 +26,11 @@ if(@$_SESSION['status'] != "login") {
   .cd-content-wrapper {
     font-size:17px;
   }
+  .small-text {
+    font-size:12px;
+    font-style:italic;
+    color:red;
+  }
   </style>
 </head>
 <body>
@@ -40,7 +45,7 @@ if(@$_SESSION['status'] != "login") {
           <div style="overflow-x:auto;">
             <table cellpadding="5">
               <tr>
-                <td>Image</td>
+                <td>Image&nbsp;<span class="small-text">(Rasio : 4:3 / 800 x 600)</span></td>
               </tr>
               <tr>
                 <td><input type="file" name="file"></td>

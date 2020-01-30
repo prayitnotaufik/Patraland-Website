@@ -5,8 +5,13 @@ if(@$_SESSION['status'] != "login") {
   echo "<script type='text/javascript'>alert('Login terlebih dahulu!');window.location.href='index.php';</script>";
 }
 if(isset($_GET['act'])) {
-  $id_unit_blok = $_GET['id'];
+  $id_unit_blok = $_GET['id_unit_blok'];
+  $id = $_GET['id'];
   $query = mysqli_query($db, "DELETE FROM tb_unit_blok WHERE id_unit_blok = '$id_unit_blok'");
+  echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Data Terhapus!');
+        window.location.href='blok-garden.php?id=$id&cat=Garden';
+        </script>");
 }
 ?>
 <!doctype html>
@@ -141,6 +146,11 @@ if(isset($_GET['act'])) {
       width: 100%;
     }
   }
+  .small-text {
+    font-size:12px;
+    font-style:italic;
+    color:red;
+  }
   </style>
 </head>
 <body>
@@ -187,7 +197,7 @@ if(isset($_GET['act'])) {
       <?php
       if(isset($_GET['id'])) {
         ?>
-        <button class="btn btn--primary btn--sm" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Change Siteplan</button>
+        <button class="btn btn--primary btn--sm" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Change Siteplan Per Blok</button>
 
         <div id="id01" class="modal">
 
@@ -197,7 +207,7 @@ if(isset($_GET['act'])) {
             </div>
 
             <div class="container">
-              <label for="image"><b>Siteplan</b></label>
+              <label for="image"><b>Siteplan Per Blok</b></label>&nbsp;<span class="small-text">(Ukuran : Custom)</span>
               <input type="file" name="file">
               <input type="hidden" name="id_blok" value="<?php echo $_GET['id']; ?>">
               <input type="hidden" name="txtcat" value="<?php echo $_GET['cat']; ?>">
@@ -288,7 +298,7 @@ if(isset($_GET['act'])) {
                   <td><?php echo $data['type']; ?></a></td>
                   <td><?php echo $data['lt_b']; ?></td>
                   <td><?php echo $data['status']; ?></td>
-                  <td align="center"><br><a class="btn btn--accent btn--sm" href="?id=<?php echo $data['id_unit_blok']; ?>&cat=<?php echo $data['category']; ?>&act=del">Hapus</a><br><br></td>
+                  <td align="center"><br><a class="btn btn--accent btn--sm" href="?id=<?php echo $id; ?>&cat=<?php echo $data['category']; ?>&id_unit_blok=<?php echo $data['id_unit_blok']; ?>&act=del">Hapus</a><br><br></td>
                 </tr>
               <?php } ?>
           </table>

@@ -144,6 +144,11 @@ if(@$_SESSION['status'] != "login") {
     margin-top:-5px;
     color: red;
   }
+  .small-text {
+    font-size:12px;
+    font-style:italic;
+    color:red;
+  }
   </style>
 </head>
 <body>
@@ -193,7 +198,7 @@ if(@$_SESSION['status'] != "login") {
             </div>
 
             <div class="container">
-              <label for="image"><b>Image</b></label>
+              <label for="image"><b>Image</b></label>&nbsp;<span class="small-text">(Ukuran : 800 x 1511)</span>
               <input type="file" name="file">
               <input type="hidden" name="txttype" value="<?php echo $_GET['tp']; ?>">
               <input type="hidden" name="txtcat" value="<?php echo $_GET['cat']; ?>">

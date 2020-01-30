@@ -139,6 +139,11 @@ if (@$_SESSION['status'] != "login") {
       width: 100%;
     }
   }
+  .small-text {
+    font-size:12px;
+    font-style:italic;
+    color:red;
+  }
   </style>
 </head>
 
@@ -162,7 +167,7 @@ if (@$_SESSION['status'] != "login") {
           <div style="overflow-x:auto;">
             <table cellpadding="5">
               <tr>
-                <td>Photo</td>
+                <td>Photo<br><span class="small-text">(Ukuran : 300 x 400)</span></td>
                 <td>:</td>
                 <td>
                   <img src="../images/team/<?php echo $data['photo']; ?>" width="200"><br>
@@ -220,7 +225,7 @@ if (@$_SESSION['status'] != "login") {
             </div>
 
             <div class="container">
-              <label for="photo"><b>Photo</b></label>
+              <label for="photo"><b>Photo</b></label>&nbsp;<span class="small-text">(Ukuran : 300 x 400)</span>
               <input type="file" name="file">
 
               <label for="name"><b>Name</b></label>

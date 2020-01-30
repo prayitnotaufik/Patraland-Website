@@ -56,6 +56,11 @@ if(@$_SESSION['status'] != "login") {
     border: 10px solid #ddd;
     width: 300px;
   }
+  .small-text {
+    font-size:12px;
+    font-style:italic;
+    color:red;
+  }
   </style>
 </head>
 <body>
@@ -79,6 +84,7 @@ if(@$_SESSION['status'] != "login") {
                       <td>1. </td>
                       <td>
                         <img src="../garden-residence/images/about/<?php echo $data1['image']; ?>"><br>
+                        <span class="small-text">(Ukuran : 800 x 533)</span><br>
                         <input type="file" name="file1">
                         <input type="hidden" name="content_id1" value="1">
                       </td>
@@ -103,6 +109,7 @@ if(@$_SESSION['status'] != "login") {
                       <td>3. </td>
                       <td>
                         <img src="../garden-residence/images/about/<?php echo $data3['image']; ?>"><br>
+                        <span class="small-text">(Ukuran : 800 x 533)</span><br>
                         <input type="file" name="file3">
                         <input type="hidden" name="content_id3" value="3">
                       </td>
@@ -129,6 +136,7 @@ if(@$_SESSION['status'] != "login") {
                       <td>2. </td>
                       <td>
                         <img src="../garden-residence/images/about/<?php echo $data2['image']; ?>"><br>
+                        <span class="small-text">(Ukuran : 800 x 533)</span><br>
                         <input type="file" name="file2">
                         <input type="hidden" name="content_id2" value="2">
                       </td>

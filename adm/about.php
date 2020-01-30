@@ -31,6 +31,11 @@ $data = mysqli_fetch_array($sql);
   area {
     display:block;
   }
+  .small-text {
+    font-size:12px;
+    font-style:italic;
+    color:red;
+  }
   </style>
 </head>
 <body>
@@ -45,7 +50,7 @@ $data = mysqli_fetch_array($sql);
           <div style="overflow-x:auto;">
             <table cellpadding="5">
               <tr>
-                <td>Image</td>
+                <td>Image&nbsp;<span class="small-text">(Ukuran : 1280 x 600 / 600 x 281)</span></td>
               </tr>
               <tr>
                 <td>

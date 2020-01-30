@@ -136,6 +136,11 @@ if(@$_SESSION['status'] != "login") {
       width: 100%;
     }
   }
+  .small-text {
+    font-size:12px;
+    font-style:italic;
+    color:red;
+  }
   </style>
 </head>
 <body>
@@ -195,7 +200,7 @@ if(@$_SESSION['status'] != "login") {
             </div>
 
             <div class="container">
-              <label for="image"><b>Image</b></label>
+              <label for="image"><b>Image</b></label>&nbsp;<span class="small-text">(Ukuran : 1280 x 600)</span>
               <input type="file" name="file">
 
               <label for="title"><b>Title</b></label>
