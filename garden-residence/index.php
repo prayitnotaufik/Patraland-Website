@@ -230,7 +230,7 @@ $data = mysqli_fetch_assoc($hasil);
         <div class="row">
           <div class="col-md-6 kontak-col2 mb-5">
             <div class="row">
-              <a href="https://www.instagram.com/<?php echo $data3['instagram']; ?>">
+              <a href="https://www.instagram.com/<?php echo $data3['instagram']; ?>" target="_blank">
                 <div class="col-md-6 kontak-col">
                   <div class="row">
                     <div class="col-md-4 kontak-icon">
@@ -244,7 +244,7 @@ $data = mysqli_fetch_assoc($hasil);
                   </div>
                 </div>
               </a>
-              <a href="<?php echo $data3['facebook']; ?>">
+              <a href="<?php echo $data3['facebook']; ?>" target="_blank">
                 <div class="col-md-6 kontak-col">
                   <div class="row">
                     <div class="col-md-4 kontak-icon">
@@ -258,7 +258,7 @@ $data = mysqli_fetch_assoc($hasil);
                   </div>
                 </div>
               </a>
-              <a href="">
+              <a href="https://api.whatsapp.com/send?phone=<?php echo $data3['whatsapp']; ?>">
                 <div class="col-md-6 kontak-col">
                   <div class="row">
                     <div class="col-md-4 kontak-icon">
@@ -272,7 +272,7 @@ $data = mysqli_fetch_assoc($hasil);
                   </div>
                 </div>
               </a>
-              <a href="">
+              <a href="mailto:<?php echo $data3['email']; ?>">
                 <div class="col-md-6 kontak-col">
                   <div class="row">
                     <div class="col-md-4 kontak-icon">
