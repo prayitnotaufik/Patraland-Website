@@ -24,7 +24,7 @@ include the remember me checkbox
     <center><h2>Patraland</h2></center><br>
     <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
     <p id="profile-name" class="profile-name-card"></p>
-    <form class="form-signin" action="" method="post">
+    <form class="form-signin" action="proc/proc-login.php" method="post">
       <span id="reauth-email" class="reauth-email"></span>
       <input type="text" id="inputEmail" class="form-control" placeholder="Username" name="username" required autofocus>
       <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
@@ -32,25 +32,3 @@ include the remember me checkbox
     </form><!-- /form -->
   </div><!-- /card-container -->
 </div><!-- /container -->
-
-<?php
-if(isset($_POST["submit"])) {
-  $username = @$_POST['username'];
-  $pass = $_POST['password'];
-  $sql = "SELECT * FROM tb_login WHERE username = '$username'";
-  $query = $db->query($sql);
-  $hasil = $query->fetch_assoc();
-  if($query->num_rows == 0) {
-    echo "<script type='text/javascript'>alert('Username dan Password tidak ada!');window.location.href='index.php';</script>";
-  } else {
-    if($pass <> $hasil['password']) {
-      echo "<script type='text/javascript'>alert('Password Salah!');window.location.href='index.php';</script>";
-    } else {
-      session_start();
-      $_SESSION['username'] = $hasil['username'];
-      $_SESSION['status'] = "login";
-      header('location:home.php');
-    }
-  }
-}
-?>

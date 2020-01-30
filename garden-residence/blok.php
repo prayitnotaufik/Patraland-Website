@@ -250,7 +250,7 @@ $sql_unit = mysqli_query($db, "SELECT * FROM tb_unit_blok WHERE id_blok = '$id_b
   </div>
   <!-- SECTION PART -->
   <!-- footer -->
-  <?php include("includes/footer.php"); ?>
+  <?php include("../includes/footer.php"); ?>
   <!-- footer -->
   <!--FlexSlider-->
   <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />

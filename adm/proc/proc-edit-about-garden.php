@@ -23,20 +23,23 @@ if (isset($_POST["saveaboutG"])) {
     // Image 1
     $image_tmp1 = $_FILES["file1"]["tmp_name"];
     $image_name1 = $_FILES["file1"]["name"];
-    $image_ext1 = strtolower(end(explode('.',$_FILES['file1']['name'])));
-    $newfilename1 = date('dmYHis').'.'.$image_ext1;
+    $image_ext1 = explode('.',$_FILES['file1']['name']);
+    $image_ext11 = end($image_ext1);
+    $newfilename1 = date('dmYHis').'.'.$image_ext11;
     $path_image1 = "$nama_folder/$newfilename1";
     // Image 2
     $image_tmp2 = $_FILES["file2"]["tmp_name"];
     $image_name2 = $_FILES["file2"]["name"];
-    $image_ext2 = strtolower(end(explode('.',$_FILES['file2']['name'])));
-    $newfilename2 = date('dmYHis').'.'.$image_ext2;
+    $image_ext2 = explode('.',$_FILES['file2']['name']);
+    $image_ext22 = end($image_ext2);
+    $newfilename2 = date('dmYHis').'.'.$image_ext22;
     $path_image2 = "$nama_folder/$newfilename2";
     // Image 3
     $image_tmp3 = $_FILES["file3"]["tmp_name"];
     $image_name3 = $_FILES["file3"]["name"];
-    $image_ext3 = strtolower(end(explode('.',$_FILES['file3']['name'])));
-    $newfilename3 = date('dmYHis').'.'.$image_ext3;
+    $image_ext3 = explode('.',$_FILES['file3']['name']);
+    $image_ext33 = end($image_ext3);
+    $newfilename3 = date('dmYHis').'.'.$image_ext33;
     $path_image3 = "$nama_folder/$newfilename3";
 
     $tipe_file = array("image/jpeg", "image/gif", "image/png", "image/jpg");

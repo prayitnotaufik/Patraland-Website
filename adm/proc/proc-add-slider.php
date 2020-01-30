@@ -13,7 +13,8 @@ if (isset($_POST["submit"])) {
         $nama_folder = "../../images/slider";
         $image_tmp = $_FILES["file"]["tmp_name"];
         $image_name = $_FILES["file"]["name"];
-        $image_ext = strtolower(end(explode('.',$_FILES['file']['name'])));
+        $image_ext1 = explode('.',$_FILES['file']['name']);
+        $image_ext = end($image_ext1);
         $newfilename= date('dmYHis').'.'.$image_ext;
         $path_image = "$nama_folder/$newfilename";
         $tipe_file = array("image/jpeg", "image/gif", "image/png", "image/jpg");
